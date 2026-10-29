@@ -22,29 +22,18 @@ jobs:
           path: trusted
           fetch-depth: 0
           persist-credentials: false
-      - name: 获取投稿数据
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: submission
-          fetch-depth: 0
-          persist-credentials: false
-          submodules: false
-          lfs: false
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
       - name: 检查投稿
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-          SUBMISSION_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           set -euo pipefail
-          git -C submission fetch --no-tags https://github.com/kourou25/meme-hall-skins.git "$BASE_SHA"
           node --test trusted/tests/*.test.mjs
-          node trusted/scripts/validate-snapshot.mjs submission "$BASE_SHA" "$HEAD_SHA"
+          node trusted/scripts/check-remote-submission.mjs
       - name: 合并已检查的提交并启动目录发布
         env:
           GITHUB_TOKEN: ${{ github.token }}
