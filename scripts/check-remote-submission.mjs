@@ -16,7 +16,7 @@ export function submissionId(files){
 export async function checkRemote({repo,number,head,request,raw}){
  if(repo!=='kourou25/meme-hall-skins'||!Number.isSafeInteger(number)||number<1||!/^[a-f0-9]{40}$/.test(head||''))throw Error('投稿参数无效')
  const pr=await request(`/repos/${repo}/pulls/${number}`),actor=pr.user?.login,source=pr.head?.repo?.full_name,base=pr.base?.sha
- if(pr.state!=='open'||pr.draft||pr.head?.sha!==head||!/^[a-f0-9]{40}$/.test(base||'')||!actor||!/^[-a-zA-Z0-9_.]+\/[-a-zA-Z0-9_.]+$/.test(source||''))throw Error('投稿状态或版本已变化')
+ if(pr.state!=='open'||pr.draft||pr.base?.ref!=='main'||pr.head?.sha!==head||!/^[a-f0-9]{40}$/.test(base||'')||!actor||!/^[-a-zA-Z0-9_.]+\/[-a-zA-Z0-9_.]+$/.test(source||''))throw Error('投稿状态、目标分支或版本已变化')
  const id=submissionId(await request(`/repos/${repo}/pulls/${number}/files?per_page=100`))
  const tree=async(r,sha)=>{const data=await request(`/repos/${r}/git/trees/${sha}`);if(data.truncated||!Array.isArray(data.tree))throw Error('素材目录不可完整读取');return data.tree}
  const folder=async(r,commit)=>{const data=await request(`/repos/${r}/git/commits/${commit}`);if(!/^[a-f0-9]{40}$/.test(data.tree?.sha||''))throw Error('提交目录无效');const root=await tree(r,data.tree.sha),s=root.find(x=>x.path==='submissions');if(!s)return null;if(s.type!=='tree'||s.mode!=='040000')throw Error('投稿目录类型无效');const dirs=await tree(r,s.sha),entry=dirs.find(x=>x.path===id);if(!entry)return null;if(entry.type!=='tree'||entry.mode!=='040000')throw Error('套装目录类型无效');return tree(r,entry.sha)}

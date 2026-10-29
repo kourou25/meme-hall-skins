@@ -2,34 +2,54 @@ name: 社区装扮自动合并
 on:
   pull_request_target:
     types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 需要重新检查的投稿编号
+        required: true
+        type: string
 permissions:
   contents: write
   pull-requests: write
   actions: write
 concurrency:
-  group: community-submission-${{ github.event.pull_request.number }}
+  group: community-submission-${{ github.event.pull_request.number || inputs.pr_number }}
   cancel-in-progress: false
 jobs:
   merge:
-    if: github.event.pull_request.draft == false
+    if: (github.event_name == 'pull_request_target' && github.event.pull_request.draft == false && github.event.pull_request.base.ref == 'main') || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: 获取可信检查程序
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.base.sha }}
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
           path: trusted
           fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: 确定投稿版本
+        id: submission
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+          EVENT_HEAD: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$PR_NUMBER" =~ ^[1-9][0-9]*$ ]] || { echo '投稿编号无效' >&2; exit 1; }
+          if [ -n "$EVENT_HEAD" ]; then head="$EVENT_HEAD"; else head=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq '.head.sha'); fi
+          [[ "$head" =~ ^[a-f0-9]{40}$ ]] || { echo '投稿版本无效' >&2; exit 1; }
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "head=$head" >> "$GITHUB_OUTPUT"
       - name: 检查投稿
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ steps.submission.outputs.number }}
+          HEAD_SHA: ${{ steps.submission.outputs.head }}
         run: |
           set -euo pipefail
           node --test trusted/tests/*.test.mjs
@@ -37,6 +57,6 @@ jobs:
       - name: 合并已检查的提交并启动目录发布
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ steps.submission.outputs.number }}
+          HEAD_SHA: ${{ steps.submission.outputs.head }}
         run: node trusted/scripts/merge-submission.mjs

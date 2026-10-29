@@ -6,7 +6,7 @@ const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42
 const manifest=Buffer.from(JSON.stringify({schemaVersion:1,id:'sample-set',name:'晨光',author:'作者',github:'artist',license:'CC0',permission:true,components:{badge:{file:'assets/badge.png'}}}))
 const fake=(changes=[{filename:'submissions/sample-set/manifest.json',status:'added'}])=>{
  const request=async path=>{
-  if(path.endsWith('/pulls/2'))return {state:'open',draft:false,user:{login:'artist'},head:{sha:a,repo:{full_name:'artist/fork'}},base:{sha:b}}
+  if(path.endsWith('/pulls/2'))return {state:'open',draft:false,user:{login:'artist'},head:{sha:a,repo:{full_name:'artist/fork'}},base:{sha:b,ref:'main'}}
   if(path.includes('/files?'))return changes
   if(path.includes('/git/commits/'+a))return {tree:{sha:root}}
   if(path.includes('/git/commits/'+b))return {tree:{sha:b}}
@@ -22,3 +22,4 @@ const fake=(changes=[{filename:'submissions/sample-set/manifest.json',status:'ad
 }
 test('仅以数据读取投稿并核验作者、图片与配置',async()=>{const result=await checkRemote(fake());assert.equal(result.id,'sample-set');assert.equal(result.author,'artist')})
 test('拒绝脚本修改、跨套装修改和伪造提交',async()=>{assert.throws(()=>submissionId([{filename:'public/x.js'}]),/固定目录/);assert.throws(()=>submissionId([{filename:'submissions/abc/manifest.json'},{filename:'submissions/def/manifest.json'}]),/一个套装/);await assert.rejects(checkRemote({...fake(),head:'0'.repeat(40)}),/版本已变化/)})
+test('手动重查仍只允许合并到主分支',async()=>{const f=fake(),request=f.request;f.request=async p=>{const value=await request(p);if(p.endsWith('/pulls/2'))value.base.ref='other';return value};await assert.rejects(checkRemote(f),/目标分支/)})
