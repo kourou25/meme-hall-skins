@@ -3,7 +3,7 @@ const controllers=new WeakMap()
 const allowed=doc=>!doc.hidden&&doc.hasFocus()&&doc.getSelection()?.isCollapsed!==false&&doc.documentElement.dataset.bubbleMotion!=='pause'&&doc.documentElement.dataset.pageHidden!=='true'&&![...doc.querySelectorAll('dialog[open],[role="dialog"],[role="alertdialog"],[aria-modal="true"],.modal,.pop')].some(el=>el.getClientRects().length)
 const stageOf=b=>Math.max(1,Math.min(10,Number(b.className.match(/\brt-growth-(\d+)\b/)?.[1]||1)))
 const current=b=>!b.closest('.cm-row')||b.closest('.cm-row').dataset.bubbleLive==='true'
-const eligible=b=>current(b)&&(b.classList.contains('rt-chickengun')?stageOf(b)>1&&b.dataset.cgFire!=='off':b.classList.contains('rt-railcannon')&&stageOf(b)>=2)
+const eligible=b=>current(b)&&(b.classList.contains('rt-chickengun')?stageOf(b)>=7&&b.dataset.cgFire!=='off':b.classList.contains('rt-railcannon')&&stageOf(b)>=2)
 const cooldown=b=>b.classList.contains('rt-chickengun')?([12000,12000,11000,10000,9000,8500,8000,7500,7000,6500][stageOf(b)-1]):([14000,14000,13000,12000,10000,9000,8000,7000,6000,5500][stageOf(b)-1])
 function visible(el){
  if(!el?.isConnected||!el.getClientRects().length)return false
@@ -21,6 +21,67 @@ function nextFace(bubble){
  }
  return null
 }
+// The machine gun spits thick white liquid: heavy gobs that land on the next
+// avatar as one puddle, which then sags and slides slowly down over it.
+function lobGoo(doc,layer,{start,dx,dy,bend,target,face,stage},animations){
+ const shots=stage>=7?3:stage>=4?2:1
+ for(let i=0;i<shots;i++){
+  const blob=doc.createElement('i');blob.className='rt-goo-blob';blob.style.left=start.x+'px';blob.style.top=start.y+'px';layer.append(blob)
+  const apex=-(Math.min(15,7+Math.abs(dy)*.22)+i*2)
+  animations.push(blob.animate([
+   {transform:'translate(0,0) scale(.4,.55)',opacity:0},
+   {transform:`translate(${bend*.55}px,${apex}px) scale(.8,1.08) rotate(-9deg)`,opacity:1,offset:.34},
+   {transform:`translate(${dx*.6}px,${dy*.6}px) scale(.92,1.03) rotate(4deg)`,opacity:1,offset:.68},
+   {transform:`translate(${dx}px,${dy}px) scale(1.15,.72)`,opacity:.96,offset:.93},
+   {transform:`translate(${dx}px,${dy+3}px) scale(.88,.42)`,opacity:0}
+  ],{duration:900,delay:i*250,easing:'cubic-bezier(.34,0,.72,1)',fill:'both'}))
+ }
+ if(!target||!face)return
+ const pool=doc.createElement('span');pool.className='rt-goo-pool';Object.assign(pool.style,{left:face.left+'px',top:face.top+'px',width:face.width+'px',height:face.height+'px'});layer.append(pool)
+ const end=3600
+ animations.push(pool.animate([
+  {opacity:0},
+  {opacity:1,offset:.03},
+  {opacity:1,offset:.96},
+  {opacity:0}
+ ],{duration:end-620,delay:620,fill:'both',easing:'linear'}))
+ for(const [cls,w,h,l,t,rx,ry,delay] of [
+  ['rt-goo-patch',30,26,10,-2,8,22,620],
+  ['rt-goo-patch',38,30,48,-6,-6,20,680],
+  ['rt-goo-patch',26,24,24,18,4,24,760]
+ ]){
+  const patch=doc.createElement('i');patch.className=cls
+  Object.assign(patch.style,{width:w+'%',height:h+'%',left:l+'%',top:t+'%'})
+  pool.append(patch)
+  animations.push(patch.animate([
+   {transform:'scale(.2)',opacity:0},
+   {transform:'scale(1.12,.86)',opacity:1,offset:.14},
+   {transform:'scale(1)',offset:.24},
+   {transform:`translate(${rx*.3}px,${ry*.4}px) scale(1.02,1.06)`,offset:.7},
+   {transform:`translate(${rx}px,${ry}px) scale(.98,1.14)`}
+  ],{duration:end-delay,delay,fill:'both',easing:'cubic-bezier(.28,.64,.38,1)'}))
+ }
+ // Small stray droplets around the patches.
+ for(const [x,y,size,delay] of [[-6,14,10,720],[82,10,10,780],[12,50,9,880],[76,44,10,920]]){
+  const bead=doc.createElement('i');bead.className='rt-goo-bead';Object.assign(bead.style,{left:x+'%',top:y+'%',width:size+'%'});pool.append(bead)
+  animations.push(bead.animate([
+   {transform:'scale(.15)',opacity:0},
+   {transform:'scale(1.15)',opacity:1,offset:.1},
+   {transform:'scale(1)',offset:.22},
+   {transform:'translateY(12px) scale(.92)'}
+  ],{duration:end-delay,delay,fill:'both',easing:'ease-out'}))
+ }
+ // Viscous white liquid running down slowly across the avatar.
+ for(const [delay,left,width,height] of [[840,16,8,84],[960,34,10,108],[1100,56,9,96],[1240,68,7,80]]){
+  const drip=doc.createElement('i');drip.className='rt-goo-drip';Object.assign(drip.style,{left:left+'%',width:width+'%',height:height+'%'});pool.append(drip)
+  animations.push(drip.animate([
+   {transform:'scaleY(.02)',opacity:0},
+   {transform:'scaleY(.16)',opacity:1,offset:.06},
+   {transform:'scaleY(.68)',offset:.52},
+   {transform:'scaleY(1.04) translateY(16px)'}
+  ],{duration:end-delay,delay,fill:'both',easing:'cubic-bezier(.34,.64,.42,1)'}))
+ }
+}
 export function fireBubbleBurst(bubble){
  const doc=bubble?.ownerDocument,state=doc&&controllers.get(doc)
  if(!state||state.active||Date.now()<state.resumeAt||!allowed(doc)||!eligible(bubble)||!visible(bubble))return false
@@ -37,22 +98,23 @@ export function fireBubbleBurst(bubble){
  state.active={layer,cancel,bubble}
  layer.dataset.stage=String(stage)
  const shots=gun?(stage>=7?3:stage>=4?2:1):(stage>=9?4:stage>=7?3:stage>=4?2:1)
- for(let i=0;i<shots;i++){
-  const drop=doc.createElement('i');drop.className='rt-shot-drop';const port=!gun&&i%2?6:0;drop.style.left=(start.x+port)+'px';drop.style.top=(start.y+port*.5)+'px';layer.append(drop)
-  // Reach the avatar gutter before descending, so the next message stays clear.
-  const bend=Math.min(-12,dx*.9)-i*2
+ // Reach the avatar gutter before descending, so the next message stays clear.
+ const bend=Math.min(-12,dx*.9)
+ if(gun)lobGoo(doc,layer,{start,dx,dy,bend,target,face:f,stage},animations)
+ else for(let i=0;i<shots;i++){
+  const drop=doc.createElement('i');drop.className='rt-shot-drop';const port=i%2?6:0;drop.style.left=(start.x+port)+'px';drop.style.top=(start.y+port*.5)+'px';layer.append(drop)
   animations.push(drop.animate([
    {transform:'translate(0,0) scale(.2)',opacity:0},
-   {transform:`translate(${bend}px,${Math.max(2,dy*.08)}px) rotate(28deg) scale(1,.9)`,opacity:.95,offset:.32},
+   {transform:`translate(${bend-i*2}px,${Math.max(2,dy*.08)}px) rotate(28deg) scale(1,.9)`,opacity:.95,offset:.32},
    {transform:`translate(${dx-port+i*.7}px,${dy}px) rotate(65deg) scale(.75,1)`,opacity:.9,offset:.86},
    {transform:`translate(${dx+i}px,${dy+3}px) scale(.2)`,opacity:0}
-  ],{duration:target?760:550,delay:i*(gun?220:180),easing:'ease-in',fill:'both'}))
+  ],{duration:target?760:550,delay:i*180,easing:'ease-in',fill:'both'}))
  }
- if(target)for(let i=0;i<(stage>=7?2:1);i++){
+ if(target&&!gun)for(let i=0;i<(stage>=7?2:1);i++){
   const dot=doc.createElement('i');dot.className='rt-shot-splash';dot.style.left=(end.x+(i%2)*4)+'px';dot.style.top=(end.y+(i-1)*5)+'px';layer.append(dot)
   animations.push(dot.animate([{opacity:0,transform:'scale(.1)'},{opacity:1,transform:'scale(1.25)',offset:.15},{opacity:.6,transform:'translateY(3px) scale(.85)',offset:.65},{opacity:0,transform:'translateY(7px) scale(.4)'}],{duration:900,delay:540+i*25,fill:'both',easing:'ease-out'}))
  }
- if(target){const hit=doc.createElement('i');hit.className='rt-shot-hit';Object.assign(hit.style,{left:f.left+'px',top:f.top+'px',width:f.width+'px',height:f.height+'px'});layer.append(hit);animations.push(hit.animate([{opacity:0,transform:'scale(.9)'},{opacity:1,transform:'scale(1.05)',offset:.15},{opacity:.78,transform:'scale(1)',offset:.55},{opacity:0,transform:'scale(1.06)'}],{duration:1050,delay:530,fill:'both',easing:'ease-out'}))}
+ if(target&&!gun){const hit=doc.createElement('i');hit.className='rt-shot-hit';Object.assign(hit.style,{left:f.left+'px',top:f.top+'px',width:f.width+'px',height:f.height+'px'});layer.append(hit);animations.push(hit.animate([{opacity:0,transform:'scale(.9)'},{opacity:1,transform:'scale(1.05)',offset:.15},{opacity:.78,transform:'scale(1)',offset:.55},{opacity:0,transform:'scale(1.06)'}],{duration:1050,delay:530,fill:'both',easing:'ease-out'}))}
  Promise.allSettled(animations.map(a=>a.finished)).then(cancel)
  return true
 }

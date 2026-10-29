@@ -152,8 +152,6 @@ html .cm-row:not([data-bubble-live=true]) .rt-whalepunch{--cf-character:url('/as
 .deco-showcase{display:grid;gap:12px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}.deco-showcase p{margin:0}.deco-showcase-heading{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.deco-showcase-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;max-height:280px;overflow-y:auto;overscroll-behavior:contain;padding:4px}.deco-showcase-choice{display:flex;align-items:center;gap:8px;min-width:0;padding:4px 0;cursor:pointer}.deco-showcase-choice input{flex:none;accent-color:var(--primary)}.deco-showcase-choice:has(input:disabled){opacity:.55;cursor:default}.ucard-badges:empty{display:none}
 .dp-bubble:has(.rt-chickengun){padding-left:48px;padding-bottom:calc(var(--cg-preview-size,54px) * 1.0862069)}
 
-.rt-shot-layer.is-chickengun .rt-shot-drop{background:linear-gradient(90deg,#a0d9ed22,#fff 55%,#d8edf4);box-shadow:0 0 5px #b8e6edaa}.rt-shot-layer.is-chickengun .rt-shot-splash{background:#f8fcff}
-
 /* Keep the original whale artwork and poses, while its frame no longer takes
    space away from the message. The common text metrics also apply to previews. */
 html .cm-text.rt-bubble.rt-whalebuddy{
@@ -168,7 +166,25 @@ html .cm-text.rt-bubble.rt-whalebuddy::before{inset:-12px 0 auto 0;height:16.333
 html .cm-text.rt-bubble.rt-whalebuddy::after{inset:0;border-radius:inherit;z-index:-1}
 
 /* Readable energy and avatar impact on both pale and dark chat backgrounds. */
-.rt-shot-layer .rt-shot-drop,.rt-shot-layer.is-chickengun .rt-shot-drop{width:20px;height:7px;border:1px solid #427c9e;background:linear-gradient(90deg,#82b4cf,#fff 45%,#c9f0ff);box-shadow:0 0 0 1px #fff9,0 1px 3px #315578b3,0 0 7px #5fbce3cc}
+.rt-shot-layer .rt-shot-drop{width:20px;height:7px;border:1px solid #427c9e;background:linear-gradient(90deg,#82b4cf,#fff 45%,#c9f0ff);box-shadow:0 0 0 1px #fff9,0 1px 3px #315578b3,0 0 7px #5fbce3cc}
 .rt-shot-layer:is([data-stage='9'],[data-stage='10']) .rt-shot-drop{width:27px;height:9px;box-shadow:0 0 0 1px #fff9,0 2px 4px #294c78cc,0 0 9px #48b9e3cc}
-.rt-shot-layer .rt-shot-splash,.rt-shot-layer.is-chickengun .rt-shot-splash{width:13px;height:13px;background:#eafbff;filter:drop-shadow(0 1px 1px #386b96) drop-shadow(0 0 2px #5a9fbd)}
+.rt-shot-layer .rt-shot-splash{width:13px;height:13px;background:#eafbff;filter:drop-shadow(0 1px 1px #386b96) drop-shadow(0 0 2px #5a9fbd)}
 .rt-shot-layer .rt-shot-hit{border:3px solid #5a91b3;background:repeating-conic-gradient(from 10deg at 45% 45%,transparent 0deg 42deg,#edfaffb3 44deg 49deg,transparent 51deg 90deg),radial-gradient(circle at 38% 32%,#fff9 0 12%,#7dc9ec59 35%,transparent 65%);box-shadow:inset 0 0 0 2px #e6f9ff,inset 0 0 9px #81cdf091,0 0 0 1px #fff9,0 1px 5px #366188b3;}
+
+/* Machine gun ammo reads as white, thick liquid: a heavy gob in flight, then the
+   whole next avatar is covered and strands of it run down over the edge. */
+.rt-goo-blob{position:absolute;display:block;pointer-events:none;width:11px;height:15px;border-radius:54% 46% 42% 58%/62% 48% 52% 38%;background:radial-gradient(circle at 36% 26%,#fff 0 32%,#f7f9fa 58%,#e5ebee 90%);box-shadow:inset -1px -2px 2px #cfd8dd,inset 1px 1px 2px #fff,0 0 0 1px #ffffff8c,0 1px 2px #2c241e3d}
+.rt-shot-layer.is-chickengun:is([data-stage='4'],[data-stage='5'],[data-stage='6']) .rt-goo-blob{width:13px;height:17px}
+.rt-shot-layer.is-chickengun:is([data-stage='7'],[data-stage='8']) .rt-goo-blob{width:15px;height:20px}
+.rt-shot-layer.is-chickengun:is([data-stage='9'],[data-stage='10']) .rt-goo-blob{width:17px;height:23px}
+.rt-goo-pool{position:absolute;display:block;pointer-events:none;overflow:visible}
+/* Thick milky fluid: translucent white with wet gloss and soft specular, not cartoon outlines. */
+.rt-goo-patch{position:absolute;display:block;pointer-events:none;transform-origin:50% 20%;background:linear-gradient(135deg,rgba(255,255,255,.98) 0%,rgba(246,250,253,.92) 65%,rgba(228,238,244,.85) 100%);box-shadow:inset 1.5px 2px 3px #ffffff,inset -1.5px -2px 3px rgba(160,185,200,.35),0 2px 4px rgba(20,35,45,.18);filter:drop-shadow(0 1px 2px rgba(0,0,0,.1))}
+.rt-goo-patch::after{content:'';position:absolute;inset:15% 25% auto 20%;height:30%;border-radius:50%;background:radial-gradient(ellipse at 50% 50%,#ffffff 0%,rgba(255,255,255,.9) 50%,transparent 100%);opacity:.95;pointer-events:none}
+.rt-goo-patch:nth-of-type(1){border-radius:45% 55% 62% 38%/38% 48% 52% 62%;transform:rotate(-6deg)}
+.rt-goo-patch:nth-of-type(2){border-radius:60% 40% 48% 52%/52% 60% 40% 48%;transform:rotate(8deg)}
+.rt-goo-patch:nth-of-type(3){border-radius:52% 48% 38% 62%/45% 42% 58% 55%;transform:rotate(-3deg)}
+/* Strands running down: organic tapering with fluid tear tips, no disjointed balls. */
+.rt-goo-drip{position:absolute;top:16%;transform-origin:50% 0;border-radius:25% 25% 48% 52%/15% 15% 75% 75%;background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(244,249,252,.92) 70%,rgba(232,242,248,.95) 100%);box-shadow:inset 1px 0 2px rgba(255,255,255,.8),inset -1px 0 2px rgba(150,178,195,.3),0 2px 3px rgba(20,35,45,.15);-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.6) 14%,#000 30%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.6) 14%,#000 30%)}
+.rt-goo-drip::after{content:'';position:absolute;left:-20%;bottom:-4px;width:140%;aspect-ratio:.9;border-radius:40% 40% 52% 52%/30% 30% 70% 70%;background:radial-gradient(circle at 40% 35%,#ffffff 0%,rgba(245,250,253,.96) 60%,rgba(225,238,245,.9) 100%);box-shadow:inset 1px 1px 2px #fff,inset -1px -1px 2px rgba(150,180,200,.35),0 2px 3px rgba(20,35,45,.2)}
+.rt-goo-bead{position:absolute;aspect-ratio:.95;transform-origin:50% 50%;border-radius:48% 52% 55% 45%/45% 55% 45% 55%;background:radial-gradient(circle at 35% 30%,#ffffff 0%,rgba(245,250,253,.94) 65%,rgba(225,238,246,.85) 100%);box-shadow:inset 1px 1px 1.5px #fff,inset -1px -1px 1.5px rgba(150,180,200,.3),0 1px 2px rgba(20,35,45,.15)}
