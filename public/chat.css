@@ -1740,6 +1740,136 @@ button.notif-row { width: 100%; border: 0; background: none; font: inherit; text
 .cm-text.bb-yinlu{background:#f1f8dc;color:#31482d;border:1px dashed #94b669;border-radius:16px 16px 16px 5px;box-shadow:3px 3px 0 #bdd595;padding-inline-end:22px}.cm-text.bb-yinlu::after{content:"✧";position:absolute;right:4px;bottom:3px;color:#658b40;pointer-events:none}
 [data-theme=dark] .u-title.reward-guangjie,[data-theme=dark] .cm-text.bb-yinlu{background:#273e2d;color:#d6edb3;box-shadow:2px 2px 0 #577748}
 
+/* ---------- 极光流转：360° 全光谱旋转流光边框 + 丝滑扫光 + 爆闪十字星芒 ---------- */
+@property --streamer-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --aurora-sheen {
+  syntax: '<percentage>';
+  initial-value: -35%;
+  inherits: false;
+}
+@keyframes streamer-spin {
+  to { --streamer-angle: 360deg; }
+}
+
+/* 丝滑极光扫光：采用高斯羽化光波 + 慢入快中慢出正弦曲线，彻底消除顿挫与频闪 */
+@keyframes aurora-silk-sweep {
+  0% {
+    --aurora-sheen: -35%;
+    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  38%, 100% {
+    --aurora-sheen: 135%;
+  }
+}
+
+/* 右上角爆闪十字星芒：平时为微光星种，扫光抵达右上角时触发二段十字脉冲爆闪 */
+@keyframes aurora-cross-burst {
+  0%, 22% {
+    opacity: 0.42;
+    transform: scale(0.45) rotate(0deg);
+    filter: drop-shadow(0 0 3px #38bdf8);
+  }
+  29% {
+    opacity: 1;
+    transform: scale(1.42) rotate(0deg);
+    filter: brightness(1.75) drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 14px #00f0ff) drop-shadow(0 0 22px #ff007f);
+  }
+  35% {
+    opacity: 0.72;
+    transform: scale(0.68) rotate(12deg);
+    filter: drop-shadow(0 0 5px #00f0ff);
+  }
+  41% {
+    opacity: 1;
+    transform: scale(1.16) rotate(0deg);
+    filter: brightness(1.5) drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 14px #a855f7) drop-shadow(0 0 20px #00ff88);
+  }
+  54%, 100% {
+    opacity: 0.42;
+    transform: scale(0.45) rotate(0deg);
+    filter: drop-shadow(0 0 3px #38bdf8);
+  }
+}
+
+/* 极光流转：深曜石底色 + 360° 全光谱流光粗边框 + 内部丝滑扫光 + 右上角爆闪十字星芒 */
+.cm-text.bb-aurora {
+  position: relative;
+  border: 3.5px solid transparent !important;
+  background:
+    linear-gradient(135deg, #0d1224 0%, #131a34 55%, #191436 100%) padding-box,
+    conic-gradient(
+      from var(--streamer-angle),
+      #00f0ff 0deg,
+      #3b82f6 45deg,
+      #8b5cf6 90deg,
+      #d946ef 135deg,
+      #ff007f 180deg,
+      #ff7700 225deg,
+      #ffea00 270deg,
+      #00ff88 315deg,
+      #00f0ff 360deg
+    ) border-box !important;
+  color: #f8fafc !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  border-radius: 4px 16px 16px 16px !important;
+  box-shadow:
+    0 4px 20px rgba(244, 63, 94, 0.34),
+    0 0 18px rgba(0, 240, 255, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  isolation: isolate;
+  padding: 8px 15px !important;
+  animation: streamer-spin 1.2s linear infinite;
+}
+
+/* 内部内容丝滑扫光：通过独立圆角自动裁切在气泡内部，不裁切右上角星芒 */
+.cm-text.bb-aurora::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 2px 12.5px 12.5px 12.5px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    112deg,
+    transparent calc(var(--aurora-sheen) - 28%),
+    rgba(168, 85, 247, 0.06) calc(var(--aurora-sheen) - 18%),
+    rgba(244, 114, 182, 0.22) calc(var(--aurora-sheen) - 9%),
+    rgba(255, 255, 255, 0.48) calc(var(--aurora-sheen) - 3%),
+    rgba(255, 255, 255, 0.72) var(--aurora-sheen),
+    rgba(224, 242, 254, 0.52) calc(var(--aurora-sheen) + 3%),
+    rgba(56, 189, 248, 0.26) calc(var(--aurora-sheen) + 10%),
+    rgba(56, 189, 248, 0.06) calc(var(--aurora-sheen) + 20%),
+    transparent calc(var(--aurora-sheen) + 30%)
+  );
+  mix-blend-mode: screen;
+  animation: aurora-silk-sweep 3.2s infinite;
+}
+
+/* 右上角爆闪十字星芒（SVG 八芒十字星辉：主十字长芒 + 45° 棱镜辅芒 + 中心星核） */
+.cm-text.bb-aurora::after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: -15px;
+  width: 28px;
+  height: 28px;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='50%25'%3E%3Stop offset='0%25' stop-color='%23ffffff' stop-opacity='1'/%3E%3Stop offset='38%25' stop-color='%237dd3fc' stop-opacity='0.88'/%3E%3Stop offset='72%25' stop-color='%23f43f5e' stop-opacity='0.35'/%3E%3Stop offset='100%25' stop-color='%23f43f5e' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='22' fill='url(%23g)'/%3E%3Cpath fill='%2338bdf8' opacity='0.85' d='M32 10 L35 27 L52 12 L37 29 L54 32 L37 35 L52 52 L35 37 L32 54 L29 37 L12 52 L27 35 L10 32 L27 29 L12 12 L29 27 Z'/%3E%3Cpath fill='%23ffffff' d='M32 0 L35.2 26.5 L64 32 L35.2 37.5 L32 64 L28.8 37.5 L0 32 L28.8 26.5 Z'/%3E%3Ccircle cx='32' cy='32' r='4.5' fill='%23ffffff'/%3E%3C/svg%3E");
+  animation: aurora-cross-burst 3.2s ease-out infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* 站点无障碍与性能动画暂停规则适配 */
+html:is([data-bubble-motion=pause],[data-page-hidden=true]) .cm-text.bb-aurora,
+html:is([data-bubble-motion=pause],[data-page-hidden=true]) .cm-text.bb-aurora::before,
+html:is([data-bubble-motion=pause],[data-page-hidden=true]) .cm-text.bb-aurora::after {
+  animation-play-state: paused !important;
+}
+
 [data-theme=dark] .invite-title-toggle{background:#304a35;color:#e2efc8;border:1px solid #718b56}[data-theme=dark] .bw-guide .bw-lv{color:#9cdbe6}
 
 .cm-mobile-more { display: none; }

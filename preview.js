@@ -3,7 +3,7 @@ import {PERSONAL_TITLES} from '/personal-catalog.js'
 import {PERSONAL_V2_TITLES} from '/personal-v2-catalog.js'
 import {titleVisualClass,attachTitleMotion} from '/title-visuals.js'
 const byId=id=>document.getElementById(id),family=byId('family'),search=byId('search'),level=byId('level'),cards=byId('cards')
-const presets=['laowu','cloud','candy','neon','paper','ink','pixel','sakura','gold','night','jelly','puff','paw','galaxy','bit','petal','boba','cyber','prism','mint','bunny','lemon','yinlu'].map(id=>({id,name:id}))
+const presets=['laowu','cloud','candy','neon','paper','ink','pixel','sakura','gold','night','jelly','puff','paw','galaxy','bit','petal','boba','cyber','prism','mint','bunny','lemon','yinlu','aurora'].map(id=>({id,name:id==='aurora'?'极光流转':id}))
 const officials=['serene','gentleman','coder','banana','peach','oracle','whale','diver','reborn'].map(id=>({id,name:id}))
 const personal=Object.entries({...PERSONAL_TITLES,...PERSONAL_V2_TITLES}).map(([id,x])=>({id,...x}))
 const growth=['guess','luck_king','luck_last','rank_guess_winrate','resource_respect'].flatMap(series=>[1,2,3,4,5].map(level=>({id:series+'-'+level,name:series+' Lv'+level,series,level})))
