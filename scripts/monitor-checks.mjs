@@ -2,9 +2,9 @@ import {resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
 
 const delayedMs=15*60*1000
-// 2026-10-29 手工发布到主站和 VIP 的两项历史投稿；版本与部署记录对应。
-const reviewedMerges=new Map([[2,'084e5978246a16c06099f8521fd9588f850cb87b'],[6,'1969e637178b91188673b4b6050c7639ee466ee6']])
-const reviewedRuns=new Set([40841712027,40841715092,40846329497,40850491966,40846332927,40850489775])
+// 已逐项审查并由主站发布的投稿；仅确认精确合并版本。
+const reviewedMerges=new Map([[2,'084e5978246a16c06099f8521fd9588f850cb87b'],[6,'1969e637178b91188673b4b6050c7639ee466ee6'],[13,'3e4c6dd6dafa2dc88d8c85ad27898aefa1597ab0']])
+const reviewedRuns=new Set([40841712027,40841715092,40846329497,40850491966,40846332927,40850489775,40995935988,40995938150])
 export function reviewedReleaseConfirmed(pr){return pr?.state==='closed'&&!!pr.merged_at&&reviewedMerges.get(pr.number)===pr.merge_commit_sha}
 export function reviewedRunSettled(run){return run?.status==='completed'&&reviewedRuns.has(Number(run.id))}
 export function findRunPullRequest(run,prs){

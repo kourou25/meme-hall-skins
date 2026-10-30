@@ -25,6 +25,7 @@ test('已核验的两次主站发布按精确合并版本确认，其他版本�
  const pr={number:2,state:'closed',merged_at:'2026-10-29T10:08:44Z',merge_commit_sha:'084e5978246a16c06099f8521fd9588f850cb87b'}
  assert.equal(reviewedReleaseConfirmed(pr),true);assert.equal(reviewedReleaseConfirmed({...pr,merge_commit_sha:'f'.repeat(40)}),false);assert.equal(reviewedReleaseConfirmed({...pr,state:'open'}),false);assert.equal(reviewedReleaseConfirmed({...pr,number:9}),false)
  assert.equal(reviewedRunSettled({id:40841712027,status:'completed',conclusion:'failure'}),true);assert.equal(reviewedRunSettled({id:40841712028,status:'completed',conclusion:'failure'}),false);assert.equal(reviewedRunSettled({id:40841712027,status:'in_progress'}),false)
+ assert.equal(reviewedReleaseConfirmed({number:13,state:'closed',merged_at:'2026-10-30T03:46:26Z',merge_commit_sha:'3e4c6dd6dafa2dc88d8c85ad27898aefa1597ab0'}),true)
 })
 test('上线未确认时保留提醒，定时扫描不重复派发目录发布',()=>{
  const dir=mkdtempSync(join(tmpdir(),'skin-monitor-')),fixture=join(dir,'mock.mjs')
