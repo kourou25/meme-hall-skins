@@ -23,7 +23,7 @@ export async function validateSnapshot(root,changed=[],options={}){
   for(const part of name.split('/')){target=resolve(target,part);try{const info=await lstat(target);if(info.isSymbolicLink()){problems.push(`不支持符号链接：${name}`);missing=true;break}}catch(e){if(e.code==='ENOENT'){missing=true;break}throw e}}
   if(missing)continue // Deleted files are allowed; required files checked above.
   const st=await lstat(file);if(!st.isFile()){problems.push(`不是普通文件：${name}`);continue}
-  if(!allowedExtensions.has(extname(name).toLowerCase())&&name!=='LICENSE'&&name!=='.gitattributes'&&!(options.trusted&&name.startsWith('.github/'))){problems.push(`不支持的文件类型：${name}`);continue}
+  if(!allowedExtensions.has(extname(name).toLowerCase())&&name!=='LICENSE'&&name!=='.gitattributes'&&!(options.trusted&&(name.startsWith('.github/')||name==='.gitignore'))){problems.push(`不支持的文件类型：${name}`);continue}
   if(st.size>25*1024*1024){problems.push(`单文件超过静态资源25 MiB上限：${name}`);continue}
   if(['.js','.mjs'].includes(extname(name).toLowerCase())){const result=spawnSync(process.execPath,['--check',file],{encoding:'utf8',timeout:15000});if(result.status!==0)problems.push(`JavaScript 语法错误：${name}`)}
  }

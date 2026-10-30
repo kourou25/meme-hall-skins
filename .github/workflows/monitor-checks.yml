@@ -33,6 +33,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - run: npm ci
       - name: 检查失败或超时并记录到 GitHub
         env:
           GITHUB_TOKEN: ${{ github.token }}

@@ -8,9 +8,10 @@ export function checkManifest(raw,id){
  if(typeof raw.github!=='string'||!/^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/i.test(raw.github))throw Error('作者 GitHub 用户名无效')
  keys(raw.components,['bubble','title','badge','reply']);const components={}
  for(const [kind,v] of Object.entries(raw.components)){
-  keys(v,['file','slice']);if(typeof v.file!=='string'||!new RegExp(`^assets/${kind}\\.(png|jpg|webp)$`).test(v.file))throw Error('素材路径无效')
-  if(v.slice!==undefined&&(!['bubble','title','reply'].includes(kind)||!Array.isArray(v.slice)||v.slice.length!==4||v.slice.some(x=>!Number.isInteger(x)||x<0||x>64)))throw Error('边框切片无效')
-  components[kind]={file:v.file,...(v.slice?{slice:[...v.slice]}:{})}
+  keys(v,['file','slice','style']);if(typeof v.file!=='string'||!new RegExp(`^assets/${kind}\\.(png|jpg|webp|css)$`).test(v.file))throw Error('素材路径无效')
+  if(v.style!==undefined&&(v.file.endsWith('.css')||v.style!==`assets/${kind}.css`))throw Error('样式路径无效')
+  if(v.slice!==undefined&&(v.file.endsWith('.css')||!['bubble','title','reply'].includes(kind)||!Array.isArray(v.slice)||v.slice.length!==4||v.slice.some(x=>!Number.isInteger(x)||x<0||x>64)))throw Error('边框切片无效')
+  components[kind]={file:v.file,...(v.slice?{slice:[...v.slice]}:{}),...(v.style?{style:v.style}:{})}
  }
  if(!Object.keys(components).length)throw Error('至少需要一项装扮')
  return {schemaVersion:1,id,name,author,github:raw.github.toLowerCase(),license,permission:true,components}

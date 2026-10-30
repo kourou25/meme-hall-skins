@@ -27,6 +27,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: 安装可信解析依赖
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then npm ci --prefix .trusted-check; else npm ci; fi
       - name: 运行检查
         env:
           EVENT_NAME: ${{ github.event_name }}
@@ -50,5 +53,5 @@ jobs:
         shell: bash
         run: |
           echo '## 装扮投稿状态' >> "$GITHUB_STEP_SUMMARY"
-          echo '投稿只接收受控配置和图片。网站显示以发布确认状态为准。' >> "$GITHUB_STEP_SUMMARY"
+          echo '投稿支持图片和限定作用范围的 CSS。网站显示以发布确认状态为准。' >> "$GITHUB_STEP_SUMMARY"
           echo '如检查失败，请查看上方步骤错误。' >> "$GITHUB_STEP_SUMMARY"

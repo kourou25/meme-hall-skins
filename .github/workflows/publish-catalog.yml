@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - run: npm ci
       - name: 验证并发布固定版本目录
         run: |
           set -euo pipefail
