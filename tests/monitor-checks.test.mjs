@@ -4,7 +4,7 @@ import {spawnSync} from 'node:child_process'
 import {writeFileSync,mkdtempSync,rmSync} from 'node:fs'
 import {tmpdir} from 'node:os'
 import {join} from 'node:path'
-import {pathToFileURL} from 'node:url'
+import {pathToFileURL,fileURLToPath} from 'node:url'
 import {assessment,issueTitle,reconcile,pullRequestAlert,reviewedReleaseConfirmed,reviewedRunSettled,findRunPullRequest} from '../scripts/monitor-checks.mjs'
 const now=Date.parse('2026-10-29T08:00:00Z'),run=(extra={})=>({id:42,status:'in_progress',created_at:new Date(now-16*60000).toISOString(),...extra})
 test('等待中超过15分钟提示，正常运行和成功不报异常',()=>{assert.match(assessment(run(),now),/15分钟/);assert.equal(assessment(run({created_at:new Date(now-2*60000).toISOString()}),now),null);assert.equal(assessment(run({status:'completed',conclusion:'success'}),now),null);assert.match(assessment(run({status:'completed',conclusion:'failure'}),now),/未通过/)})
@@ -30,7 +30,7 @@ test('上线未确认时保留提醒，定时扫描不重复派发目录发布',
  const dir=mkdtempSync(join(tmpdir(),'skin-monitor-')),fixture=join(dir,'mock.mjs')
  try{
   writeFileSync(fixture,`globalThis.fetch=async (url,options={})=>{const u=String(url);let data=[];if(u.includes('dispatches')){console.log('UNEXPECTED_DISPATCH');return new Response(null,{status:204})}if(u.includes('community-skins/status'))data={source:'a'.repeat(40)};else if(u.includes('/compare/'))data={status:'behind'};else if(u.includes('/actions/workflows/'))data={workflow_runs:[]};else if(u.includes('/pulls?state=closed'))data=[{number:2,state:'closed',merged_at:'2026-01-01T00:00:00Z',merge_commit_sha:'b'.repeat(40)}];else if(u.includes('/issues?'))data=[{number:12,title:'[装扮自动化] 上线等待 #2',state:'open',user:{login:'github-actions[bot]'}}];else if(options.method==='PATCH')data={};return new Response(JSON.stringify(data),{status:200})}`)
-  const run=spawnSync(process.execPath,['--import',pathToFileURL(fixture).href,'scripts/monitor-checks.mjs'],{encoding:'utf8',env:{...process.env,GITHUB_TOKEN:'fixture',GITHUB_REPOSITORY:'kourou25/meme-hall-skins'}})
+  const run=spawnSync(process.execPath,['--import',pathToFileURL(fixture).href,fileURLToPath(new URL('../scripts/monitor-checks.mjs',import.meta.url))],{encoding:'utf8',env:{...process.env,GITHUB_TOKEN:'fixture',GITHUB_REPOSITORY:'kourou25/meme-hall-skins'}})
   assert.equal(run.status,0,run.stderr);assert.doesNotMatch(run.stdout,/UNEXPECTED_DISPATCH/)
  }finally{rmSync(dir,{recursive:true,force:true})}
 })
@@ -38,7 +38,7 @@ test('定时扫描关闭已发布投稿的历史失败和上线等待',()=>{
  const dir=mkdtempSync(join(tmpdir(),'skin-monitor-release-')),fixture=join(dir,'mock.mjs')
  try{
   writeFileSync(fixture,`globalThis.fetch=async (url,options={})=>{const u=String(url);let data=[];if(options.method==='PATCH'){console.log('CLOSED:'+u.split('/').at(-1)+':'+JSON.parse(options.body).state);return new Response('{}')}if(u.includes('community-skins/status'))data={source:'a'.repeat(40)};else if(u.includes('/actions/workflows/check-skins'))data={workflow_runs:[{id:40841712027,status:'completed',conclusion:'failure',event:'pull_request'}]};else if(u.includes('/actions/workflows/'))data={workflow_runs:[]};else if(u.includes('/pulls?state=closed'))data=[{number:2,state:'closed',merged_at:'2026-10-29T10:08:44Z',merge_commit_sha:'084e5978246a16c06099f8521fd9588f850cb87b'}];else if(u.includes('/issues?'))data=[{number:3,title:'[装扮自动化] 检查异常 #40841712027',state:'open',user:{login:'github-actions[bot]'}},{number:12,title:'[装扮自动化] 上线等待 #2',state:'open',user:{login:'github-actions[bot]'}}];return new Response(JSON.stringify(data),{status:200})}`)
-  const run=spawnSync(process.execPath,['--import',pathToFileURL(fixture).href,'scripts/monitor-checks.mjs'],{encoding:'utf8',env:{...process.env,GITHUB_TOKEN:'fixture',GITHUB_REPOSITORY:'kourou25/meme-hall-skins'}})
+  const run=spawnSync(process.execPath,['--import',pathToFileURL(fixture).href,fileURLToPath(new URL('../scripts/monitor-checks.mjs',import.meta.url))],{encoding:'utf8',env:{...process.env,GITHUB_TOKEN:'fixture',GITHUB_REPOSITORY:'kourou25/meme-hall-skins'}})
   assert.equal(run.status,0,run.stderr);assert.match(run.stdout,/CLOSED:3:closed/);assert.match(run.stdout,/CLOSED:12:closed/);assert.doesNotMatch(run.stdout,/:open/)
  }finally{rmSync(dir,{recursive:true,force:true})}
 })
