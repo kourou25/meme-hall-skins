@@ -1,5 +1,6 @@
 import {resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
+import {recoverCatalog} from './recover-catalog.mjs'
 
 const delayedMs=15*60*1000
 // 已逐项审查并由主站发布的投稿；仅确认精确合并版本。
@@ -52,10 +53,12 @@ async function main(){
  const issues=(await request('/issues?state=all&per_page=100')).filter(x=>!x.pull_request&&x.user?.login==='github-actions[bot]')
  const input=process.env.WATCH_RUN_ID
  const prs=[...await request('/pulls?state=open&per_page=30'),...await request('/pulls?state=closed&sort=updated&direction=desc&per_page=30')]
- const runs=input?[await request('/actions/runs/'+Number(input))]:(await Promise.all(['check-skins.yml','auto-merge-submission.yml','publish-catalog.yml'].map(x=>request('/actions/workflows/'+x+'/runs?per_page=30')))).flatMap(x=>x.workflow_runs)
+ const workflowRuns=input?null:await Promise.all(['check-skins.yml','auto-merge-submission.yml','publish-catalog.yml'].map(x=>request('/actions/workflows/'+x+'/runs?per_page=30')))
+ const runs=input?[await request('/actions/runs/'+Number(input))]:workflowRuns.flatMap(x=>x.workflow_runs)
  const handled=new Set();runs.sort((a,b)=>Number(!!assessment(b))-Number(!!assessment(a))||Date.parse(b.created_at||0)-Date.parse(a.created_at||0))
  for(const run of runs){const pr=reviewedRunSettled(run)?undefined:findRunPullRequest(run,prs);if(pr&&handled.has(pr.number))continue;if(pr)handled.add(pr.number);await reconcile({run,pr,issues:issues.filter(x=>x.state==='open'),create:async(title,body)=>{const prior=issues.find(x=>x.title===title);if(prior){if(pr&&prior.state==='closed'){await request('/issues/'+prior.number,'PATCH',{state:'open',body});prior.state='open';prior.body=body}return}const issue=await request('/issues','POST',{title,body,assignees:['kourou25']});issues.push(issue)},update:async(n,body)=>{await request('/issues/'+n,'PATCH',{body});const issue=issues.find(x=>x.number===n);if(issue)issue.body=body},close:async n=>{await request('/issues/'+n,'PATCH',{state:'closed'});const issue=issues.find(x=>x.number===n);if(issue)issue.state='closed'}})}
  if(!input){
+  try{const recovery=await recoverCatalog({prs,runs:workflowRuns[2].workflow_runs,request});if(recovery.dispatched)console.log(`已恢复投稿 #${recovery.number} 的目录发布`)}catch(error){console.error('目录发布恢复失败：',error.message)}
   let published='';try{const r=await fetch('https://52dmeme.com/api/community-skins/status',{signal:AbortSignal.timeout(5000)});const data=await r.json();if(r.ok&&/^[a-f0-9]{40}$/.test(data.source))published=data.source}catch{}
   for(const pr of prs){
    const old=issues.find(x=>x.state==='open'&&x.title===`[装扮自动化] 合并等待 #${pr.number}`)
