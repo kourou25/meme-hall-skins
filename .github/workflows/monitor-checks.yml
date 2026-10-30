@@ -14,7 +14,7 @@ on:
         default: false
 permissions:
   contents: read
-  actions: write
+  actions: read
   issues: write
   pull-requests: read
 concurrency:

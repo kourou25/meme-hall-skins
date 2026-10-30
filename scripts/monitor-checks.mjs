@@ -42,14 +42,12 @@ async function main(){
  if(!input){
   const prs=[...await request('/pulls?state=open&per_page=30'),...await request('/pulls?state=closed&sort=updated&direction=desc&per_page=30')]
   let published='';try{const r=await fetch('https://52dmeme.com/api/community-skins/status',{signal:AbortSignal.timeout(5000)});const data=await r.json();if(r.ok&&/^[a-f0-9]{40}$/.test(data.source))published=data.source}catch{}
-  let retriedPublish=false
   for(const pr of prs){
    const old=issues.find(x=>x.state==='open'&&x.title===`[装扮自动化] 合并等待 #${pr.number}`)
    if(old&&(pr.state!=='open'||pr.draft)){await request('/issues/'+old.number,'PATCH',{state:'closed'});old.state='closed'}
    let confirmed=false;if(pr.merged_at&&published&&/^[a-f0-9]{40}$/.test(pr.merge_commit_sha||'')){try{const diff=await request(`/compare/${pr.merge_commit_sha}...${published}`);confirmed=['identical','ahead'].includes(diff.status)}catch{}}
    const waiting=issues.find(x=>x.state==='open'&&x.title===`[装扮自动化] 上线等待 #${pr.number}`);if(confirmed&&waiting){await request('/issues/'+waiting.number,'PATCH',{state:'closed'});waiting.state='closed'}
    const alert=pullRequestAlert(pr,Date.now(),confirmed);if(!alert)continue
-   if(pr.merged_at&&!confirmed&&!retriedPublish){try{await request('/actions/workflows/publish-catalog.yml/dispatches','POST',{ref:'main'});retriedPublish=true}catch{}}
    const existing=issues.find(x=>x.title===alert.title)
    if(!existing){const issue=await request('/issues','POST',{...alert,assignees:['kourou25']});issues.push(issue)}else if(existing.state==='closed'){await request('/issues/'+existing.number,'PATCH',{state:'open',body:alert.body});existing.state='open';existing.body=alert.body}else if(existing.body!==alert.body)await request('/issues/'+existing.number,'PATCH',{body:alert.body})
   }
