@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "lanting-ink",
+  "name": "兰亭墨韵",
+  "author": "超时空蚂蚁",
+  "github": "qwddkxs",
+  "license": "原创纯 CSS3 与内联矢量 SVG 水墨长卷装扮，确认拥有完整使用与再发布权限",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    }
+  }
+}

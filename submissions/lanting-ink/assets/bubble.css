@@ -1,0 +1,150 @@
+@property --ink-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --ink-sheen {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: -35%;
+}
+
+:scope {
+  position: relative;
+  display: inline-block;
+  border: 2.5px solid transparent !important;
+  border-radius: 4px 16px 6px 16px !important;
+  padding: 11px 22px 11px 18px !important;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(212, 175, 55, 0.22) 0 1px, transparent 1.5px) padding-box,
+    radial-gradient(circle at 76% 68%, rgba(180, 131, 39, 0.20) 0 1.2px, transparent 1.8px) padding-box,
+    radial-gradient(ellipse 85% 60% at 88% 85%, rgba(28, 37, 44, 0.11) 0%, transparent 70%) padding-box,
+    radial-gradient(ellipse 65% 55% at 12% 15%, rgba(180, 131, 39, 0.10) 0%, transparent 65%) padding-box,
+    linear-gradient(135deg, #fbf8ef 0%, #f3ebd9 52%, #ebe0c7 100%) padding-box,
+    conic-gradient(from var(--ink-angle), #111827 0deg, #b48327 58deg, #991b1b 115deg, #27272a 180deg, #d4af37 240deg, #1f2937 305deg, #111827 360deg) border-box !important;
+  box-shadow:
+    0 5px 18px rgba(17, 24, 39, 0.16),
+    inset 0 0 0 1.5px rgba(180, 131, 39, 0.36),
+    inset 5px 0 0 #111827,
+    inset -4px 0 0 #991b1b;
+  font-family: "STXingkai", "Xingkai SC", "FZShuTi", "HYShangWeiShouShuW", "Kaiti SC", "STKaiti", "KaiTi", "BiauKai", cursive, serif !important;
+  font-size: 17.5px;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: 0.08em;
+  color: #1c1917 !important;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 2px #fffdf7;
+  text-shadow:
+    0 1px 0 #fffdf7,
+    1.4px 1.4px 0 rgba(180, 131, 39, 0.78),
+    2.4px 2.4px 0 rgba(153, 27, 27, 0.28),
+    0 2px 5px rgba(17, 24, 39, 0.16);
+  isolation: isolate;
+  animation: ink-border-spin 4s linear infinite;
+}
+
+[data-theme="dark"] :scope {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(250, 204, 21, 0.16) 0 1px, transparent 1.5px) padding-box,
+    radial-gradient(circle at 76% 68%, rgba(250, 204, 21, 0.14) 0 1.2px, transparent 1.8px) padding-box,
+    radial-gradient(ellipse 85% 60% at 88% 85%, rgba(185, 28, 28, 0.15) 0%, transparent 70%) padding-box,
+    radial-gradient(ellipse 65% 55% at 12% 15%, rgba(212, 175, 55, 0.10) 0%, transparent 65%) padding-box,
+    linear-gradient(135deg, #18191e 0%, #201e24 52%, #15171c 100%) padding-box,
+    conic-gradient(from var(--ink-angle), #d4af37 0deg, #4b5563 65deg, #ef4444 125deg, #f3e5ab 185deg, #374151 245deg, #b48327 305deg, #d4af37 360deg) border-box !important;
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1.5px rgba(212, 175, 55, 0.34),
+    inset 5px 0 0 #090a0f,
+    inset -4px 0 0 #b91c1c;
+  color: #fef3c7 !important;
+  -webkit-text-stroke: 2px #111827;
+  text-shadow:
+    0 1px 0 #090a0f,
+    1.4px 1.4px 0 rgba(217, 119, 6, 0.82),
+    2.4px 2.4px 0 rgba(185, 28, 28, 0.52),
+    0 2px 8px rgba(250, 204, 21, 0.28);
+}
+
+:scope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px 13px 4px 13px;
+  z-index: 1;
+  background:
+    no-repeat right 7px bottom 6px / 14px 14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='12' fill='%23b91c1c' opacity='0.9'/%3E%3Cg fill='%23fffbeb'%3E%3Ccircle cx='32' cy='19' r='7.5'/%3E%3Ccircle cx='44.5' cy='28' r='7.5'/%3E%3Ccircle cx='39.8' cy='42.5' r='7.5'/%3E%3Ccircle cx='24.2' cy='42.5' r='7.5'/%3E%3Ccircle cx='19.5' cy='28' r='7.5'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='4.5' fill='%23fde68a'/%3E%3C/svg%3E"),
+    no-repeat right 0 bottom 0 / 180px 38px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 50'%3E%3Cpath fill='%231e293b' fill-opacity='0.07' d='M0 50 L0 38 Q35 18 72 34 T148 22 T240 30 L240 50 Z'/%3E%3Cpath fill='%23b48327' fill-opacity='0.08' d='M40 50 Q95 24 150 40 T240 18 L240 50 Z'/%3E%3C/svg%3E"),
+    linear-gradient(
+      112deg,
+      transparent calc(var(--ink-sheen) - 26%),
+      rgba(180, 131, 39, 0.14) calc(var(--ink-sheen) - 8%),
+      rgba(255, 252, 240, 0.58) var(--ink-sheen),
+      rgba(28, 37, 44, 0.10) calc(var(--ink-sheen) + 10%),
+      transparent calc(var(--ink-sheen) + 26%)
+    );
+  animation: ink-wash-sweep 4.2s infinite;
+}
+
+[data-theme="dark"] :scope::before {
+  background:
+    no-repeat right 7px bottom 6px / 14px 14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='12' fill='%23b91c1c' opacity='0.9'/%3E%3Cg fill='%23fffbeb'%3E%3Ccircle cx='32' cy='19' r='7.5'/%3E%3Ccircle cx='44.5' cy='28' r='7.5'/%3E%3Ccircle cx='39.8' cy='42.5' r='7.5'/%3E%3Ccircle cx='24.2' cy='42.5' r='7.5'/%3E%3Ccircle cx='19.5' cy='28' r='7.5'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='4.5' fill='%23fde68a'/%3E%3C/svg%3E"),
+    no-repeat right 0 bottom 0 / 180px 38px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 50'%3E%3Cpath fill='%23fde68a' fill-opacity='0.06' d='M0 50 L0 38 Q35 18 72 34 T148 22 T240 30 L240 50 Z'/%3E%3Cpath fill='%23ef4444' fill-opacity='0.08' d='M40 50 Q95 24 150 40 T240 18 L240 50 Z'/%3E%3C/svg%3E"),
+    linear-gradient(
+      112deg,
+      transparent calc(var(--ink-sheen) - 26%),
+      rgba(212, 175, 55, 0.16) calc(var(--ink-sheen) - 8%),
+      rgba(255, 250, 230, 0.22) var(--ink-sheen),
+      rgba(185, 28, 28, 0.12) calc(var(--ink-sheen) + 10%),
+      transparent calc(var(--ink-sheen) + 26%)
+    );
+}
+
+:scope::after {
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: -12px;
+  width: 34px;
+  height: 34px;
+  z-index: 3;
+  transform-origin: 20% 80%;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 52 Q24 34 36 28 T58 12' fill='none' stroke='%23111827' stroke-width='3.2' stroke-linecap='round'/%3E%3Cpath d='M28 33 Q34 42 46 44' fill='none' stroke='%23111827' stroke-width='2.2' stroke-linecap='round'/%3E%3Cg fill='%23b91c1c'%3E%3Ccircle cx='44' cy='18' r='5'/%3E%3Ccircle cx='51' cy='21' r='4.5'/%3E%3Ccircle cx='49' cy='28' r='4.5'/%3E%3Ccircle cx='41' cy='27' r='4.5'/%3E%3Ccircle cx='39' cy='21' r='4.5'/%3E%3C/g%3E%3Ccircle cx='45' cy='23' r='2.5' fill='%23fde68a'/%3E%3Ccircle cx='22' cy='38' r='3.5' fill='%23dc2626'/%3E%3Ccircle cx='46' cy='44' r='3' fill='%23ef4444'/%3E%3C/svg%3E");
+  animation: plum-branch-sway 3.6s ease-in-out infinite;
+}
+
+@keyframes ink-border-spin {
+  to {
+    --ink-angle: 360deg;
+  }
+}
+
+@keyframes ink-wash-sweep {
+  0% {
+    --ink-sheen: -35%;
+  }
+  42%, 100% {
+    --ink-sheen: 135%;
+  }
+}
+
+@keyframes plum-branch-sway {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-5deg) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :scope,
+  :scope::before,
+  :scope::after {
+    animation: none !important;
+  }
+}
