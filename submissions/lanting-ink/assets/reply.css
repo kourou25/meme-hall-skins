@@ -1,0 +1,75 @@
+@property --ink-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+:scope {
+  position: relative;
+  border: 2px solid transparent !important;
+  border-radius: 3px 11px 3px 11px !important;
+  padding-right: 24px !important;
+  background:
+    radial-gradient(circle at 20% 35%, rgba(212, 175, 55, 0.20) 0 1px, transparent 1.5px) padding-box,
+    linear-gradient(135deg, #fbf8ef 0%, #f3ebd9 52%, #ebe0c7 100%) padding-box,
+    conic-gradient(from var(--ink-angle), #111827 0deg, #b48327 58deg, #991b1b 115deg, #27272a 180deg, #d4af37 240deg, #1f2937 305deg, #111827 360deg) border-box !important;
+  box-shadow:
+    0 2px 6px rgba(17, 24, 39, 0.12),
+    inset 0 0 0 1px rgba(180, 131, 39, 0.36),
+    inset 4px 0 0 #111827,
+    inset -3px 0 0 #991b1b;
+  font-family: "STXingkai", "Xingkai SC", "FZShuTi", "HYShangWeiShouShuW", "Kaiti SC", "STKaiti", "KaiTi", "BiauKai", cursive, serif !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #1c1917 !important;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 1.6px #fffdf7;
+  text-shadow:
+    0 1px 0 #fffdf7,
+    1.1px 1.1px 0 rgba(180, 131, 39, 0.72),
+    1.8px 1.8px 0 rgba(153, 27, 27, 0.25);
+  animation: ink-border-spin 4s linear infinite;
+}
+
+[data-theme="dark"] :scope {
+  background:
+    radial-gradient(circle at 20% 35%, rgba(250, 204, 21, 0.14) 0 1px, transparent 1.5px) padding-box,
+    linear-gradient(135deg, #18191e 0%, #201e24 52%, #15171c 100%) padding-box,
+    conic-gradient(from var(--ink-angle), #d4af37 0deg, #4b5563 65deg, #ef4444 125deg, #f3e5ab 185deg, #374151 245deg, #b48327 305deg, #d4af37 360deg) border-box !important;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(212, 175, 55, 0.34),
+    inset 4px 0 0 #090a0f,
+    inset -3px 0 0 #b91c1c;
+  color: #fef3c7 !important;
+  -webkit-text-stroke: 1.6px #111827;
+  text-shadow:
+    0 1px 0 #090a0f,
+    1.1px 1.1px 0 rgba(217, 119, 6, 0.78),
+    1.8px 1.8px 0 rgba(185, 28, 28, 0.45);
+}
+
+:scope::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  margin-top: -6.5px;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='%23b91c1c'%3E%3Ccircle cx='32' cy='18' r='9'/%3E%3Ccircle cx='45.5' cy='27.5' r='9'/%3E%3Ccircle cx='40.3' cy='43.5' r='9'/%3E%3Ccircle cx='23.7' cy='43.5' r='9'/%3E%3Ccircle cx='18.5' cy='27.5' r='9'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='6' fill='%23fde68a'/%3E%3C/svg%3E");
+}
+
+@keyframes ink-border-spin {
+  to {
+    --ink-angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :scope,
+  :scope::before,
+  :scope::after {
+    animation: none !important;
+  }
+}
