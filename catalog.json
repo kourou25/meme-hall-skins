@@ -1,6 +1,42 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
-  "source": "8f08a7b8e59f09311892b677f50b84d74210948c",
-  "entries": []
+  "revision": 2,
+  "source": "66430a407e561188a1c56765907834d928eb6b02",
+  "entries": [
+    {
+      "schemaVersion": 1,
+      "id": "lanting-ink",
+      "name": "兰亭墨韵",
+      "author": "超时空蚂蚁",
+      "github": "qwddkxs",
+      "license": "原创纯 CSS3 与内联矢量 SVG 水墨长卷装扮，确认拥有完整使用与再发布权限",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 6875,
+          "sha256": "d2061651cc0cbcd1e369dce2101c665bb3fb3bf1c47c47ddce6706c556c9a0f8"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 3655,
+          "sha256": "2e46a5e8bdc8c377a13fb6da7730a9569964865858ff411b7148befcf52b9de3"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 3079,
+          "sha256": "91f13a156701580083213711d78d3c78897e9d44186e38b21795754405f384a1"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 2719,
+          "sha256": "977ee520dea47fd0a67265969bab90672f210a840feb3b15641b96b9bd81fca2"
+        }
+      }
+    }
+  ]
 }
