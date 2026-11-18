@@ -1,0 +1,63 @@
+/* A tiny dispatch pass: cream ticket, orange paw stamp and perforation. */
+:scope {
+  --ticket: #fff1d9;
+  --ticket-low: #ffdfad;
+  --ink: #67371f;
+  --edge: #be7542;
+  --stamp: #b65a30;
+  --paw: #fff1d9;
+  --tear: #ad683d;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 20px;
+  height: auto;
+  max-width: 100%;
+  padding: 2px 12px 2px 22px;
+  border: 1px solid var(--edge);
+  border-radius: 5px;
+  background: linear-gradient(180deg, var(--ticket), var(--ticket-low));
+  color: var(--ink);
+  box-shadow: 0 1px 0 #7f431e25, inset 0 1px 0 #ffffff65;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .09em;
+  line-height: 1.35;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+:scope::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 3px;
+  width: 14px;
+  height: 13px;
+  transform: translateY(-50%) rotate(-8deg);
+  border-radius: 3px;
+  background:
+    radial-gradient(ellipse at 50% 67%, var(--paw) 0 26%, transparent 28%) 4px 5px / 6px 5px no-repeat,
+    radial-gradient(ellipse, var(--paw) 0 49%, transparent 55%) 2px 4px / 4px 4px no-repeat,
+    radial-gradient(ellipse, var(--paw) 0 49%, transparent 55%) 5px 2px / 4px 4px no-repeat,
+    radial-gradient(ellipse, var(--paw) 0 49%, transparent 55%) 8px 4px / 4px 4px no-repeat,
+    var(--stamp);
+}
+:scope::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  inset-inline-end: 6px;
+  border-inline-start: 1px dashed var(--tear);
+}
+[data-theme="dark"] :scope {
+  --ticket: #754527;
+  --ticket-low: #5d321f;
+  --ink: #ffedcf;
+  --edge: #d68f57;
+  --stamp: #ec9b62;
+  --paw: #5b301d;
+  --tear: #e1a36d;
+  box-shadow: 0 1px 0 #160e0b70, inset 0 1px 0 #ffe0b62e;
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "laowu-dispatch",
+  "name": "老吴派遣",
+  "author": "Earthcat",
+  "github": "EarthRelig",
+  "license": "气泡经原图抠图镜像并以第三只橘猫参考图补纹；称号为 CSS，徽章沿用谷恒条野。投稿人确认有权使用、修改及公开再发布。",
+  "permission": true,
+  "components": {
+    "bubble": { "file": "assets/bubble.css" },
+    "title": { "file": "assets/title.css" },
+    "badge": { "file": "assets/badge.css" }
+  }
+}
