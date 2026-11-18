@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "laowu-dispatch-all-in",
+  "name": "老吴派遣·all in",
+  "author": "Earthcat",
+  "github": "EarthRelig",
+  "license": "六款气泡复用投稿人有权使用、修改及再发布的老吴派遣系列素材，重新适配大小和切片。集合称号为原创 CSS。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    }
+  }
+}
