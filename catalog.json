@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
-  "source": "cd64fd6ca51046d214593a14c1ad240ae9c45632",
+  "revision": 4,
+  "source": "d9cc76387e4e03476ae2be456c105e9b1af4e7a7",
   "entries": [
     {
       "schemaVersion": 1,
@@ -35,6 +35,35 @@
           "type": "text/css",
           "bytes": 2719,
           "sha256": "977ee520dea47fd0a67265969bab90672f210a840feb3b15641b96b9bd81fca2"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laowu-dispatch",
+      "name": "老吴派遣",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡经原图抠图镜像并以第三只橘猫参考图补纹；称号为 CSS，徽章沿用谷恒条野。投稿人确认有权使用、修改及公开再发布。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 10249,
+          "sha256": "0214a7c86f6aceca3aed5e860ac49af4d1c87115f03488adf08bf775e2913d3a"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1740,
+          "sha256": "1ead51732f7b6a4b7fb9a59fcf9f9a2d84e001f8439fcfc5557ba1af8ae32f9d"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 7939,
+          "sha256": "8308f50c2f974c616763cf22dbee4a14de2f9927bdd7d402b74ae26faeaa662b"
         }
       }
     },
