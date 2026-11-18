@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 12,
-  "source": "bf6ca165cdcb1baf15fe44a5f79467c628964c3d",
+  "revision": 13,
+  "source": "01dee30a386525953352329ac358e88b96549f0d",
   "entries": [
     {
       "schemaVersion": 1,
@@ -87,6 +87,29 @@
           "type": "text/css",
           "bytes": 1491,
           "sha256": "8cd9a254d97135f971c3ea3ec057ff5daf413d3a3f6f3f02b6dd358f131604b3"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laowu-dispatch-calico",
+      "name": "老吴派遣·三花",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡取自投稿人有权使用、修改及再发布的参考图，已抠图、镜像并制作适配切片；称号为原创 CSS。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 24681,
+          "sha256": "18c36ff1d9e2b4b6128e94c4015e663f0c48308c302bf704902735faab1aa0b6"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1636,
+          "sha256": "936a072bc83ff4af6a10f51574152e872f00aa72d81a7429f1fd5aa42d1a925a"
         }
       }
     },
@@ -237,6 +260,29 @@
           "type": "text/css",
           "bytes": 1810,
           "sha256": "52994e13542a3a4767edf93934919096e95e2ca441d86cf9aeac8d8a8aaf2080"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "waibi-babu",
+      "name": "外币巴布",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡取自投稿人有权使用、修改及再发布的参考图，已抠图、镜像并制作适配切片；称号为原创 CSS。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 15289,
+          "sha256": "071f6e9dba7f15c2b6132491b34c6f2c9c889bfc004999444cef0face86572a4"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1790,
+          "sha256": "08af8fd3adc2847b3e82e68b55d22d63e9e48b2b93667c665ed6a1ed94b35b45"
         }
       }
     }
