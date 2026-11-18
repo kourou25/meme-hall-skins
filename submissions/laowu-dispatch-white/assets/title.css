@@ -1,0 +1,51 @@
+/* A monochrome field label; the left tab carries a tiny paw print. */
+:scope {
+  --paper: #fffefa;
+  --shade: #e5e6eb;
+  --ink: #292b34;
+  --edge: #626574;
+  --tab: #363743;
+  --mark: #fffefd;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex: none;
+  min-inline-size: max-content;
+  min-height: 22px;
+  padding: 2px 8px;
+  padding-inline: 24px 9px !important;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: linear-gradient(var(--paper), var(--shade));
+  color: var(--ink);
+  box-shadow: 2px 2px 0 #2426392f;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .07em;
+  line-height: 1.3;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+:scope::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  bottom: 0;
+  width: 18px;
+  background: radial-gradient(ellipse, var(--mark) 0 48%, transparent 58%) left 6px bottom 4px / 7px 6px no-repeat,
+    radial-gradient(ellipse, var(--mark) 0 48%, transparent 59%) left 3px bottom 9px / 5px 4px no-repeat,
+    radial-gradient(ellipse, var(--mark) 0 48%, transparent 59%) left 7px bottom 11px / 4px 4px no-repeat,
+    radial-gradient(ellipse, var(--mark) 0 48%, transparent 59%) left 10px bottom 9px / 5px 4px no-repeat,
+    var(--tab);
+}
+[data-theme="dark"] :scope {
+  --paper: #494951;
+  --shade: #383943;
+  --ink: #fbf9f3;
+  --edge: #a8a7b4;
+  --tab: #d6d7dd;
+  --mark: #353644;
+  box-shadow: 2px 2px 0 #17171caa;
+}
