@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 14,
-  "source": "600d06556e8e396e9d96073f1f63fdc5a82c4f57",
+  "revision": 15,
+  "source": "725af2e97ac35ec6865d6a712b2abae9144b634e",
   "entries": [
     {
       "schemaVersion": 1,
@@ -87,6 +87,29 @@
           "type": "text/css",
           "bytes": 7939,
           "sha256": "8308f50c2f974c616763cf22dbee4a14de2f9927bdd7d402b74ae26faeaa662b"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laowu-dispatch-all-in",
+      "name": "老吴派遣·all in",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "六款气泡复用投稿人有权使用、修改及再发布的老吴派遣系列素材，重新适配大小和切片。集合称号为原创 CSS。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 31609,
+          "sha256": "c3274be65de19dc7dc4fbbffd378225d03792333ae747559675d1f0abe903a65"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 2741,
+          "sha256": "12667bafacb0d837d7a43b50cfbcc9b296b326221b05b1da6078100e553d2067"
         }
       }
     },
