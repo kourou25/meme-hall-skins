@@ -1,0 +1,19 @@
+/* A tiny dispatch ticket: mint enamel, ivory ink, brass edge and six coat-color notches. */
+:scope {
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  flex:none;box-sizing:border-box;inline-size:max-content;min-inline-size:max-content;min-height:24px;
+  padding:2px 7px;padding-inline:24px 11px !important;border:1px solid #a47b43;border-radius:6px 10px 6px 10px;
+  font-size:0 !important;letter-spacing:0 !important;color:transparent !important;text-shadow:none;
+  background:linear-gradient(90deg,#e5a254 0 16.67%,#b3aeb5 16.67% 33.33%,#5d6159 33.33% 50%,#ccaf8e 50% 66.67%,#fcf4dd 66.67% 83.33%,#c77c49 83.33%) bottom 1px center/82% 2px no-repeat,
+    linear-gradient(150deg,#234c46,#153c36 62%,#2b5045);
+  box-shadow:inset 0 1px #f5e8b83d,0 1px 2px #15251f32;white-space:nowrap;vertical-align:middle;
+}
+:scope::before {
+  content:"";position:absolute;inset-inline-start:3px;top:50%;transform:translateY(-51%);width:18px;height:18px;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M2%206.2%2012%202l10%204.5v11.1L12%2022l-10-4.4z%22%20fill%3D%22%23f9e7b4%22%20stroke%3D%22%23d7b476%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22m12%2010.4%209.6-4v11L12%2021.8z%22%20fill%3D%22%23c9a66a%22%2F%3E%3Cpath%20d%3D%22m2.4%206.3%209.6%204.1%209.6-4.1L12%202.4z%22%20fill%3D%22%23fff3cd%22%2F%3E%3Cpath%20d%3D%22m2.6%206.4%209.4%204.1v10.9%22%20fill%3D%22none%22%20stroke%3D%22%23ab8958%22%20stroke-width%3D%22.85%22%2F%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%226.4%22%20rx%3D%222.1%22%20ry%3D%22.95%22%20fill%3D%22%2331594b%22%2F%3E%3Cpath%20d%3D%22M4.9%2014.2q.4-2%201.7-1.4%201-.3%202%201.3%201.6%203-1.1%202.2-3.5-.7-2.6-2.1z%22%20fill%3D%22%23365548%22%2F%3E%3Cellipse%20cx%3D%224.5%22%20cy%3D%2211.9%22%20rx%3D%22.75%22%20ry%3D%221%22%20fill%3D%22%23365548%22%2F%3E%3Cellipse%20cx%3D%226.5%22%20cy%3D%2211.3%22%20rx%3D%22.72%22%20ry%3D%221%22%20fill%3D%22%23365548%22%2F%3E%3Cellipse%20cx%3D%228.7%22%20cy%3D%2212.3%22%20rx%3D%22.75%22%20ry%3D%221%22%20fill%3D%22%23365548%22%2F%3E%3Cellipse%20cx%3D%2215.3%22%20cy%3D%2215.8%22%20rx%3D%22.85%22%20ry%3D%221.2%22%20fill%3D%22%233b5545%22%2F%3E%3Cellipse%20cx%3D%2218.8%22%20cy%3D%2211.6%22%20rx%3D%22.85%22%20ry%3D%221.2%22%20fill%3D%22%233b5545%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;
+}
+:scope::after {
+  content:"老吴大派遣";position:relative;display:block;font:750 12px/1.35 system-ui,"Microsoft YaHei",sans-serif;
+  letter-spacing:.055em;color:#fff3d3;white-space:nowrap;text-shadow:0 1px #142d26;
+}
+[data-theme="dark"] :scope{border-color:#cfaa6b;box-shadow:inset 0 1px #fff1c638,0 1px 2px #0004;}
