@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
-  "source": "1cecd0c5e2eaed24f23164d98b802093ad362dd7",
+  "revision": 7,
+  "source": "e845560d51ca43d3837f3b008f37290144923346",
   "entries": [
     {
       "schemaVersion": 1,
@@ -133,6 +133,29 @@
           "type": "text/css",
           "bytes": 1337,
           "sha256": "2f5b6dbdbf7d14d7e7db3b12ca8957b8990a56e66fd7643d23b5ff4890bf6a62"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laowu-dispatch-white",
+      "name": "老吴派遣",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 17909,
+          "sha256": "38500ed04d5a2541e9de75951627ddd3204488245d1d338112fad40a816b5623"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1471,
+          "sha256": "aed3e69262739d914ec1ca2a1dce4631687df1878dd98cc41ebff18eccda4925"
         }
       }
     },
