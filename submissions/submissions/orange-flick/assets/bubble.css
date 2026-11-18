@@ -1,0 +1,41 @@
+/* Compact left corners, rounded right corners, and one centered short stroke. */
+.bubble {
+  --mark: #ad673d;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: fit-content;
+  min-width: 0;
+  max-width: min(637px, calc(100% - 3px));
+  margin: 3px 0 5px;
+  padding: 7px 19px 7px 11px;
+  border: 1px solid #dfa16f;
+  border-right-width: 2px;
+  border-bottom: 3px solid #f1a5c5;
+  border-radius: 7px 20px 20px 7px;
+  background: #fff0da;
+  color: #733e23;
+  box-shadow: 2px 3px 0 #f1a5c5;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.bubble::after {
+  content: '';
+  position: absolute;
+  top: calc(50% + 1px);
+  inset-inline-end: 0;
+  width: 9px;
+  height: 1.3px;
+  transform: translateY(-50%);
+  border-radius: 2px 0 0 2px;
+  background: var(--mark);
+}
+[data-theme="dark"] .bubble {
+  --mark: #eaa879;
+  border-color: #bd805e;
+  border-bottom-color: #cb6b93;
+  background: #553121;
+  color: #ffeddb;
+  box-shadow: 2px 3px 0 #cb6b93;
+}
