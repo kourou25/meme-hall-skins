@@ -14,7 +14,11 @@
   min-height: 20px;
   height: auto;
   max-width: 100%;
-  padding: 2px 12px 2px 22px;
+  flex: none;
+  min-inline-size: max-content;
+  padding-block: 2px;
+  /* Reserve space for the stamp and perforation even inside chat headers. */
+  padding-inline: 22px 12px !important;
   border: 1px solid var(--edge);
   border-radius: 5px;
   background: linear-gradient(180deg, var(--ticket), var(--ticket-low));
