@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 13,
-  "source": "01dee30a386525953352329ac358e88b96549f0d",
+  "revision": 14,
+  "source": "600d06556e8e396e9d96073f1f63fdc5a82c4f57",
   "entries": [
     {
       "schemaVersion": 1,
@@ -35,6 +35,29 @@
           "type": "text/css",
           "bytes": 2719,
           "sha256": "977ee520dea47fd0a67265969bab90672f210a840feb3b15641b96b9bd81fca2"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laoda-purple",
+      "name": "牢大牢大",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡取自投稿人有权使用、修改及再发布的参考图，已抠图、镜像并制作适配切片；称号为原创 CSS。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 15269,
+          "sha256": "577da4e91d9738e86786c8406c07dfe88cbdcb44e63311042b7e77026da3a0d8"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1774,
+          "sha256": "8af57fbe47154b322d365f9bfe185ac8bb4a6b89007c5dd2ad534b52f2c01cc8"
         }
       }
     },
