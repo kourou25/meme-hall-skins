@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 5,
-  "source": "7e408067ed97f2cadefc5fb5e174e9db33dc02eb",
+  "revision": 6,
+  "source": "1cecd0c5e2eaed24f23164d98b802093ad362dd7",
   "entries": [
     {
       "schemaVersion": 1,
@@ -64,6 +64,75 @@
           "type": "text/css",
           "bytes": 7939,
           "sha256": "8308f50c2f974c616763cf22dbee4a14de2f9927bdd7d402b74ae26faeaa662b"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laowu-dispatch-black",
+      "name": "老吴派遣",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 12104,
+          "sha256": "124cbd46081146004ff36715429e5b03dab38fad884fe3f04ee525755d96316c"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1491,
+          "sha256": "8cd9a254d97135f971c3ea3ec057ff5daf413d3a3f6f3f02b6dd358f131604b3"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laowu-dispatch-gray",
+      "name": "老吴派遣",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 31033,
+          "sha256": "5b91b24896290ea874a69f57535b737a704e3d47ec0920fa06c9c729efad69a9"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1463,
+          "sha256": "8598f77b56ad49ce8023f3c7b91d739691faebc6ffc8a917c9a39e9e27c3f488"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laowu-dispatch-siamese",
+      "name": "老吴派遣",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 21289,
+          "sha256": "832ed7919d46f2c984116cd0125284db50246b525a01560addb9b9541c168429"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1337,
+          "sha256": "2f5b6dbdbf7d14d7e7db3b12ca8957b8990a56e66fd7643d23b5ff4890bf6a62"
         }
       }
     },
