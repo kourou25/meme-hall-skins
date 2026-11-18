@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
-  "source": "66430a407e561188a1c56765907834d928eb6b02",
+  "revision": 3,
+  "source": "cd64fd6ca51046d214593a14c1ad240ae9c45632",
   "entries": [
     {
       "schemaVersion": 1,
@@ -35,6 +35,41 @@
           "type": "text/css",
           "bytes": 2719,
           "sha256": "977ee520dea47fd0a67265969bab90672f210a840feb3b15641b96b9bd81fca2"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "orange-flick",
+      "name": "谷恒条野",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "原创矢量轮廓及 CSS 配色，不含参考截图或现成站内素材；投稿前请核对并填写授权说明。",
+      "permission": true,
+      "components": {
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 7939,
+          "sha256": "8308f50c2f974c616763cf22dbee4a14de2f9927bdd7d402b74ae26faeaa662b"
+        },
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 989,
+          "sha256": "382c275581545f1a02f6a607f4383a77f908f28f5da89ea0c62aa751deec9ae6"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 781,
+          "sha256": "9f191b7cb02af0ff36f2c76cf92a6b94bbf1f7a14db4adf5e62627412830a2a2"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 482,
+          "sha256": "0a28c9e1259604c58ee9dd7b6c88ddafda6bbbed50014f7db908bc05d762f8f6"
         }
       }
     }
