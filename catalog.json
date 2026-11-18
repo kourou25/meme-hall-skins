@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 10,
-  "source": "94fb8ab0bdb06212b28664ea9fc62bd2e3a55808",
+  "revision": 11,
+  "source": "5779e3b5c766928ede888924a8fa51d920c22239",
   "entries": [
     {
       "schemaVersion": 1,
@@ -191,6 +191,29 @@
           "type": "text/css",
           "bytes": 482,
           "sha256": "0a28c9e1259604c58ee9dd7b6c88ddafda6bbbed50014f7db908bc05d762f8f6"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "round-maodie",
+      "name": "圆头耄耋",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡取自投稿人有权使用、修改及再发布的参考图，已抠图、镜像并制作适配切片；称号为原创 CSS。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 18329,
+          "sha256": "9f8ae826293199307224daafce9e5d8d25c92a61777366eb6812ba460950dbd4"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1810,
+          "sha256": "52994e13542a3a4767edf93934919096e95e2ca441d86cf9aeac8d8a8aaf2080"
         }
       }
     }
