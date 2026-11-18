@@ -1,0 +1,19 @@
+/* Same paper, ink, edge and pink accent as the chat bubble. Style only the frame. */
+.reply {
+  --paper: #fff0da;
+  --ink: #733e23;
+  --edge: #dfa16f;
+  --accent: #f1a5c5;
+  box-sizing: border-box;
+  background-color: var(--paper) !important;
+  color: var(--ink);
+  border: 1px solid var(--edge);
+  border-radius: 8px 17px 17px 8px;
+  box-shadow: 0 3px 0 var(--accent);
+}
+[data-theme="dark"] .reply {
+  --paper: #553121;
+  --ink: #ffeddb;
+  --edge: #bd805e;
+  --accent: #cb6b93;
+}
