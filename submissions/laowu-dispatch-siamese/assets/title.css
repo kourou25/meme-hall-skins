@@ -1,0 +1,51 @@
+/* Warm porcelain with a blue-glass diamond from the Siamese cat's eyes. */
+:scope {
+  --porcelain: #fcf2df;
+  --blue: #d7e9f0;
+  --edge: #86a4b3;
+  --ink: #354856;
+  --gem: #46768b;
+  --glint: #bdeeff;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex: none;
+  min-inline-size: max-content;
+  min-height: 22px;
+  padding: 2px 8px;
+  padding-inline: 22px 10px !important;
+  border: 1px solid var(--edge);
+  border-radius: 12px 4px 12px 4px;
+  background: linear-gradient(110deg, var(--blue), var(--porcelain) 68%);
+  color: var(--ink);
+  box-shadow: inset 0 1px #ffffffad, 0 1px 2px #32546230;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .075em;
+  line-height: 1.3;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+:scope::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 6px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+  transform: translateY(-50%) rotate(45deg);
+  border: 1px solid var(--gem);
+  border-radius: 2px;
+  background: radial-gradient(circle at 38% 30%, #fff 0 13%, var(--glint) 25%, var(--gem) 98%);
+}
+[data-theme="dark"] :scope {
+  --porcelain: #4c3b30;
+  --blue: #324c57;
+  --edge: #8eb6c8;
+  --ink: #fff0da;
+  --gem: #7dabbc;
+  --glint: #c5f0ff;
+  box-shadow: inset 0 1px #fff2df35, 0 1px 2px #19283080;
+}
