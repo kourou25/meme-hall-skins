@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 11,
-  "source": "5779e3b5c766928ede888924a8fa51d920c22239",
+  "revision": 12,
+  "source": "bf6ca165cdcb1baf15fe44a5f79467c628964c3d",
   "entries": [
     {
       "schemaVersion": 1,
@@ -156,6 +156,29 @@
           "type": "text/css",
           "bytes": 1471,
           "sha256": "aed3e69262739d914ec1ca2a1dce4631687df1878dd98cc41ebff18eccda4925"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "oiia-loaf",
+      "name": "oiia",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡取自投稿人有权使用、修改及再发布的参考图，已抠图、镜像并制作适配切片；称号为原创 CSS。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 6502,
+          "sha256": "784ee18be88851697cd36bee3e1687c60f7ecc360c742aa74bffd5362ebf6892"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1775,
+          "sha256": "1a0c4355046715dbc8adb807df228befb2da9c2b096e6011eb509659972f591e"
         }
       }
     },
