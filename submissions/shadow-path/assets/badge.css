@@ -1,0 +1,27 @@
+/* 影径徽章：压笠遮目水墨侠客（assets/badge.png）+ 轻柔呼吸光影 */
+:scope {
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 2px 5px rgba(16, 22, 26, 0.24));
+  animation: blade-aura 3.6s ease-in-out infinite;
+}
+
+[data-theme="dark"] :scope {
+  filter: drop-shadow(0 0 7px rgba(170, 210, 222, 0.30));
+}
+
+@keyframes blade-aura {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :scope {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "shadow-path",
+  "name": "影径",
+  "author": "超时空蚂蚁",
+  "github": "qwddkxs",
+  "license": "原创暗黑水墨冷刃风格画稿与受控 CSS（含 AI 辅助绘制与原创像素级抠图、九宫格切片及深色夜墨重绘，不含游戏原图或第三方版权素材），作者确认拥有使用与再发布权限。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.png",
+      "slice": [
+        42,
+        64,
+        44,
+        62
+      ],
+      "style": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.png",
+      "slice": [
+        16,
+        48,
+        16,
+        52
+      ],
+      "style": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.png",
+      "style": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.png",
+      "slice": [
+        18,
+        56,
+        18,
+        56
+      ],
+      "style": "assets/reply.css"
+    }
+  }
+}
