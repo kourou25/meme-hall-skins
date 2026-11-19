@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 19,
-  "source": "ab819898a4ceb4f5da8d4b74cf59890f1a29b65e",
+  "revision": 20,
+  "source": "d4d0855a58eb1e2fdc88fad1d0d99cd4de958a7b",
   "entries": [
     {
       "schemaVersion": 1,
@@ -297,6 +297,37 @@
           "type": "text/css",
           "bytes": 482,
           "sha256": "0a28c9e1259604c58ee9dd7b6c88ddafda6bbbed50014f7db908bc05d762f8f6"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "p3r-zero-hour-fool",
+      "name": "月行水上",
+      "author": "结城理",
+      "github": "professorzoom20",
+      "license": "气泡图集取自 P3R 官方宣传片，人物头部由 AI 补全，称号图标与铭牌为自制素材",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.webp",
+          "style": {
+            "file": "assets/bubble.css",
+            "type": "text/css",
+            "bytes": 8976,
+            "sha256": "8d96cc083f041556bc94fd2b0c10c24f006a5a0e8563f7767f7609fb41b7f3a9"
+          },
+          "type": "image/webp",
+          "width": 2016,
+          "height": 2025,
+          "bytes": 508358,
+          "sha256": "0a4fbf591d0059052bccc9baef213b050426ea90d02c154afe011e407e227245"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 16510,
+          "sha256": "2e93383775162eabae36eb97ba3791c26073379d67b215ffe56b0fcae2c00ec8"
         }
       }
     },
