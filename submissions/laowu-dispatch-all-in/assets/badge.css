@@ -1,0 +1,51 @@
+/* 9 original GIF poses, 4 motion inbetweens per pair, 1.8 s with wraparound. */
+:scope {box-sizing:border-box;flex:none;padding:0;border:0;border-radius:0;box-shadow:none;background-color:transparent;background-repeat:no-repeat;background-size:900% 500%;background-position:25% 50%;animation:tabby-hiss 1.8s steps(1,end) infinite;}
+@keyframes tabby-hiss {
+ 0.00000000% {background-position:0% 0%;}
+ 2.22222222% {background-position:12.5% 0%;}
+ 4.44444444% {background-position:25% 0%;}
+ 6.66666667% {background-position:37.5% 0%;}
+ 8.88888889% {background-position:50% 0%;}
+ 11.11111111% {background-position:62.5% 0%;}
+ 13.33333333% {background-position:75% 0%;}
+ 15.55555556% {background-position:87.5% 0%;}
+ 17.77777778% {background-position:100% 0%;}
+ 20.00000000% {background-position:0% 25%;}
+ 22.22222222% {background-position:12.5% 25%;}
+ 24.44444444% {background-position:25% 25%;}
+ 26.66666667% {background-position:37.5% 25%;}
+ 28.88888889% {background-position:50% 25%;}
+ 31.11111111% {background-position:62.5% 25%;}
+ 33.33333333% {background-position:75% 25%;}
+ 35.55555556% {background-position:87.5% 25%;}
+ 37.77777778% {background-position:100% 25%;}
+ 40.00000000% {background-position:0% 50%;}
+ 42.22222222% {background-position:12.5% 50%;}
+ 44.44444444% {background-position:25% 50%;}
+ 46.66666667% {background-position:37.5% 50%;}
+ 48.88888889% {background-position:50% 50%;}
+ 51.11111111% {background-position:62.5% 50%;}
+ 53.33333333% {background-position:75% 50%;}
+ 55.55555556% {background-position:87.5% 50%;}
+ 57.77777778% {background-position:100% 50%;}
+ 60.00000000% {background-position:0% 75%;}
+ 62.22222222% {background-position:12.5% 75%;}
+ 64.44444444% {background-position:25% 75%;}
+ 66.66666667% {background-position:37.5% 75%;}
+ 68.88888889% {background-position:50% 75%;}
+ 71.11111111% {background-position:62.5% 75%;}
+ 73.33333333% {background-position:75% 75%;}
+ 75.55555556% {background-position:87.5% 75%;}
+ 77.77777778% {background-position:100% 75%;}
+ 80.00000000% {background-position:0% 100%;}
+ 82.22222222% {background-position:12.5% 100%;}
+ 84.44444444% {background-position:25% 100%;}
+ 86.66666667% {background-position:37.5% 100%;}
+ 88.88888889% {background-position:50% 100%;}
+ 91.11111111% {background-position:62.5% 100%;}
+ 93.33333333% {background-position:75% 100%;}
+ 95.55555556% {background-position:87.5% 100%;}
+ 97.77777778% {background-position:100% 100%;}
+ 100% {background-position:0% 0%;}
+}
+@media (prefers-reduced-motion: reduce) { :scope { animation:none; background-position:25% 50%; } }
