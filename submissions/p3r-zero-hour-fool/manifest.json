@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "p3r-zero-hour-fool",
+  "name": "月行水上",
+  "author": "结城理",
+  "github": "professorzoom20",
+  "license": "气泡图集取自 P3R 官方宣传片，人物头部由 AI 补全，称号图标与铭牌为自制素材",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.webp",
+      "style": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    }
+  }
+}
