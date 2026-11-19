@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 15,
-  "source": "725af2e97ac35ec6865d6a712b2abae9144b634e",
+  "revision": 16,
+  "source": "489c7dcbba6d064823833aa26fa1ab1f0ca188da",
   "entries": [
     {
       "schemaVersion": 1,
@@ -96,7 +96,7 @@
       "name": "老吴派遣·all in",
       "author": "Earthcat",
       "github": "earthrelig",
-      "license": "六款气泡复用投稿人有权使用、修改及再发布的老吴派遣系列素材，重新适配大小和切片。集合称号为原创 CSS。",
+      "license": "六款气泡复用投稿人有权使用、修改及再发布的老吴派遣系列素材，重新适配大小和切片。集合称号为原创 CSS。徽章使用投稿人有权使用、修改及再发布的哈气橘猫 GIF，逐帧抠图并按原动作补帧。",
       "permission": true,
       "components": {
         "bubble": {
@@ -110,6 +110,20 @@
           "type": "text/css",
           "bytes": 2741,
           "sha256": "12667bafacb0d837d7a43b50cfbcc9b296b326221b05b1da6078100e553d2067"
+        },
+        "badge": {
+          "file": "assets/badge.webp",
+          "style": {
+            "file": "assets/badge.css",
+            "type": "text/css",
+            "bytes": 2605,
+            "sha256": "94246d3faec40ef12c0149002c8399d03334719b91f739e3c7b7b24288f1e83c"
+          },
+          "type": "image/webp",
+          "width": 1080,
+          "height": 600,
+          "bytes": 270046,
+          "sha256": "19b1612f344bacb77ff295e1015b806caf76b8c71d573f4d6ab572e20b3ede2d"
         }
       }
     },
