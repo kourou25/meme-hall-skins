@@ -4,7 +4,7 @@
   "name": "老吴派遣·all in",
   "author": "Earthcat",
   "github": "EarthRelig",
-  "license": "六款气泡复用投稿人有权使用、修改及再发布的老吴派遣系列素材，重新适配大小和切片。集合称号为原创 CSS。",
+  "license": "六款气泡复用投稿人有权使用、修改及再发布的老吴派遣系列素材，重新适配大小和切片。集合称号为原创 CSS。徽章使用投稿人有权使用、修改及再发布的哈气橘猫 GIF，逐帧抠图并按原动作补帧。",
   "permission": true,
   "components": {
     "bubble": {
@@ -12,6 +12,10 @@
     },
     "title": {
       "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.webp",
+      "style": "assets/badge.css"
     }
   }
 }
