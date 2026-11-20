@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 21,
-  "source": "1808505a1436cfb7e6be6e93bac240430dbc8a65",
+  "revision": 22,
+  "source": "ad7a2296d59a7df431cf7be2447ef578b5020550",
   "entries": [
     {
       "schemaVersion": 1,
@@ -351,6 +351,91 @@
           "type": "text/css",
           "bytes": 1810,
           "sha256": "52994e13542a3a4767edf93934919096e95e2ca441d86cf9aeac8d8a8aaf2080"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "shadow-dao",
+      "name": "影道",
+      "author": "超时空蚂蚁",
+      "github": "qwddkxs",
+      "license": "原创暗黑金墨武侠风格画稿与受控 CSS（含 AI 辅助绘制及原创像素级抠图、九宫格切片与深色玄墨鎏金重绘，不含游戏原图或第三方版权素材），作者确认拥有使用与再发布权限。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.png",
+          "slice": [
+            42,
+            60,
+            48,
+            64
+          ],
+          "style": {
+            "file": "assets/bubble.css",
+            "type": "text/css",
+            "bytes": 16275,
+            "sha256": "4109795dce89347e35af08858127b876d4ddfc2a73560d1175a4c222b9e6f6f1"
+          },
+          "type": "image/png",
+          "width": 240,
+          "height": 124,
+          "bytes": 32962,
+          "sha256": "c27d25f5af2a532894b64d7b3b067d761039e5f8a7d8b1f9bde1cc08af97e564"
+        },
+        "title": {
+          "file": "assets/title.png",
+          "slice": [
+            16,
+            44,
+            18,
+            52
+          ],
+          "style": {
+            "file": "assets/title.css",
+            "type": "text/css",
+            "bytes": 8190,
+            "sha256": "5922d5865c0ad8231ad6300feecfda1d27c41bf99dc9bbd808e21d0cdfeba253"
+          },
+          "type": "image/png",
+          "width": 200,
+          "height": 48,
+          "bytes": 11448,
+          "sha256": "43d02ac97cee40ff1a6d5ab4b65deb45e9821122d84434dde2d3b1e91c18de3e"
+        },
+        "badge": {
+          "file": "assets/badge.png",
+          "style": {
+            "file": "assets/badge.css",
+            "type": "text/css",
+            "bytes": 620,
+            "sha256": "301c922e3cd6fdc25d792f7a52ed4bdec4bf3abc5ef966a336cdb632cfb7da97"
+          },
+          "type": "image/png",
+          "width": 256,
+          "height": 256,
+          "bytes": 103490,
+          "sha256": "035488c68252c293478618fae559040afa733ee1373333bd548a3da1a6143a88"
+        },
+        "reply": {
+          "file": "assets/reply.png",
+          "slice": [
+            18,
+            50,
+            20,
+            56
+          ],
+          "style": {
+            "file": "assets/reply.css",
+            "type": "text/css",
+            "bytes": 10045,
+            "sha256": "18f7ad0c5bd6189267927b5b8ccfe63951f5311ce81d4077af57ea69f5757a9c"
+          },
+          "type": "image/png",
+          "width": 240,
+          "height": 56,
+          "bytes": 15815,
+          "sha256": "3c8a4a9d85b7386530c543b9e16b73435257fcb42fc9168a373115fa53afbceb"
         }
       }
     },
