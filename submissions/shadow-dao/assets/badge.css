@@ -1,0 +1,27 @@
+/* 影道徽章：高马尾金冠竖剑遮半面水墨剑客（assets/badge.png）+ 轻柔流金呼吸 */
+:scope {
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 2px 5px rgba(18, 16, 12, 0.24));
+  animation: dao-aura 3.6s ease-in-out infinite;
+}
+
+[data-theme="dark"] :scope {
+  filter: drop-shadow(0 0 7px rgba(214, 174, 96, 0.34));
+}
+
+@keyframes dao-aura {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :scope {
+    animation: none !important;
+  }
+}

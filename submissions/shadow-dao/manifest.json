@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "shadow-dao",
+  "name": "影道",
+  "author": "超时空蚂蚁",
+  "github": "qwddkxs",
+  "license": "原创暗黑金墨武侠风格画稿与受控 CSS（含 AI 辅助绘制及原创像素级抠图、九宫格切片与深色玄墨鎏金重绘，不含游戏原图或第三方版权素材），作者确认拥有使用与再发布权限。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.png",
+      "slice": [
+        42,
+        60,
+        48,
+        64
+      ],
+      "style": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.png",
+      "slice": [
+        16,
+        44,
+        18,
+        52
+      ],
+      "style": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.png",
+      "style": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.png",
+      "slice": [
+        18,
+        50,
+        20,
+        56
+      ],
+      "style": "assets/reply.css"
+    }
+  }
+}
