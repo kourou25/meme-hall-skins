@@ -1,0 +1,20 @@
+:scope {
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  flex:none;box-sizing:border-box;inline-size:max-content;min-inline-size:max-content;min-height:23px;
+  padding:2px 14px 2px 24px !important;
+  border:1px solid #46204f;border-radius:7px 12px 9px 10px;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2214%22%20viewBox%3D%220%200%2016%2014%22%3E%0A%20%20%3Cpath%20d%3D%22M1%207Q4%202.4%208%202.4Q12%202.4%2015%207Q12%2011.6%208%2011.6Q4%2011.6%201%207Z%22%20fill%3D%22%23ffdb70%22%20stroke%3D%22%2330163a%22%20stroke-width%3D%221.1%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M8%203.6Q10.5%207.2%207.8%2010.5Q5.8%206.9%208%203.6Z%22%20fill%3D%22%232a1830%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%229.3%22%20cy%3D%225.3%22%20r%3D%22.9%22%20fill%3D%22%23fff7d7%22%2F%3E%0A%3C%2Fsvg%3E") left 4px center/15px 13px no-repeat, linear-gradient(150deg,#a84bc1,#702786 62%,#522263);
+  box-shadow:inset 0 1px #eaa8f277,inset 0 -1px #361342;
+  font-size:0 !important;letter-spacing:0 !important;color:transparent !important;text-shadow:none;
+  white-space:nowrap;vertical-align:middle;
+}
+:scope::before {
+  content:"";position:absolute;top:calc(50% - 2px);right:5px;width:3px;height:3px;
+  border-radius:50%;background:#ffdb70;box-shadow:-1px 3px 0 -1px #f4b8f1;
+}
+:scope::after {
+  content:"肽克lili";display:block;white-space:nowrap;
+  font:750 12px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:.065em;
+  color:#fff4fe;text-shadow:0 1px #45104f;
+}
+[data-theme="dark"] :scope {border-color:#b570c6;}

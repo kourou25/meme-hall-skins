@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "taike-lili",
+  "name": "肽克lili",
+  "author": "Earthcat",
+  "github": "EarthRelig",
+  "license": "气泡按投稿人有权使用、修改及再发布的参考图矢量重绘；称号和独眼触手徽章为自制。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
+    }
+  }
+}
