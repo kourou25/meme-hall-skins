@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 26,
-  "source": "bc58d9f45858db5045c6baed71a42869a384c5a6",
+  "revision": 27,
+  "source": "a294374246954dc96ab26c5a3c67d2d1535a02a2",
   "entries": [
     {
       "schemaVersion": 1,
@@ -228,23 +228,29 @@
     {
       "schemaVersion": 1,
       "id": "laowu-dispatch-white",
-      "name": "老吴派遣·白",
+      "name": "整点薯条",
       "author": "Earthcat",
       "github": "earthrelig",
-      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "license": "气泡素材为经授权的参考图，已镜像、去字、抠图并适配伸缩；薯条徽章与称号为自制。",
       "permission": true,
       "components": {
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 17909,
-          "sha256": "38500ed04d5a2541e9de75951627ddd3204488245d1d338112fad40a816b5623"
+          "bytes": 20417,
+          "sha256": "ae1d64e1a3d81a4101a8c6e33969ebf1db3dfac4f4c182b28908b5df4d60c617"
         },
         "title": {
           "file": "assets/title.css",
           "type": "text/css",
-          "bytes": 1471,
-          "sha256": "aed3e69262739d914ec1ca2a1dce4631687df1878dd98cc41ebff18eccda4925"
+          "bytes": 1619,
+          "sha256": "a2b9d6c54240e9e60c24cf21db215ff96428b7a45fde185ea7aea136ec1cc701"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 3241,
+          "sha256": "b4fa89efd4d7ee5b295ed69149b418c4223d90a14bc2a554f98915bf52dfe5f8"
         }
       }
     },
