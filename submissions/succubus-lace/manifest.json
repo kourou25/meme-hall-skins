@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "succubus-lace",
+  "name": "绯夜魅魔",
+  "author": "DracaeneSunbringer",
+  "github": "DracaeneSunbringer",
+  "license": "原创暗夜魅魔活体蝠翼气泡、契约颈环称号与微醺爱心瞳徽章四件套，确认拥有完整使用与再发布权限",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.webp",
+      "style": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    }
+  }
+}
