@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "laowu-dispatch-gray",
-  "name": "老吴派遣·灰",
+  "name": "虫棍飞天虾",
   "author": "Earthcat",
   "github": "EarthRelig",
-  "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+  "license": "投稿人有权使用、修改和再发布所提供的参考图。气泡按参考图重新描绘、镜像并去掉示例文字；虫图标与虫棍为参考图的矢量重绘，称号和三灯徽章为自制样式。",
   "permission": true,
   "components": {
     "bubble": {
@@ -12,6 +12,9 @@
     },
     "title": {
       "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
     }
   }
 }
