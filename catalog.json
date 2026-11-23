@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 24,
-  "source": "f33c344678a7dfb3c47dddcef3a1de042e818d93",
+  "revision": 25,
+  "source": "5e1e3ec22f2d651a3981b9628022faf2392750ef",
   "entries": [
     {
       "schemaVersion": 1,
@@ -176,23 +176,29 @@
     {
       "schemaVersion": 1,
       "id": "laowu-dispatch-gray",
-      "name": "老吴派遣·灰",
+      "name": "虫棍飞天虾",
       "author": "Earthcat",
       "github": "earthrelig",
-      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "license": "投稿人有权使用、修改和再发布所提供的参考图。气泡按参考图重新描绘、镜像并去掉示例文字；虫图标与虫棍为参考图的矢量重绘，称号和三灯徽章为自制样式。",
       "permission": true,
       "components": {
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 13755,
-          "sha256": "32ca8af9fd0dbe6576e4e3df7fbf38ffb1621abf9a6f28facf9763497a62d02c"
+          "bytes": 6413,
+          "sha256": "85893b9737a342ae448bb9f26c9909204359b53d1817bf37d828da26c90a63c0"
         },
         "title": {
           "file": "assets/title.css",
           "type": "text/css",
-          "bytes": 1463,
-          "sha256": "8598f77b56ad49ce8023f3c7b91d739691faebc6ffc8a917c9a39e9e27c3f488"
+          "bytes": 1653,
+          "sha256": "9d4c2d089f5f0b7fd4a4692bbcf29222e1abff129b14f8ce41b3b5a9cec6f38b"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 1194,
+          "sha256": "f217d3c8463c884e369b24ce89688e5c87505fe2fb28a065cf912c2862edebd1"
         }
       }
     },
