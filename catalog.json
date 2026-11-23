@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 25,
-  "source": "5e1e3ec22f2d651a3981b9628022faf2392750ef",
+  "revision": 26,
+  "source": "bc58d9f45858db5045c6baed71a42869a384c5a6",
   "entries": [
     {
       "schemaVersion": 1,
@@ -556,6 +556,35 @@
           "type": "text/css",
           "bytes": 2424,
           "sha256": "64ad2adec4fb473dc109ba170059f4341487290354f45511ae2f2aecc30d8b22"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "taike-lili",
+      "name": "肽克lili",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡按投稿人有权使用、修改及再发布的参考图矢量重绘；称号和独眼触手徽章为自制。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 9139,
+          "sha256": "c113ea82200100122a5d3b38aeba21c1a61582f787f9291e174c5a2b0e367b22"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1613,
+          "sha256": "f66ff4b08b49320c3027cd98b4be0beb24db90fd3b6623c69918498a90621774"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 3809,
+          "sha256": "b9ec4f1f3aba6b619d1412c2c58b44137e9442eb3ada73510ff6e7d973fcbefb"
         }
       }
     },
