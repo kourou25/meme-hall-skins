@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "laowu-dispatch-white",
-  "name": "老吴派遣·白",
+  "name": "整点薯条",
   "author": "Earthcat",
   "github": "EarthRelig",
-  "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+  "license": "气泡素材为经授权的参考图，已镜像、去字、抠图并适配伸缩；薯条徽章与称号为自制。",
   "permission": true,
   "components": {
     "bubble": {
@@ -12,6 +12,9 @@
     },
     "title": {
       "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
     }
   }
 }
