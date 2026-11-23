@@ -1,51 +1,11 @@
-/* A monochrome field label; the left tab carries a tiny paw print. */
 :scope {
-  --paper: #fffefa;
-  --shade: #e5e6eb;
-  --ink: #292b34;
-  --edge: #626574;
-  --tab: #363743;
-  --mark: #fffefd;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  box-sizing: border-box;
-  flex: none;
-  min-inline-size: max-content;
-  min-height: 22px;
-  padding: 2px 8px;
-  padding-inline: 24px 9px !important;
-  border: 1px solid var(--edge);
-  border-radius: 4px;
-  background: linear-gradient(var(--paper), var(--shade));
-  color: var(--ink);
-  box-shadow: 2px 2px 0 #2426392f;
-  font-size: 11px;
-  font-weight: 750;
-  letter-spacing: .07em;
-  line-height: 1.3;
-  white-space: nowrap;
-  vertical-align: middle;
+   position:relative;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;
+   flex:none;box-sizing:border-box;inline-size:max-content;min-inline-size:max-content;min-height:22px;
+   padding:1px 12px 1px 18px !important;white-space:nowrap;
+   background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%203l1.5%201%202-1%201.5%201%202-1-.8%2010-2-1-1.5%201-1.5-1-1.5%201Z%22%20fill%3D%22%23ffbf4d%22%20stroke%3D%22%23925521%22%20stroke-width%3D%220.85%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M7%205v5m2-5v5%22%20fill%3D%22none%22%20stroke%3D%22%23ffeaa1%22%20stroke-width%3D%220.85%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") left 3px center/13px 13px no-repeat,repeating-linear-gradient(105deg,#ffe19a 0,#ffe19a 5px,#ffd477 6px,#ffe19a 9px);
+   box-shadow:inset 0 1px #fff7d1,inset 0 -2px #eab165;border:1px solid #a16c2d;border-radius:8px 3px 8px 3px;
+   font-size:0 !important;letter-spacing:0 !important;color:transparent !important;text-shadow:none;
 }
-:scope::before {
-  content: '';
-  position: absolute;
-  inset-inline-start: 0;
-  top: 0;
-  bottom: 0;
-  width: 18px;
-  background: radial-gradient(ellipse, var(--mark) 0 48%, transparent 58%) left 6px bottom 4px / 7px 6px no-repeat,
-    radial-gradient(ellipse, var(--mark) 0 48%, transparent 59%) left 3px bottom 9px / 5px 4px no-repeat,
-    radial-gradient(ellipse, var(--mark) 0 48%, transparent 59%) left 7px bottom 11px / 4px 4px no-repeat,
-    radial-gradient(ellipse, var(--mark) 0 48%, transparent 59%) left 10px bottom 9px / 5px 4px no-repeat,
-    var(--tab);
-}
-[data-theme="dark"] :scope {
-  --paper: #494951;
-  --shade: #383943;
-  --ink: #fbf9f3;
-  --edge: #a8a7b4;
-  --tab: #d6d7dd;
-  --mark: #353644;
-  box-shadow: 2px 2px 0 #17171caa;
-}
+:scope::after {content:"整点薯条";display:block;white-space:nowrap;color:#5f341a;font:750 12px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:.045em;}
+:scope::before {content:"";position:absolute;width:5px;height:4px;right:4px;background:#f1b658;border:1px solid #b67c3e;border-radius:1px;top:calc(50% - 2px);transform:rotate(-18deg);}
+[data-theme="dark"] :scope {border-color:#f7c66e;}
