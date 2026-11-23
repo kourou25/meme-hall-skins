@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 23,
-  "source": "6cdffda7205f4bc4ce2c0a45828bccfc38146a0c",
+  "revision": 24,
+  "source": "f33c344678a7dfb3c47dddcef3a1de042e818d93",
   "entries": [
     {
       "schemaVersion": 1,
@@ -521,6 +521,35 @@
           "height": 56,
           "bytes": 15391,
           "sha256": "692bfbc3d734200791fd4e66a12c1c0e349e6a4446826d81c06fdbca9a36072b"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "step-by-step-bird",
+      "name": "一步一步走鸟",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡使用投稿人有权使用、修改和再发布的参考图，进行镜像、去字及透明化；称号和徽章为据此设计的原创样式。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 11621,
+          "sha256": "1b0068d3ad032a89033eb10ee7a047e6c1d455c51cecfe27e478fd383478be96"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 2064,
+          "sha256": "e54236482a889d0e2397bdba4de33ea7e6516ace48b2346817e568cf2ebb3c8e"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 2424,
+          "sha256": "64ad2adec4fb473dc109ba170059f4341487290354f45511ae2f2aecc30d8b22"
         }
       }
     },
