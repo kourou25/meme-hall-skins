@@ -1,52 +1,21 @@
-/* Fog-silver crest, with the gray cat's acid-green eyes. */
 :scope {
-  --face: #e7e7ec;
-  --shade: #c6c7d1;
-  --edge: #858597;
-  --ink: #2d2739;
-  --crest: #4d435c;
-  --eyes: #d4ea83;
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  box-sizing: border-box;
-  min-inline-size: max-content;
-  min-height: 22px;
-  flex: none;
-  padding: 2px 9px;
-  padding-inline: 23px 10px !important;
-  border: 1px solid var(--edge);
-  border-radius: 5px 9px 5px 5px;
-  background: linear-gradient(160deg, var(--face), var(--shade));
-  color: var(--ink);
-  box-shadow: inset 0 1px #ffffff9c, 0 1px 2px #28203228;
-  font-size: 11px;
-  font-weight: 750;
-  letter-spacing: .07em;
-  line-height: 1.3;
-  white-space: nowrap;
-  vertical-align: middle;
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  flex:none;box-sizing:border-box;inline-size:max-content;min-inline-size:max-content;min-height:23px;
+  padding:2px 21px 2px 14px !important;
+  border:1.5px solid #633519;border-radius:10px 11px 8px 10px;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2215%22%20viewBox%3D%220%200%2016%2015%22%3E%3Cpath%20d%3D%22M2%2012L8%206%22%20stroke%3D%22%23542c18%22%20stroke-width%3D%223.1%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M3%2011L8%206%22%20stroke%3D%22%23a8a9a2%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M8%207Q12%204%2012%201Q15%205%2011%209Z%22%20fill%3D%22%23fffaf0%22%20stroke%3D%22%23623521%22%20stroke-width%3D%221.35%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center right 3px/14px 13px no-repeat,
+    linear-gradient(170deg,#ffdc9c,#ffc170 68%,#ffac5b);
+  box-shadow:inset 0 1px #fff0cb,inset 0 -2px #e59248;
+  font-size:0 !important;letter-spacing:0 !important;color:transparent !important;text-shadow:none;
+  white-space:nowrap;vertical-align:middle;
 }
 :scope::before {
-  content: '';
-  position: absolute;
-  inset-inline-start: 4px;
-  top: 50%;
-  width: 15px;
-  height: 14px;
-  transform: translateY(-50%);
-  border-radius: 3px;
-  clip-path: polygon(0 44%, 18% 16%, 31% 33%, 48% 0, 66% 28%, 83% 11%, 100% 47%, 91% 87%, 52% 100%, 10% 86%);
-  background: radial-gradient(ellipse, var(--eyes) 0 55%, transparent 67%) 2px 6px / 5px 4px no-repeat,
-    radial-gradient(ellipse, var(--eyes) 0 55%, transparent 67%) 8px 6px / 5px 4px no-repeat,
-    var(--crest);
+  content:"";position:absolute;inset-inline-start:5px;top:calc(50% - 2px);
+  width:4px;height:4px;border-radius:50%;background:#bb5a25;box-shadow:-1px 3px 0 -1px #f48e3d;
 }
-[data-theme="dark"] :scope {
-  --face: #4d485a;
-  --shade: #353141;
-  --edge: #9388a8;
-  --ink: #f3edf8;
-  --crest: #23202c;
-  --eyes: #dbea9b;
-  box-shadow: inset 0 1px #fff3ff27, 0 1px 2px #14101880;
+:scope::after {
+  content:"虫棍飞天虾";display:block;white-space:nowrap;
+  font:750 12px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:.055em;
+  color:#492410;text-shadow:0 1px #ffefd1;
 }
+[data-theme="dark"] :scope {border-color:#ffc082;}
