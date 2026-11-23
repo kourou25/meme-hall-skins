@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 29,
-  "source": "594be5a2d6b46502856df6358431fc4d953c2f36",
+  "revision": 30,
+  "source": "9e57870bfa0c43eda2231d0f4808777859d70fb8",
   "entries": [
     {
       "schemaVersion": 1,
@@ -562,6 +562,49 @@
           "type": "text/css",
           "bytes": 2424,
           "sha256": "64ad2adec4fb473dc109ba170059f4341487290354f45511ae2f2aecc30d8b22"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "succubus-lace",
+      "name": "绯夜魅魔",
+      "author": "DracaeneSunbringer",
+      "github": "dracaenesunbringer",
+      "license": "原创暗夜魅魔活体蝠翼气泡、契约颈环称号与微醺爱心瞳徽章四件套，确认拥有完整使用与再发布权限",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 28245,
+          "sha256": "94aee08d840f68a591057ac5795db5544b4dcf329e4ff1fc3295dc22accece25"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 24983,
+          "sha256": "c4a4c731ece36e07008f62362314edae01b5a0b49f243b4b2ba5b0beb8793643"
+        },
+        "badge": {
+          "file": "assets/badge.webp",
+          "style": {
+            "file": "assets/badge.css",
+            "type": "text/css",
+            "bytes": 15412,
+            "sha256": "2629d87c959d41181f8c85e92fccb677ca2746185a35b5a8ee425eaf1f4b8bb2"
+          },
+          "type": "image/webp",
+          "width": 128,
+          "height": 128,
+          "bytes": 9742,
+          "sha256": "ec7af8d611fa8d7ceabd9b693b650fc0a815979d426e836bdf45e4be76b1732f"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 23663,
+          "sha256": "bd75d8f2526b2c200e753f05a517ef0d0b6cea446cb8e2edb25a32561f7a24fd"
         }
       }
     },
