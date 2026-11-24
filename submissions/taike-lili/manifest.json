@@ -15,6 +15,9 @@
     },
     "badge": {
       "file": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
     }
   }
 }
