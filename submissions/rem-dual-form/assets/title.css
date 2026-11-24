@@ -36,7 +36,8 @@
   align-items: center;
   box-sizing: border-box;
   min-block-size: 1.68rem;
-  padding: .12rem .58rem .12rem 1.77rem;
+  padding: .12rem .58rem;
+  padding-inline-start: 1.77rem !important;
   border: 1px solid var(--edge);
   border-radius: .68rem;
   color: color-mix(in srgb, var(--ink), var(--ink-peak) calc(var(--pulse) * 100%));
