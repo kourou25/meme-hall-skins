@@ -1,8 +1,43 @@
 {
   "schemaVersion": 1,
-  "revision": 31,
-  "source": "e0d922894b02c3e5381af70eff6e421454081f80",
+  "revision": 32,
+  "source": "dac0a311bd721e51e91246ba0213c8eeb858b0a9",
   "entries": [
+    {
+      "schemaVersion": 1,
+      "id": "gushen-yinpa",
+      "name": "古神银趴",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "气泡与回应框根据投稿人有权使用、修改和再发布的参考图制作；四角动效基于气泡静态描摹，称号和徽章为本套装制作。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 31937,
+          "sha256": "44842f9a84ccfa72eef2eceb8d14c5671d5244961afedd66104e56a224855f56"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 3688,
+          "sha256": "6a7a2bb0ff0a2956b641fd98de0a65759c7e61de57d54d692a86f7857fcbf06a"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 1506,
+          "sha256": "599048ca7b1d8131a35c1cee19e3efacd37c93c29ed3e53e729bc8fa9bd7e91b"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 15736,
+          "sha256": "89e0b9ca54c2ec94ef0ed8250a417624657e703b8cc73bd731eb7efaee8bc638"
+        }
+      }
+    },
     {
       "schemaVersion": 1,
       "id": "lanting-ink",
