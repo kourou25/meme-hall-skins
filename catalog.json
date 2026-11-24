@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 35,
-  "source": "69db5affff5076460554226bbb1eebdfab568dd7",
+  "revision": 36,
+  "source": "7b63f8b19e7d2e86c57ecbffec32269f5094dc1a",
   "entries": [
     {
       "schemaVersion": 1,
@@ -165,23 +165,35 @@
     {
       "schemaVersion": 1,
       "id": "laowu-dispatch-black",
-      "name": "老吴派遣·黑",
+      "name": "奶酪鼠王",
       "author": "Earthcat",
       "github": "earthrelig",
-      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "license": "气泡以投稿人有权使用、修改和公开再发布的参考图为基础，镜像重绘为矢量素材并制作动效；称号、徽章与回应框为据此设计的原创样式。",
       "permission": true,
       "components": {
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 12104,
-          "sha256": "124cbd46081146004ff36715429e5b03dab38fad884fe3f04ee525755d96316c"
+          "bytes": 14428,
+          "sha256": "0976ac4b25a15e410e37c3c85022bf50d068528a81a30e8d924ce7b2614e870d"
         },
         "title": {
           "file": "assets/title.css",
           "type": "text/css",
-          "bytes": 1491,
-          "sha256": "8cd9a254d97135f971c3ea3ec057ff5daf413d3a3f6f3f02b6dd358f131604b3"
+          "bytes": 2380,
+          "sha256": "c26412a5ab7388f20014ebeec4b73ded19703380b428645f97af8937af043117"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 2468,
+          "sha256": "02495e1c24e7fa1733bf4a8099f05eab7d20016f9f6e8905c8b34140d21f8ac7"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 4701,
+          "sha256": "85bb88df8d931f5a8e44724978da15b8ac1e4fc6f0b7f2381a93e05a1282551b"
         }
       }
     },
