@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 43,
-  "source": "ad922493ee6ad7262d2aecae331324f3eebbb4cd",
+  "revision": 44,
+  "source": "10877139ec9cb736e29c87004f8bebfd493ee7ad",
   "entries": [
     {
       "schemaVersion": 1,
@@ -714,22 +714,22 @@
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 28245,
-          "sha256": "94aee08d840f68a591057ac5795db5544b4dcf329e4ff1fc3295dc22accece25"
+          "bytes": 26443,
+          "sha256": "97d1fd6434f6f087337219493970134e9e85e1bfbd93939cbb991dbf60c30c65"
         },
         "title": {
           "file": "assets/title.css",
           "type": "text/css",
-          "bytes": 24983,
-          "sha256": "c4a4c731ece36e07008f62362314edae01b5a0b49f243b4b2ba5b0beb8793643"
+          "bytes": 24863,
+          "sha256": "4d932ed76311baefa8d440f2ae5eab9411051043a09263d17367369f67e6e0d0"
         },
         "badge": {
           "file": "assets/badge.webp",
           "style": {
             "file": "assets/badge.css",
             "type": "text/css",
-            "bytes": 15412,
-            "sha256": "2629d87c959d41181f8c85e92fccb677ca2746185a35b5a8ee425eaf1f4b8bb2"
+            "bytes": 15343,
+            "sha256": "062b751cec033c35bdcbc888041b3343fa34636cb957289a0dcef2759cbec472"
           },
           "type": "image/webp",
           "width": 128,
@@ -740,8 +740,8 @@
         "reply": {
           "file": "assets/reply.css",
           "type": "text/css",
-          "bytes": 23663,
-          "sha256": "bd75d8f2526b2c200e753f05a517ef0d0b6cea446cb8e2edb25a32561f7a24fd"
+          "bytes": 23566,
+          "sha256": "a67b986faac0925dc714032832815e0ba491aba93020bb973a3fb6323260ae48"
         }
       }
     },
