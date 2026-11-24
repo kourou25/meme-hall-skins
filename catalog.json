@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 38,
-  "source": "f7f23ad3ade90926d3275dda2efc586883572e8a",
+  "revision": 39,
+  "source": "11f849713333eda4be657dec6bac178a8f2ee87e",
   "entries": [
     {
       "schemaVersion": 1,
@@ -252,23 +252,29 @@
     {
       "schemaVersion": 1,
       "id": "laowu-dispatch-siamese",
-      "name": "老吴派遣·暹罗",
+      "name": "sup早苗",
       "author": "Earthcat",
       "github": "earthrelig",
-      "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+      "license": "气泡使用投稿人有权使用、修改和公开再发布的参考图，对人物和青蛙裁切透明化，并重制左尾与框体；称号、徽章为据此设计的原创图样。",
       "permission": true,
       "components": {
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 21289,
-          "sha256": "832ed7919d46f2c984116cd0125284db50246b525a01560addb9b9541c168429"
+          "bytes": 29200,
+          "sha256": "a397e6bb8c6b5d1cdc1b39157136edff9bcb01556f30beed37e65d695b2cf647"
         },
         "title": {
           "file": "assets/title.css",
           "type": "text/css",
-          "bytes": 1337,
-          "sha256": "2f5b6dbdbf7d14d7e7db3b12ca8957b8990a56e66fd7643d23b5ff4890bf6a62"
+          "bytes": 1611,
+          "sha256": "413d033bef1ac62f44d0e5230154cfec72193a87d7345b585a3402a3192c1fc9"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 961,
+          "sha256": "539b83f39c5c714e8a2b8307588dbf3d023362e7dddd3cc8e086894c6f96774c"
         }
       }
     },
