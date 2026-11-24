@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 33,
-  "source": "985bc38a34d3f7c06736ee7b741fadd1455a05dd",
+  "revision": 34,
+  "source": "555f6ca420d74ee6057ca86009be1c2a37be6210",
   "entries": [
     {
       "schemaVersion": 1,
@@ -381,6 +381,29 @@
           "type": "text/css",
           "bytes": 16510,
           "sha256": "2e93383775162eabae36eb97ba3791c26073379d67b215ffe56b0fcae2c00ec8"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rem-dual-form",
+      "name": "蕾姆·昼夜誓约",
+      "author": "shx126",
+      "github": "shx126",
+      "license": "两张插画由生成工具绘制，角色源自《Re:从零开始的异世界生活》。投稿人确认拥有素材使用和再发布权限。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 29188,
+          "sha256": "59c871e9cb7117b8460fa7fe79bb6b52306165575278be8c36d4409d852d61ff"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 11662,
+          "sha256": "e2f7bb4b0b106982cf1d8ecaa28fe469d19fd79fc4522e821624e06b3b5eb2fb"
         }
       }
     },
