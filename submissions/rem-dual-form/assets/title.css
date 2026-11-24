@@ -52,7 +52,7 @@
   box-shadow: inset 0 0 0 1px var(--light), inset 0 0 .38rem var(--glow-wash), 0 1px 5px var(--halo);
   line-height: 1.2;
   font-weight: 700;
-  animation: day-night 360s ease-in-out infinite;
+  animation: day-night 360s ease-in-out -175s infinite;
 }
 
 :scope::before,
