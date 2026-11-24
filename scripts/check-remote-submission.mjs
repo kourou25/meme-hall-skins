@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url'
 import {readSubmission} from './community-catalog.mjs'
 import {checkManifest} from './community-format.mjs'
 
-const pathPattern=/^submissions\/([a-z0-9][a-z0-9-]{2,47})\/(manifest\.json|assets\/(?:bubble|title|badge|reply)\.(?:png|jpg|webp|css))$/
+const pathPattern=/^submissions\/([a-z0-9][a-z0-9-]{2,47})\/(manifest\.json|assets\/(?:bubble|title|badge|reply|frame)\.(?:png|jpg|webp|css))$/
 export function submissionId(files){
  if(!Array.isArray(files)||!files.length||files.length>10)throw Error('投稿文件数量无效')
  const ids=new Set()
@@ -27,7 +27,7 @@ export async function checkRemote({repo,number,head,request,raw}){
  if(current.some(x=>!['manifest.json','assets'].includes(x.path)))throw Error('套装目录包含未许可文件')
  const manifest=current.find(x=>x.path==='manifest.json'),assets=current.find(x=>x.path==='assets')
  if(!manifest||manifest.type!=='blob'||manifest.mode!=='100644'||manifest.size>8192||!assets||assets.type!=='tree'||assets.mode!=='040000')throw Error('投稿目录结构无效')
- const pictures=await tree(source,assets.sha);if(pictures.length>8||pictures.some(x=>x.type!=='blob'||x.mode!=='100644'||! /^(bubble|title|badge|reply)\.(png|jpg|webp|css)$/.test(x.path)||x.size>(x.path.endsWith('.css')?32768:4*1024*1024)))throw Error('素材文件无效')
+ const pictures=await tree(source,assets.sha);if(pictures.length>10||pictures.some(x=>x.type!=='blob'||x.mode!=='100644'||! /^(bubble|title|badge|reply|frame)\.(png|jpg|webp|css)$/.test(x.path)||x.size>(x.path.endsWith('.css')?32768:4*1024*1024)))throw Error('素材文件无效')
  const temp=await mkdtemp(join(tmpdir(),'community-submission-'))
  try{
   const dir=join(temp,'submissions',id);await mkdir(join(dir,'assets'),{recursive:true})

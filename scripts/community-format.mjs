@@ -6,7 +6,7 @@ export function checkManifest(raw,id){
  if(raw.schemaVersion!==1||typeof id!=='string'||!/^[a-z0-9][a-z0-9-]{2,47}$/.test(id)||raw.id!==id||raw.permission!==true)throw Error('套装编号或授权声明无效')
  const name=text(raw.name,24),author=text(raw.author,24),license=text(raw.license,100)
  if(typeof raw.github!=='string'||!/^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/i.test(raw.github))throw Error('作者 GitHub 用户名无效')
- keys(raw.components,['bubble','title','badge','reply']);const components={}
+ keys(raw.components,['bubble','title','badge','reply','frame']);const components={}
  for(const [kind,v] of Object.entries(raw.components)){
   keys(v,['file','slice','style']);if(typeof v.file!=='string'||!new RegExp(`^assets/${kind}\\.(png|jpg|webp|css)$`).test(v.file))throw Error('素材路径无效')
   if(v.style!==undefined&&(v.file.endsWith('.css')||v.style!==`assets/${kind}.css`))throw Error('样式路径无效')

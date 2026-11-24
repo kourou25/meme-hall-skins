@@ -1,6 +1,6 @@
 import postcss from 'postcss'
 
-const kinds=new Set(['bubble','title','badge','reply'])
+const kinds=new Set(['bubble','title','badge','reply','frame'])
 const unsafeProperty=/^(?:behavior|-moz-binding|cursor|pointer-events|user-select|content-visibility|contain|all)$/i
 const unsafeValue=/(?:javascript\s*:|expression\s*\(|@import|image-set\s*\(|element\s*\(|-moz-binding|behavior\s*:)/i
 function validSvg(value){

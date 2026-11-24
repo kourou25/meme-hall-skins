@@ -18,3 +18,9 @@ test('CSS 投稿生成摘要并约束到自己的气泡',async()=>{
   assert.throws(()=>compileCommunityCss('.example { background: url("https://example.com/a.png") }','test-set','bubble'))
  }finally{await rm(dir,{recursive:true,force:true})}
 })
+test('头像框样式只作用于 .cskin-frame-<编号> 及其前后装饰',()=>{
+ const css=compileCommunityCss('.ring::after{content:"";position:absolute;inset:-4px;border:2px solid #f0c;border-radius:50%}','sample-set','frame')
+ assert.match(css,/\.cskin-frame-sample-set::after/)
+ assert.doesNotMatch(css,/\.ring/)
+ assert.throws(()=>compileCommunityCss('body{color:red}','sample-set','frame'))
+})
