@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 45,
-  "source": "012641c6ae82e46150557eeff17560eae30faec7",
+  "revision": 46,
+  "source": "a3821490a6cf234c181ed4afd3dc09014f557892",
   "entries": [
     {
       "schemaVersion": 1,
@@ -327,14 +327,14 @@
           "style": {
             "file": "assets/frame.css",
             "type": "text/css",
-            "bytes": 4690,
-            "sha256": "9ed9c2e87a33b15a6914e424744c94fca3b2e905cc4af0eefdfca0412f4b10fb"
+            "bytes": 4765,
+            "sha256": "9bf273455314e853ee8fad633e04c80c4904a8c82cbf958e8370752182737638"
           },
           "type": "image/webp",
           "width": 256,
           "height": 256,
-          "bytes": 21762,
-          "sha256": "715be621820e3eb2d5a59c5dae4a46e30bc42bfe41c813c48856552121968e6c"
+          "bytes": 22692,
+          "sha256": "0f5f31efd69a0e95c3acfbcf8faebfa7eb47a409fd98732ed1b45445deda255d"
         }
       }
     },
