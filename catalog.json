@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 40,
-  "source": "43ae273226021d5a1471542e56cd02e9d898c637",
+  "revision": 41,
+  "source": "93c0a1f30e0b85c9c8cda723fb57debf8826d001",
   "entries": [
     {
       "schemaVersion": 1,
@@ -310,6 +310,49 @@
           "type": "text/css",
           "bytes": 2805,
           "sha256": "71cc0bcec9f5ea878e4f4f4477a657b4bf23ca3cbba04c86bcfc2d7a1163f37b"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "manga-tremor",
+      "name": "娇怯拟声",
+      "author": "DracaeneSunbringer",
+      "github": "dracaenesunbringer",
+      "license": "原创日漫娇怯手写拟声词气泡、心动颈环称号、徽章与回应框四件套，确认拥有完整使用与再发布权限",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 32098,
+          "sha256": "70628030042823f81331a1102144b183140c2d8dc60b4d12938d3d765a6d3d5a"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 16585,
+          "sha256": "dd182da1acbdf9bf8a2896cfee7bf8bd6220bb429b0e4e6e81c5f8d195331448"
+        },
+        "badge": {
+          "file": "assets/badge.webp",
+          "style": {
+            "file": "assets/badge.css",
+            "type": "text/css",
+            "bytes": 7482,
+            "sha256": "878e318ff9927971bf038459b22d947e1c33950e450b002e0c78fcef36036ac4"
+          },
+          "type": "image/webp",
+          "width": 128,
+          "height": 128,
+          "bytes": 5796,
+          "sha256": "ee7735aa671347752bf0d5b11f1f3b1ab263c64237f80c8de27d1e56f78cec97"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 17892,
+          "sha256": "87d95d45610403d2d1255d708a0422c55dda13641edb8f46717255b9488761e2"
         }
       }
     },
