@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 41,
-  "source": "93c0a1f30e0b85c9c8cda723fb57debf8826d001",
+  "revision": 42,
+  "source": "db11eddcba3f699afc4ba161ad2deb03fa3a77d7",
   "entries": [
     {
       "schemaVersion": 1,
@@ -451,7 +451,7 @@
       "name": "蕾姆·昼夜誓约",
       "author": "shx126",
       "github": "shx126",
-      "license": "两张插画由生成工具绘制，角色源自《Re:从零开始的异世界生活》。投稿人确认拥有素材使用和再发布权限。",
+      "license": "气泡与称号所用的两张插画及徽章的日月剪影均由生成工具绘制，角色源自《Re:从零开始的异世界生活》。投稿人确认拥有素材使用和再发布权限。",
       "permission": true,
       "components": {
         "bubble": {
@@ -465,6 +465,12 @@
           "type": "text/css",
           "bytes": 11673,
           "sha256": "352b5fff6255041aefa65a5befb6325fcd3aa4a0abfe649d1196ff66a604c874"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 31949,
+          "sha256": "1141933bfee0d1b4fac534a440aa9bedaae139aee755741b4909cc77f289fd4c"
         }
       }
     },
