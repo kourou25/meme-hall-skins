@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "laowu-dispatch-siamese",
-  "name": "老吴派遣·暹罗",
+  "name": "sup早苗",
   "author": "Earthcat",
   "github": "EarthRelig",
-  "license": "气泡由投稿人提供的参考图抠图、镜像并制作伸缩切片；称号为原创 CSS。投稿人确认有权使用、修改及公开再发布。",
+  "license": "气泡使用投稿人有权使用、修改和公开再发布的参考图，对人物和青蛙裁切透明化，并重制左尾与框体；称号、徽章为据此设计的原创图样。",
   "permission": true,
   "components": {
     "bubble": {
@@ -12,6 +12,9 @@
     },
     "title": {
       "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
     }
   }
 }
