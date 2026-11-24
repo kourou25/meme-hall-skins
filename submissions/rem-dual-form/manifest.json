@@ -4,10 +4,11 @@
   "name": "蕾姆·昼夜誓约",
   "author": "shx126",
   "github": "shx126",
-  "license": "两张插画由生成工具绘制，角色源自《Re:从零开始的异世界生活》。投稿人确认拥有素材使用和再发布权限。",
+  "license": "气泡与称号所用的两张插画及徽章的日月剪影均由生成工具绘制，角色源自《Re:从零开始的异世界生活》。投稿人确认拥有素材使用和再发布权限。",
   "permission": true,
   "components": {
     "bubble": { "file": "assets/bubble.css" },
-    "title": { "file": "assets/title.css" }
+    "title": { "file": "assets/title.css" },
+    "badge": { "file": "assets/badge.css" }
   }
 }
