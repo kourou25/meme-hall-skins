@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 37,
-  "source": "4901439f211eefd20f9bd675cc28a64709e169d5",
+  "revision": 38,
+  "source": "f7f23ad3ade90926d3275dda2efc586883572e8a",
   "entries": [
     {
       "schemaVersion": 1,
@@ -408,14 +408,14 @@
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 29194,
-          "sha256": "766b702b1da56cd928a38d0ab252398c8199c1b841e837bff0027efef1de3dbd"
+          "bytes": 29170,
+          "sha256": "1ca1e3cfa3a29ec18471745e2fd38e3391dbd7cd60c7292f8abba4e80fd5b695"
         },
         "title": {
           "file": "assets/title.css",
           "type": "text/css",
-          "bytes": 11697,
-          "sha256": "656621a391f2cd39cba984eb52dce9d8794e80fbc93a4183e5786e86a7c250cc"
+          "bytes": 11673,
+          "sha256": "352b5fff6255041aefa65a5befb6325fcd3aa4a0abfe649d1196ff66a604c874"
         }
       }
     },
