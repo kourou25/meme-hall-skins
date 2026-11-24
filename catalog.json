@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 44,
-  "source": "10877139ec9cb736e29c87004f8bebfd493ee7ad",
+  "revision": 45,
+  "source": "012641c6ae82e46150557eeff17560eae30faec7",
   "entries": [
     {
       "schemaVersion": 1,
@@ -310,6 +310,31 @@
           "type": "text/css",
           "bytes": 2805,
           "sha256": "71cc0bcec9f5ea878e4f4f4477a657b4bf23ca3cbba04c86bcfc2d7a1163f37b"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "live-on-air",
+      "name": "正在直播",
+      "author": "DracaeneSunbringer",
+      "github": "dracaenesunbringer",
+      "license": "原创直播电波头像框（三环扩散波纹与动态三柱音律直播中胶囊），借鉴纯 CSS 实现，确认拥有完整使用与再发布权限",
+      "permission": true,
+      "components": {
+        "frame": {
+          "file": "assets/frame.webp",
+          "style": {
+            "file": "assets/frame.css",
+            "type": "text/css",
+            "bytes": 4690,
+            "sha256": "9ed9c2e87a33b15a6914e424744c94fca3b2e905cc4af0eefdfca0412f4b10fb"
+          },
+          "type": "image/webp",
+          "width": 256,
+          "height": 256,
+          "bytes": 21762,
+          "sha256": "715be621820e3eb2d5a59c5dae4a46e30bc42bfe41c813c48856552121968e6c"
         }
       }
     },
