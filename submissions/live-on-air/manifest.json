@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "live-on-air",
+  "name": "正在直播",
+  "author": "DracaeneSunbringer",
+  "github": "DracaeneSunbringer",
+  "license": "原创直播电波头像框（三环扩散波纹与动态三柱音律直播中胶囊），借鉴纯 CSS 实现，确认拥有完整使用与再发布权限",
+  "permission": true,
+  "components": {
+    "frame": {
+      "file": "assets/frame.webp",
+      "style": "assets/frame.css"
+    }
+  }
+}
