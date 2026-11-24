@@ -1,0 +1,14 @@
+:scope {
+  position:relative;box-sizing:border-box;height:auto !important;
+  --panel-art:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2238%22%20viewBox%3D%220%200%2036%2038%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paper%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f4e6cf%22%2F%3E%3Cstop%20offset%3D%22.45%22%20stop-color%3D%22%23fff8e7%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M2%201H34Q35%201%2035%203V14C29%2014%2029%2024%2035%2024V35Q35%2037%2033%2037H3Q1%2037%201%2035V24C7%2024%207%2014%201%2014V3Q1%201%202%201Z%22%20fill%3D%22url(%23paper)%22%20stroke%3D%22%23c4875f%22%20stroke-width%3D%221.1%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--dash:#d5754b;
+  border:1.5px solid transparent !important;border-radius:5px;padding:16px 10px 9px;
+   background:transparent !important;
+   border-image:var(--panel-art) 13 8 13 8 fill / 13px 8px 13px 8px / 0 stretch !important;
+}
+[data-theme="dark"] :scope {
+  --panel-art:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2238%22%20viewBox%3D%220%200%2036%2038%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paper%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2348372b%22%2F%3E%3Cstop%20offset%3D%22.45%22%20stop-color%3D%22%23342a22%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M2%201H34Q35%201%2035%203V14C29%2014%2029%2024%2035%2024V35Q35%2037%2033%2037H3Q1%2037%201%2035V24C7%2024%207%2014%201%2014V3Q1%201%202%201Z%22%20fill%3D%22url(%23paper)%22%20stroke%3D%22%23bb885d%22%20stroke-width%3D%221.1%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--dash:#c3865b;
+}
+:scope::before {content:"";position:absolute;top:0;left:9px;right:9px;
+   background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2256%22%20height%3D%2220%22%20viewBox%3D%220%200%2056%2020%22%3E%3Cpath%20d%3D%22M3%204H49V16H3Z%22%20fill%3D%22%23fbdca0%22%20stroke%3D%22%23b95e3b%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M8%207H32M8%2010H30M8%2013H23M38%205V7M38%209V11M38%2013V15%22%20stroke%3D%22%23b95e3b%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M43%2012L47%208M43%208L47%2012%22%20stroke%3D%22%23d66945%22%20stroke-width%3D%221.05%22%2F%3E%3C%2Fsvg%3E") right top -2px/56px 20px no-repeat,repeating-linear-gradient(90deg,var(--dash) 0 3px,transparent 3px 7px) left top 8px/calc(100% - 66px) 1px no-repeat;
+   height:15px;}
+   :scope::after {content:"";position:absolute;left:9px;right:9px;bottom:4px;height:1px;background:repeating-linear-gradient(90deg,var(--dash) 0 4px,transparent 4px 8px);}
