@@ -1,82 +1,82 @@
 @property --r1 {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 65.65%;
+  initial-value: 67.11%;
 }
 
 @property --r2 {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 76.59%;
+  initial-value: 77.64%;
 }
 
 @property --r3 {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 87.54%;
+  initial-value: 88.16%;
 }
 
 @property --c1 {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgba(255, 102, 153, 1);
+  initial-value: rgba(255, 102, 153, 0.96);
 }
 
 @property --c2 {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgba(255, 102, 153, 0.67);
+  initial-value: rgba(255, 102, 153, 0.64);
 }
 
 @property --c3 {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgba(255, 102, 153, 0.33);
+  initial-value: rgba(255, 102, 153, 0.32);
 }
 
 :scope {
-  background: none !important;
-  --rim: rgba(255, 102, 153, 0.58);
+  --rim: rgba(255, 102, 153, 0.48);
   --bar: url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%2016'><rect%20width='4'%20height='16'%20rx='2'%20fill='%23ffffff'/></svg>");
   --txt: url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='-25%20278%206267%202105'><path%20fill='%23ffffff'%20d='M36%202023H246V823H874V691H78V473H874V339H1158V473H1976V691H1158V823H1808V2023H2014V2241H36ZM1540%201035H516V1153H1540ZM516%202023H1540V1905H516ZM516%201733H1540V1615H516ZM516%201443H1540V1325H516ZM2858%202319V1513Q2812%201461%202749%201393Q2750%201443%202752%201485L2616%201524V2051Q2616%202199%202544%202256Q2473%202313%202214%202309Q2194%202193%202166%202051Q2255%202053%202312%202050Q2370%202047%202370%201961V1596L2176%201653L2156%201359L2370%201314V967H2176V719H2370V363H2616V719H2768V967H2616V1255Q2690%201235%202750%201217Q2749%201264%202749%201306Q2967%201214%203137%201085H2782V891H3039Q2969%20820%202880%20741L2977%20655L2844%20659Q2830%20565%202808%20449Q3636%20429%204026%20397L4060%20601L3880%20613L4016%20721Q3945%20788%203830%20891H4124V1085H3732Q3911%201228%204162%201295Q4123%201346%204034%201483V2315H3790V2233H3102V2319ZM3568%20630V891H3754L3646%20793Q3741%20705%203830%20615ZM3072%20652Q3163%20726%203238%20797L3134%20891H3322V642ZM3322%201379V1150Q3168%201313%202998%201429H3881Q3695%201317%203568%201151V1379ZM3790%201619H3566V1741H3790ZM3102%201741H3322V1619H3102ZM3566%202043H3790V1921H3566ZM3102%202043H3322V1921H3102ZM5130%20339H5434V693H6180V1815H5884V1677H5434V2321H5130V1677H4680V1821H4384V693H5130ZM5884%20969H5434V1401H5884ZM4680%201401H5130V969H4680Z'/></svg>");
 }
 
 [data-theme="dark"] :scope {
-  --rim: rgba(255, 255, 255, 0.42);
+  --rim: rgba(255, 255, 255, 0.38);
 }
 
 :scope::before {
   content: "";
   position: absolute;
-  inset: -6%;
+  inset: -26%;
   border-radius: 50%;
   z-index: 1;
   background-image:
-    radial-gradient(circle closest-side, transparent calc(64.6% - 1.3px), var(--rim) calc(64.6% - 0.5px), var(--rim) calc(64.6% + 0.5px), transparent calc(64.6% + 1.3px)),
-    radial-gradient(circle closest-side, transparent calc(var(--r1) - 1.35px), var(--c1) calc(var(--r1) - 0.5px), var(--c1) calc(var(--r1) + 0.5px), transparent calc(var(--r1) + 1.35px)),
-    radial-gradient(circle closest-side, transparent calc(var(--r2) - 1.35px), var(--c2) calc(var(--r2) - 0.5px), var(--c2) calc(var(--r2) + 0.5px), transparent calc(var(--r2) + 1.35px)),
-    radial-gradient(circle closest-side, transparent calc(var(--r3) - 1.35px), var(--c3) calc(var(--r3) - 0.5px), var(--c3) calc(var(--r3) + 0.5px), transparent calc(var(--r3) + 1.35px));
-  animation: live-ring-ripple 0.5s linear infinite;
+    radial-gradient(circle closest-side, transparent calc(66.8% - 1.25px), var(--rim) calc(66.8% - 0.45px), var(--rim) calc(66.8% + 0.45px), transparent calc(66.8% + 1.25px)),
+    radial-gradient(circle closest-side, transparent calc(var(--r1) - 1.25px), var(--c1) calc(var(--r1) - 0.45px), var(--c1) calc(var(--r1) + 0.45px), transparent calc(var(--r1) + 1.25px)),
+    radial-gradient(circle closest-side, transparent calc(var(--r2) - 1.25px), var(--c2) calc(var(--r2) - 0.45px), var(--c2) calc(var(--r2) + 0.45px), transparent calc(var(--r2) + 1.25px)),
+    radial-gradient(circle closest-side, transparent calc(var(--r3) - 1.25px), var(--c3) calc(var(--r3) - 0.45px), var(--c3) calc(var(--r3) + 0.45px), transparent calc(var(--r3) + 1.25px));
+  animation: live-ring-ripple 0.5s linear infinite !important;
 }
 
 :scope::after {
   content: "";
   position: absolute;
-  left: 19%;
-  right: 19%;
-  bottom: 9%;
-  height: 20.8%;
+  top: auto !important;
+  right: 10% !important;
+  bottom: -4% !important;
+  left: 10% !important;
+  height: 28%;
   box-sizing: border-box;
   border-radius: 999px;
   border: 1px solid #ffffff;
   background-color: #ff6699;
   box-shadow: 0 1px 4px rgba(255, 70, 132, 0.28);
   z-index: 2;
-  background-image: var(--bar), var(--bar), var(--bar), var(--txt);
+  background-image: var(--bar), var(--bar), var(--bar), var(--txt) !important;
   background-repeat: no-repeat;
   background-position: left 12% bottom 24%, left 18.5% bottom 24%, left 25% bottom 24%, 79% center;
   background-size: 3.8% 22%, 3.8% 52%, 3.8% 34%, 56% 56%;
-  animation: live-eq-dance 0.9s ease-in-out infinite;
+  animation: live-eq-dance 0.9s ease-in-out infinite !important;
 }
 
 [data-theme="dark"] :scope::after {
@@ -87,19 +87,19 @@
 
 @keyframes live-ring-ripple {
   0% {
-    --r1: 65.65%;
-    --r2: 76.59%;
-    --r3: 87.54%;
-    --c1: rgba(255, 102, 153, 1);
-    --c2: rgba(255, 102, 153, 0.67);
-    --c3: rgba(255, 102, 153, 0.33);
+    --r1: 67.11%;
+    --r2: 77.64%;
+    --r3: 88.16%;
+    --c1: rgba(255, 102, 153, 0.96);
+    --c2: rgba(255, 102, 153, 0.64);
+    --c3: rgba(255, 102, 153, 0.32);
   }
   100% {
-    --r1: 76.59%;
-    --r2: 87.54%;
-    --r3: 98.48%;
-    --c1: rgba(255, 102, 153, 0.67);
-    --c2: rgba(255, 102, 153, 0.33);
+    --r1: 77.64%;
+    --r2: 88.16%;
+    --r3: 98.69%;
+    --c1: rgba(255, 102, 153, 0.64);
+    --c2: rgba(255, 102, 153, 0.32);
     --c3: rgba(255, 102, 153, 0);
   }
 }
