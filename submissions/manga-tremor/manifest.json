@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "manga-tremor",
+  "name": "娇怯拟声",
+  "author": "DracaeneSunbringer",
+  "github": "DracaeneSunbringer",
+  "license": "原创日漫娇怯手写拟声词气泡、心动颈环称号、徽章与回应框四件套，确认拥有完整使用与再发布权限",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.webp",
+      "style": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    }
+  }
+}
