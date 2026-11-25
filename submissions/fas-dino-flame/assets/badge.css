@@ -1,0 +1,56 @@
+/* fas 绿龙炽焰：旋转流光圆形徽章修饰 */
+@property --spin {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes badge-halo {
+  to {
+    --spin: 360deg;
+  }
+}
+
+:scope {
+  position: relative;
+  display: inline-block;
+  inline-size: 24px;
+  block-size: 24px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(124, 214, 142, .45),
+    0 2px 7px rgba(255, 164, 198, .28);
+  animation: badge-halo 8s linear infinite;
+}
+
+[data-theme="dark"] :scope {
+  box-shadow:
+    0 0 0 1px rgba(132, 224, 152, .52),
+    0 2px 9px rgba(255, 178, 132, .34);
+}
+
+:scope::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(from var(--spin), rgba(114, 214, 134, .75), rgba(255, 216, 110, .82), rgba(255, 150, 190, .75), rgba(114, 214, 134, .75));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px));
+  z-index: 1;
+}
+
+:scope::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .36) 0%, transparent 45%);
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :scope {
+    animation: none;
+  }
+}

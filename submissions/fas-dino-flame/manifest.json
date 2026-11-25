@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fas-dino-flame",
+  "name": "粉毛恶龙",
+  "author": "Fas",
+  "github": "Voun8",
+  "license": "基于 fas 恐龙喷火头像创作的琉璃流光五件套装扮（含气泡、称号、徽章、回应框与头像框），确认拥有使用与再发布权限。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.png",
+      "style": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    },
+    "frame": {
+      "file": "assets/frame.png",
+      "style": "assets/frame.css"
+    }
+  }
+}
