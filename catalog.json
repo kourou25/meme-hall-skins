@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 52,
-  "source": "068f86419a981f2ce2f970164b24526f3b58152d",
+  "revision": 53,
+  "source": "bd5c5a944591ab867e780ebfdadbd171774441fb",
   "entries": [
     {
       "schemaVersion": 1,
@@ -412,6 +412,35 @@
           "height": 256,
           "bytes": 22692,
           "sha256": "0f5f31efd69a0e95c3acfbcf8faebfa7eb47a409fd98732ed1b45445deda255d"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "luna-raincity",
+      "name": "露娜 · 黑色天际线",
+      "author": "shx126",
+      "github": "shx126",
+      "license": "角色源自《三角洲行动》。气泡立绘裁自投稿人提供的参考图，徽章基于该参考图生成，箭矢及动效为本次绘制。投稿人确认拥有素材使用和再发布权限。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 25201,
+          "sha256": "65fba7c4441aeab9eb3d9d96ecdde5fe571688d3c4d558fe36f9cbdd066b4787"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 2467,
+          "sha256": "b9d8ff9345b86dced0438b92563e905a7e9525129a18df1b8ea4429b9e8f6bb7"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 32179,
+          "sha256": "26d6a91e490e44c1d561d5f471e70c6ba83867acb86e24333b8da02635fc1d5d"
         }
       }
     },
