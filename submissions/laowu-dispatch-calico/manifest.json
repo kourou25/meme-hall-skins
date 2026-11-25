@@ -1,17 +1,16 @@
 {
   "schemaVersion": 1,
   "id": "laowu-dispatch-calico",
-  "name": "老吴派遣·三花",
+  "name": "鲨牙布",
   "author": "Earthcat",
   "github": "EarthRelig",
-  "license": "气泡取自投稿人有权使用、修改及再发布的参考图，已抠图、镜像并制作适配切片；称号为原创 CSS。",
+  "license": "气泡和徽章使用投稿人有权使用、修改及再发布的素材；称号、回应框、头像框为原创设计。",
   "permission": true,
   "components": {
-    "bubble": {
-      "file": "assets/bubble.css"
-    },
-    "title": {
-      "file": "assets/title.css"
-    }
+    "bubble": { "file": "assets/bubble.css" },
+    "title": { "file": "assets/title.css" },
+    "badge": { "file": "assets/badge.css" },
+    "reply": { "file": "assets/reply.css" },
+    "frame": { "file": "assets/frame.png" }
   }
 }
