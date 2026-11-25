@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "luna-raincity",
+  "name": "露娜 · 黑色天际线",
+  "author": "shx126",
+  "github": "shx126",
+  "license": "角色源自《三角洲行动》。气泡立绘裁自投稿人提供的参考图，徽章基于该参考图生成，箭矢及动效为本次绘制。投稿人确认拥有素材使用和再发布权限。",
+  "permission": true,
+  "components": {
+    "bubble": { "file": "assets/bubble.css" },
+    "title": { "file": "assets/title.css" },
+    "badge": { "file": "assets/badge.css" }
+  }
+}

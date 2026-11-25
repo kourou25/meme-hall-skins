@@ -1,0 +1,90 @@
+@property --trace-progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+:scope {
+  --trace-ink: #9ebfff;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 20px;
+  max-width: 100%;
+  padding: 1px 13px 1px 19px !important;
+  border: 1px solid #8e819e;
+  border-radius: 2px 5px 2px 5px;
+  background:
+    linear-gradient(90deg, transparent, var(--trace-ink) 36%, #fbf6ff 54%, var(--trace-ink) 70%, transparent)
+      calc(var(--trace-progress) * (100% + 64px) - 32px) bottom / 32px 2px no-repeat,
+    linear-gradient(90deg, #bcaec767, transparent 24%, transparent 74%, #dba3808c) left bottom / 100% 1px no-repeat,
+    linear-gradient(108deg, #403b50, #1e1d2a 24% 79%, #333043);
+  box-shadow: inset 0 1px #c6bad02b, 0 1px 2px #15121f36;
+  color: #f4edf5;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .025em;
+  vertical-align: middle;
+  animation: skyline-sweep 6.4s linear infinite;
+}
+
+:scope::before {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 5px;
+  width: 11px;
+  height: 9px;
+  transform: translateY(-50%);
+  background: linear-gradient(180deg, #e2d8ee, #b0a5c4);
+  clip-path: polygon(0 100%, 0 52%, 22% 52%, 22% 31%, 43% 31%, 43% 63%, 56% 63%, 56% 0, 75% 0, 75% 42%, 100% 42%, 100% 100%);
+}
+
+:scope::after {
+  content: "";
+  position: absolute;
+  inset: 50% 5px auto auto;
+  width: 3px;
+  height: 3px;
+  transform: translateY(-50%);
+  border-radius: 1px;
+  background: #eaae89;
+  box-shadow: 0 0 4px #eaae8970;
+  animation: skyline-window 6.4s ease-in-out infinite;
+}
+
+@keyframes skyline-sweep {
+  0%, 15% { --trace-progress: 0; --trace-ink: #9ebfff; }
+  29% { --trace-progress: 1; --trace-ink: #9ebfff; }
+  55.5% {
+    --trace-progress: 1;
+    --trace-ink: #9ebfff;
+    animation-timing-function: step-end;
+  }
+  56% { --trace-progress: 0; --trace-ink: #efa983; }
+  75%, 100% { --trace-progress: 1; --trace-ink: #efa983; }
+}
+
+@keyframes skyline-window {
+  0%, 23%, 32%, 67%, 79%, 100% {
+    background: #eaae89;
+    box-shadow: 0 0 4px #eaae8970;
+    transform: translateY(-50%);
+  }
+  26% {
+    background: #eff7ff;
+    box-shadow: 0 0 6px 1px #a0c1ffde;
+    transform: translateY(-50%) scale(1.32);
+  }
+  72% {
+    background: #ffdaa9;
+    box-shadow: 0 0 6px 1px #f3a372bf;
+    transform: translateY(-50%) scale(1.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :scope, :scope::after { animation: none; }
+}
