@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 49,
-  "source": "7d8f25cfb2513fbe5e9c80477575abeffb3dfec8",
+  "revision": 50,
+  "source": "288c96cc1b232e866c3970c97d0cc7611cc7bf12",
   "entries": [
     {
       "schemaVersion": 1,
@@ -494,7 +494,7 @@
       "name": "月行水上",
       "author": "结城理",
       "github": "professorzoom20",
-      "license": "气泡图集取自 P3R 官方宣传片，人物头部由 AI 补全，称号图标与铭牌为自制素材",
+      "license": "气泡图集取自 P3R 官方宣传片，人物头部由 AI 补全，称号图标与铭牌为自制素材，徽章和回应框为 AI 生成素材",
       "permission": true,
       "components": {
         "bubble": {
@@ -516,6 +516,18 @@
           "type": "text/css",
           "bytes": 16510,
           "sha256": "2e93383775162eabae36eb97ba3791c26073379d67b215ffe56b0fcae2c00ec8"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 28010,
+          "sha256": "e0fd3137d16db0f7ff2783d0e98ea450a0b28e0e03aa5b8e0d3aa5c6563706d6"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 20023,
+          "sha256": "de2afdd816c8971a917809a2467d92f66bd0db43e268763e8279c58ce9d721f6"
         }
       }
     },
