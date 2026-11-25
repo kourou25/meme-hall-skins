@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 53,
-  "source": "bd5c5a944591ab867e780ebfdadbd171774441fb",
+  "revision": 54,
+  "source": "3762ac7bf699845afc3047eac72cf2c4f177c186",
   "entries": [
     {
       "schemaVersion": 1,
@@ -404,8 +404,8 @@
           "style": {
             "file": "assets/frame.css",
             "type": "text/css",
-            "bytes": 4765,
-            "sha256": "9bf273455314e853ee8fad633e04c80c4904a8c82cbf958e8370752182737638"
+            "bytes": 4873,
+            "sha256": "c1ec4ef5603904a5293434c1717bdedea9d41c080e67c9ee9c1acb82d7e816da"
           },
           "type": "image/webp",
           "width": 256,
