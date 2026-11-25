@@ -1,8 +1,65 @@
 {
   "schemaVersion": 1,
-  "revision": 51,
-  "source": "158be7a470fc268e610a5b4b91fc29a645b4563e",
+  "revision": 52,
+  "source": "068f86419a981f2ce2f970164b24526f3b58152d",
   "entries": [
+    {
+      "schemaVersion": 1,
+      "id": "fas-dino-flame",
+      "name": "粉毛恶龙",
+      "author": "Fas",
+      "github": "voun8",
+      "license": "基于 fas 恐龙喷火头像创作的琉璃流光五件套装扮（含气泡、称号、徽章、回应框与头像框），确认拥有使用与再发布权限。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 28710,
+          "sha256": "d7ff2d77df6e080f4956cf2a49779b46abe097f4a41a83ec12102cbb6a15ab29"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 22084,
+          "sha256": "7124278b37f784a508001dbcac3deb19275b47f8aa1f1a28d7595d8fbf074f32"
+        },
+        "badge": {
+          "file": "assets/badge.png",
+          "style": {
+            "file": "assets/badge.css",
+            "type": "text/css",
+            "bytes": 1367,
+            "sha256": "3c13d927a3cc6231d3b3483241e84714295c628eae804c5a93f3943941c14733"
+          },
+          "type": "image/png",
+          "width": 256,
+          "height": 256,
+          "bytes": 63489,
+          "sha256": "68a616edab80543c9b563d8825bb0046fb4380e10f12cf2757d3e8a3ef01b97b"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 28414,
+          "sha256": "3cae012b152d37e1a5b6839afc78b1e657f26da6c299276dde0624c28b0b39eb"
+        },
+        "frame": {
+          "file": "assets/frame.png",
+          "style": {
+            "file": "assets/frame.css",
+            "type": "text/css",
+            "bytes": 1364,
+            "sha256": "b0873d01b0476ead45c4dfe1e96c273708a627c4c9a529c59a0a2fa2f5b11496"
+          },
+          "type": "image/png",
+          "width": 512,
+          "height": 512,
+          "bytes": 5574,
+          "sha256": "3613f5bf5b76cbffc10ef342b14ad42b86142c306c09efd1867dfe12c707f512"
+        }
+      }
+    },
     {
       "schemaVersion": 1,
       "id": "gushen-yinpa",
