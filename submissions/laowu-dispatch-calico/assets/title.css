@@ -1,17 +1,3 @@
-/* Both ornaments belong to the title. Reserve their space under the site's identity styles. */
-:scope {
-  position:relative;display:inline-flex;align-items:center;box-sizing:border-box;
-  flex:none;min-inline-size:max-content;min-height:22px;padding:2px 7px;
-  padding-inline:23px 15px !important;border:1px solid #926747;border-radius:4px;
-  color:#352921;background:linear-gradient(165deg,#fffaf0,#f5e6d3);
-  box-shadow:inset 0 1px #ffffff38,0 1px 1px #231b2719;
-  font-size:12px;font-weight:750;line-height:1.3;letter-spacing:.06em;
-  white-space:nowrap;vertical-align:middle;text-transform:none;
-}
-:scope::before {
-  content:"";position:absolute;inset-inline-start:3px;top:50%;transform:translateY(-50%);
-  width:17px;height:17px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Crect%20x%3D%222%22%20y%3D%224%22%20width%3D%2216%22%20height%3D%2212.3%22%20rx%3D%222.2%22%20fill%3D%22%23ffedcd%22%20stroke%3D%22%23413025%22%20stroke-width%3D%221.3%22%2F%3E%3Cpath%20d%3D%22M3%206l7%205%207-5M3%2015l4.6-4M17%2015l-4.6-4%22%20fill%3D%22none%22%20stroke%3D%22%23a76532%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2214.8%22%20cy%3D%225.6%22%20r%3D%222.2%22%20fill%3D%22%23e39140%22%20stroke%3D%22%23fff6e3%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;
-}
-:scope::after {
-  content:"";position:absolute;inset-inline-end:5px;top:50%;transform:translateY(-50%);width:5px;height:13px;border-radius:1px;background:repeating-linear-gradient(145deg,#34312b 0 3px,#fff1dc 3px 5px,#dc813a 5px 8px,#fff1dc 8px 10px);
-}
+:scope{position:relative;display:inline-flex!important;align-items:center;flex:0 0 auto;gap:4px;box-sizing:border-box;width:max-content;min-width:max-content;max-width:none!important;min-height:25px;height:auto!important;padding:2px 8px 2px 6px!important;font-size:0!important;color:transparent!important;letter-spacing:0!important;line-height:1!important;white-space:nowrap;vertical-align:middle;background:linear-gradient(#fff1b6,#f9d272);border:1.5px solid #ac7334;border-radius:16px;box-shadow:inset 0 0 0 1px #fff4c2,0 2px #81512d;}
+:scope::before{content:"";display:block;width:19px;height:19px;flex:0 0 19px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2234%22%20height%3D%2234%22%20viewBox%3D%220%200%2034%2034%22%3E%3Cellipse%20cx%3D%2217%22%20cy%3D%2217.8%22%20rx%3D%2213.7%22%20ry%3D%2213.3%22%20fill%3D%22%23ad6329%22%20stroke%3D%22%23192c45%22%20stroke-width%3D%221.7%22%2F%3E%3Cellipse%20cx%3D%2217%22%20cy%3D%2215.4%22%20rx%3D%2213.1%22%20ry%3D%2212%22%20fill%3D%22%23ffce68%22%20stroke%3D%22%23192c45%22%20stroke-width%3D%221.4%22%2F%3E%3Cellipse%20cx%3D%2217%22%20cy%3D%2215.4%22%20rx%3D%2210%22%20ry%3D%229.2%22%20fill%3D%22none%22%20stroke%3D%22%23fff1a8%22%20stroke-width%3D%221.3%22%2F%3E%3Cpath%20d%3D%22M9%2019Q12%2018%2014%2014Q16%209%2021%209Q19%2014%2024%2018Q17%2021%209%2019Z%22%20fill%3D%22%2367432e%22%20stroke%3D%22%2367432e%22%20stroke-width%3D%221%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M26%2026L28%2024M5%209L7%206%22%20fill%3D%22none%22%20stroke%3D%22%23fff2b0%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;}
+:scope::after{content:"你们是鲨币";display:block;flex:none;color:#50351e;font:750 13px/18px system-ui,sans-serif;white-space:nowrap;letter-spacing:.02em;}
