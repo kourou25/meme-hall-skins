@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 50,
-  "source": "288c96cc1b232e866c3970c97d0cc7611cc7bf12",
+  "revision": 51,
+  "source": "158be7a470fc268e610a5b4b91fc29a645b4563e",
   "entries": [
     {
       "schemaVersion": 1,
@@ -287,8 +287,8 @@
         "title": {
           "file": "assets/title.css",
           "type": "text/css",
-          "bytes": 1633,
-          "sha256": "f33eb7c4d83be2ca65d8d8b197073cb4eced04849cf7b0b8b9fbe52da9ab0723"
+          "bytes": 1644,
+          "sha256": "500a9a70a875abea4b6c827321b1238db22066caa0626465a9076e4a2a641018"
         },
         "badge": {
           "file": "assets/badge.css",
