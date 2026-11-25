@@ -4,7 +4,7 @@
   "name": "月行水上",
   "author": "结城理",
   "github": "professorzoom20",
-  "license": "气泡图集取自 P3R 官方宣传片，人物头部由 AI 补全，称号图标与铭牌为自制素材",
+  "license": "气泡图集取自 P3R 官方宣传片，人物头部由 AI 补全，称号图标与铭牌为自制素材，徽章和回应框为 AI 生成素材",
   "permission": true,
   "components": {
     "bubble": {
@@ -13,6 +13,12 @@
     },
     "title": {
       "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
     }
   }
 }
