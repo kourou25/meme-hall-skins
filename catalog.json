@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 48,
-  "source": "91e22f185fd279f6da965accc84db5e16f8cffc8",
+  "revision": 49,
+  "source": "7d8f25cfb2513fbe5e9c80477575abeffb3dfec8",
   "entries": [
     {
       "schemaVersion": 1,
@@ -209,8 +209,8 @@
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 31416,
-          "sha256": "76ab96dee05d0ab06383d1d7ca179792ec87f02a0ca5f6f08ac34c493805f26e"
+          "bytes": 31523,
+          "sha256": "57136f2d0f2d152e6e93a450bd689b98dd13a01598029afc825377c6028eb601"
         },
         "title": {
           "file": "assets/title.css",
@@ -456,6 +456,35 @@
           "type": "text/css",
           "bytes": 482,
           "sha256": "0a28c9e1259604c58ee9dd7b6c88ddafda6bbbed50014f7db908bc05d762f8f6"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "p3-azure-moon-oath",
+      "name": "苍月的誓约",
+      "author": "结城理",
+      "github": "professorzoom20",
+      "license": "称号为原创 CSS，徽章与回应框为 AI 生成素材",
+      "permission": true,
+      "components": {
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1160,
+          "sha256": "58199e61093dede9d13f050709a8d861a1d4ac758b1a7f35d187b316a1bb82cf"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 30202,
+          "sha256": "683a7ca74a4d6c075fac4e2cf4c62aada7981d579ba143769a78ab6931ab3a47"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 27446,
+          "sha256": "4df8c49c1a793079ce17c805cf81b51afd5ed1370b8df7784dd986b9f932d7ac"
         }
       }
     },
