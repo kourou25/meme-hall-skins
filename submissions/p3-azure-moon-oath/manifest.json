@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "p3-azure-moon-oath",
+  "name": "苍月的誓约",
+  "author": "结城理",
+  "github": "professorzoom20",
+  "license": "称号为原创 CSS，徽章与回应框为 AI 生成素材",
+  "permission": true,
+  "components": {
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    }
+  }
+}
