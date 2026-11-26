@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "electroboy-armor",
+  "name": "火星大力拳",
+  "author": "kourou25",
+  "github": "kourou25",
+  "license": "CSS 与矢量图形为本次自制；含 AI 生成的《电击小子》同人图。投稿人确认有权使用及再发布；角色权利归原权利人。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    },
+    "frame": {
+      "file": "assets/frame.css"
+    }
+  }
+}

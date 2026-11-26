@@ -1,0 +1,5 @@
+:scope { position: relative; border: 1px solid #df6b5a !important; border-radius: 10px; background: linear-gradient(115deg,#fff8ed,#fff2e4); box-shadow: inset 3px 0 0 #d93743,inset 0 1px 0 #fff; }
+:scope::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 0; height: 1px; border-radius: 2px; background: linear-gradient(90deg,transparent,#ffae2e,transparent); animation: reply-current 4.4s ease-in-out infinite; }
+@keyframes reply-current { 0%,65%,100% { opacity: .35; } 78%,86% { opacity: 1; box-shadow: 0 1px 4px #ffb52d70; } }
+[data-theme="dark"] :scope { border-color: #b6524c !important; background: linear-gradient(115deg,#38242a,#2c232b); box-shadow: inset 3px 0 0 #ee6156,inset 0 1px 0 #ffffff12; }
+@media (prefers-reduced-motion: reduce) { :scope, :scope::before, :scope::after { animation: none !important; } }
