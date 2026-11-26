@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 60,
-  "source": "5077d7fc05a543254132969bdf26e9d22b14c177",
+  "revision": 61,
+  "source": "ef775a9183fae4601aef3b65238e18133f8741bc",
   "entries": [
     {
       "schemaVersion": 1,
@@ -893,6 +893,29 @@
           "height": 56,
           "bytes": 15391,
           "sha256": "692bfbc3d734200791fd4e66a12c1c0e349e6a4446826d81c06fdbca9a36072b"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "shiratori-starlight",
+      "name": "白鳥的星光票根",
+      "author": "白鳥",
+      "github": "shiratori3",
+      "license": "本套装的气泡、称号和内嵌图形均为本次投稿原创，授权尽欢社区使用、展示并随装扮目录再发布。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 6062,
+          "sha256": "0fb2ff5db882fe7cb0b2ee3f07fbf706f336725a3dbeddedcc1438b902b70dcf"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 2215,
+          "sha256": "91066279dcde75564b84a4f917a67e45ab35b2f138201a118c25234fdd731ebd"
         }
       }
     },
