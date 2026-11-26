@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 59,
-  "source": "a3bac7baec2d114ec487c8de31c5584b9caff380",
+  "revision": 60,
+  "source": "5077d7fc05a543254132969bdf26e9d22b14c177",
   "entries": [
     {
       "schemaVersion": 1,
@@ -98,22 +98,22 @@
         "reply": {
           "file": "assets/reply.css",
           "type": "text/css",
-          "bytes": 28414,
-          "sha256": "3cae012b152d37e1a5b6839afc78b1e657f26da6c299276dde0624c28b0b39eb"
+          "bytes": 1631,
+          "sha256": "7b0af709077926a31dff150894d95423c97bdc53899a4c7a74bc5bf1afd884fc"
         },
         "frame": {
           "file": "assets/frame.png",
           "style": {
             "file": "assets/frame.css",
             "type": "text/css",
-            "bytes": 1364,
-            "sha256": "b0873d01b0476ead45c4dfe1e96c273708a627c4c9a529c59a0a2fa2f5b11496"
+            "bytes": 896,
+            "sha256": "a7402cc09d7d5b9d8ae0acfb4d8b3cdbf279c50bea2002f1ec4240f4d0679b7a"
           },
           "type": "image/png",
           "width": 512,
           "height": 512,
-          "bytes": 5574,
-          "sha256": "3613f5bf5b76cbffc10ef342b14ad42b86142c306c09efd1867dfe12c707f512"
+          "bytes": 104080,
+          "sha256": "1f06762c8ad8ded4f8bd16a3bebbdf27cbb64271e7d3cbd0ae7e5f5612c551c7"
         }
       }
     },
