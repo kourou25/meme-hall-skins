@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 62,
-  "source": "9d929fa1dbc209309d588c61585d6b97918a9e57",
+  "revision": 63,
+  "source": "f739a8a92f6d71d424a2be7865825af94fa36c42",
   "entries": [
     {
       "schemaVersion": 1,
@@ -1052,6 +1052,49 @@
           "type": "text/css",
           "bytes": 1790,
           "sha256": "08af8fd3adc2847b3e82e68b55d22d63e9e48b2b93667c665ed6a1ed94b35b45"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "yimao-simao",
+      "name": "一毛四毛",
+      "author": "Earthcat",
+      "github": "earthrelig",
+      "license": "参考投稿人有权使用的水彩猫素材制作。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 31641,
+          "sha256": "22b65f0cd72d3ed7279ad0e03d54e302c4f4caf13525102a0edd7d3a2a7d6843"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 16429,
+          "sha256": "aa993dda0ed0c98a2eea27d1c8aa244ea5739e17e9b1d4f67a85dac04675dcc7"
+        },
+        "frame": {
+          "file": "assets/frame.png",
+          "type": "image/png",
+          "width": 256,
+          "height": 256,
+          "bytes": 49935,
+          "sha256": "2afe82e697a1ddb5b0e3e799a454a7d57d8917ba1d14719d55c18f0942bed474"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 6462,
+          "sha256": "0b69e19de959cb0dd5ae25b462ba6baf17d6aae92e09da4498e6be5f84d96778"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 3395,
+          "sha256": "9b2e825a3c307dc3eb6e8fa949e8dfa5aa537ef9e67eebb8706339008ce120a7"
         }
       }
     }
