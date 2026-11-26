@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 64,
-  "source": "46c17eab8bb1f0ed641e2177ab3c341298c46a2d",
+  "revision": 65,
+  "source": "22f7a6130a292bca4e5a5da02f28bdf1c841de63",
   "entries": [
     {
       "schemaVersion": 1,
@@ -57,6 +57,47 @@
           "type": "text/css",
           "bytes": 1818,
           "sha256": "9804f03d40adb32a5d80cc52483a58ca210daba20889e71aefc7fd2d30834fed"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "electroboy-armor",
+      "name": "火星大力拳",
+      "author": "kourou25",
+      "github": "kourou25",
+      "license": "CSS 与矢量图形为本次自制；含 AI 生成的《电击小子》同人图。投稿人确认有权使用及再发布；角色权利归原权利人。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 8842,
+          "sha256": "f297f4e8df6446e93ad4edc8b3196cfa94b0153da5fa50418bea60a0f00047f8"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1578,
+          "sha256": "01024bcb7b430dd6579eda4d97ebaa4dd8d1228f5bab8e2860677bd54d9ac801"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 2274,
+          "sha256": "5d27e8fa43648b32cc258084dce6a56acc114be997b13495ef071c65d76045b1"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 844,
+          "sha256": "cd94b1af7c7ee96c1ba72caadeeff1b4caed51e88c8fdb1866e27a746eef3d2d"
+        },
+        "frame": {
+          "file": "assets/frame.css",
+          "type": "text/css",
+          "bytes": 2063,
+          "sha256": "3a9261fbae2e02c43d9acb6a9f58416d671088911a6058bfb73e92d91c11e9c5"
         }
       }
     },
