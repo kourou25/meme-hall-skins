@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 57,
-  "source": "d86d9398ba5c16dafbe5b90603efaa0e9a28e0eb",
+  "revision": 58,
+  "source": "3a36796cfcd79bae284809f06b6f3fbd3ad592b9",
   "entries": [
     {
       "schemaVersion": 1,
@@ -266,8 +266,8 @@
         "bubble": {
           "file": "assets/bubble.css",
           "type": "text/css",
-          "bytes": 31572,
-          "sha256": "da9b17ffba814139196d66e106e6fd660ec39bb14689332e9b92bc72fb178a6c"
+          "bytes": 31728,
+          "sha256": "66162847e02a39ccd366f84fd3a8193b18f2e2959a40549d73583fcd79bf5ecc"
         },
         "title": {
           "file": "assets/title.css",
