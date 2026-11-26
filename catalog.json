@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 61,
-  "source": "ef775a9183fae4601aef3b65238e18133f8741bc",
+  "revision": 62,
+  "source": "9d929fa1dbc209309d588c61585d6b97918a9e57",
   "entries": [
     {
       "schemaVersion": 1,
@@ -899,7 +899,7 @@
     {
       "schemaVersion": 1,
       "id": "shiratori-starlight",
-      "name": "白鳥的星光票根",
+      "name": "星光票根",
       "author": "白鳥",
       "github": "shiratori3",
       "license": "本套装的气泡、称号和内嵌图形均为本次投稿原创，授权尽欢社区使用、展示并随装扮目录再发布。",
