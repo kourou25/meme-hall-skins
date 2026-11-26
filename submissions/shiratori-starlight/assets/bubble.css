@@ -1,0 +1,130 @@
+/* 四角使用固定半径，消息换行时只延长直边。 */
+.cskin-bubble-shiratori-starlight {
+  --ink: #263452;
+  --paper: #fbfcff;
+  --stub: #596784;
+  --edge: #aab4ce;
+  --mint: #88cfb6;
+  --whisker: #e2eaf3;
+  --rail-width: calc(100% - 44px);
+  --flight: -48px;
+  /* 共用的行程上限要容得下最宽的气泡及最后一次回摆。 */
+  --flight-limit: calc(100vw + 96px);
+  --meteor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='11' viewBox='-1 0 30 11'%3E%3Cpath fill='%2386cbbb' d='M0 9L22 3L17 6Z'/%3E%3Cpath fill='%23c3efe0' d='M8 9L23 4L21 6Z'/%3E%3Cpath fill='%23579992' d='M24 0L25 2.6L28 3.5L25.3 4.7L24 8L22.8 5L20 3.7L23 2.7Z'/%3E%3Ccircle cx='24' cy='3.7' r='1' fill='%23f2fff6'/%3E%3C/svg%3E");
+  position: relative;
+  box-sizing: border-box;
+  max-width: calc(100% - 34px);
+  min-height: 42px;
+  margin: 12px 22px 6px 12px;
+  padding: 10px 20px 9px 42px !important;
+  border: 1px solid var(--edge) !important;
+  border-radius: 14px !important;
+  overflow: visible !important;
+  color: var(--ink) !important;
+  /* 底层绘制圆角细边，上沿的星光与外侧流星共用行程。 */
+  background:
+    linear-gradient(90deg, transparent calc(var(--flight) - 28px), #b1e6da var(--flight), transparent calc(var(--flight) + 3px)) 30px 0 / var(--rail-width) 2px no-repeat,
+    linear-gradient(90deg, var(--stub) 0 30px, var(--paper) 30px) padding-box,
+    linear-gradient(var(--edge), var(--edge)) border-box !important;
+  overflow-wrap: anywhere;
+}
+
+/* 耳朵、领结和两侧的短胡须共用左上角的倾斜方向。 */
+.cskin-bubble-shiratori-starlight::before {
+  --ear-fold: 0px;
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -16px;
+  width: 40px;
+  height: 24px;
+  transform: rotate(-45deg);
+  transform-origin: center 8px;
+  background:
+    linear-gradient(12deg, transparent calc(50% - 1px), var(--whisker) 50%, transparent calc(50% + 1px)) 2px 15px / 10px 4px no-repeat,
+    linear-gradient(-12deg, transparent calc(50% - 1px), var(--whisker) 50%, transparent calc(50% + 1px)) 3px 20px / 9px 4px no-repeat,
+    linear-gradient(-12deg, transparent calc(50% - 1px), var(--whisker) 50%, transparent calc(50% + 1px)) 28px 15px / 10px 4px no-repeat,
+    linear-gradient(12deg, transparent calc(50% - 1px), var(--whisker) 50%, transparent calc(50% + 1px)) 28px 20px / 9px 4px no-repeat,
+    linear-gradient(var(--mint), var(--mint)) center 6px / 4px 4px no-repeat,
+    conic-gradient(from 240deg at 100% 50%, var(--mint) 0 60deg, transparent 61deg) 12px 3px / 8px 10px no-repeat,
+    conic-gradient(from 60deg at 0 50%, var(--mint) 0 60deg, transparent 61deg) 20px 3px / 8px 10px no-repeat,
+    conic-gradient(from 142deg at calc(2px + var(--ear-fold)) var(--ear-fold), var(--stub) 0 43deg, transparent 44deg) 3px 0 / 15px 100% no-repeat,
+    conic-gradient(from 175deg at 13px 0, var(--stub) 0 43deg, transparent 44deg) 22px 0 / 15px 100% no-repeat;
+}
+
+/* 尾巴从底边探出再向上回钩。发带的结心压在尾巴上，两片带尾垂向右下。 */
+.cskin-bubble-shiratori-starlight::after {
+  content: "";
+  position: absolute;
+  right: -21px;
+  bottom: -6px;
+  width: 40px;
+  height: 32px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 32'%3E%3Cpath fill='%23596784' d='M2 24C9 27 17 26 22 20C25 16 26 12 25 8C24 4 25 2 27 2C31 2 32 8 31 13C30 22 25 28 18 30C12 32 5 31 2 28Q0 26 2 24Z'/%3E%3Cpath fill='%2365a9de' d='M26 17C23 15 18 11 17 13C16 16 17 20 19 20L26 18C27 15 31 10 34 10C36 11 35 15 34 16L27 18Z'/%3E%3Cpath fill='%238dc9f1' d='M26 17Q31 19 38 18L35 22Q29 22 26 18Z'/%3E%3Cpath fill='%2365a9de' d='M27 17Q29 22 34 25L30 26Q26 22 25 18Z'/%3E%3Cpath fill='%23497fb2' d='M24 16L27 15L29 18L26 20L24 19Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+@property --ear-fold {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+/* 气泡和尾巴共用流星行程。静止时流星在左边界以外。 */
+@property --flight {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: -48px;
+}
+
+@keyframes ticket-ear-flick {
+  0%, 100% { --ear-fold: 0px; }
+  38% { --ear-fold: 5px; }
+  76% { --ear-fold: -1px; }
+}
+
+@keyframes ticket-edge-light {
+  from { --flight: 0px; }
+  to { --flight: var(--flight-limit); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cskin-bubble-shiratori-starlight {
+    /* 将流星画在顶边上方，两侧透明切片随行程伸缩，中间保留原图宽度。
+       边框图像按边框盒计宽，需扣除轨道两端和两条 1px 边线。 */
+    --meteor-left: calc(7px + var(--flight));
+    --meteor-width: clamp(0px, calc((var(--rail-width) - 1px - var(--flight)) * 28), 28px);
+    --meteor-right: clamp(0px, calc(100% - var(--meteor-left) - var(--meteor-width)), 100%);
+    border-image: var(--meteor) 10 1 0
+      / 10px var(--meteor-right) 0 clamp(0px, var(--meteor-left), 100%)
+      / 14px 0 0 !important;
+    /* 每 4ms 前进 1px，各气泡到达右端的时间由自身轨道宽度决定。 */
+    animation: ticket-edge-light calc(1s * tan(atan2(var(--flight-limit), 250px))) 260ms linear 1;
+  }
+
+  .cskin-bubble-shiratori-starlight::before {
+    animation: ticket-ear-flick 260ms ease-in-out 1;
+  }
+
+  .cskin-bubble-shiratori-starlight::after {
+    /* 流星越过终点后先抬尾，再小幅回摆。路径起点钉在尾根，方向控制摆角。 */
+    --past-end: calc(var(--flight) - var(--rail-width));
+    --lift: max(0px, min(var(--past-end), 56px - var(--past-end)));
+    --return: max(0px, min(var(--past-end) - 56px, 96px - var(--past-end)));
+    offset-path: shape(from calc(100% - 17px) 100%, line by calc(var(--return) * .12 - var(--lift) * .24) -20px) padding-box;
+    offset-anchor: 2px 26px;
+    offset-rotate: auto 90deg;
+  }
+}
+
+[data-theme="dark"] .cskin-bubble-shiratori-starlight {
+  --ink: #f0f2fc;
+  --paper: #292f4c;
+  --stub: #536184;
+  --edge: #677294;
+  --mint: #c0ffe0;
+  --whisker: #d4dfef;
+}
+
+[data-theme="dark"] .cskin-bubble-shiratori-starlight::after {
+  filter: brightness(1.24);
+}

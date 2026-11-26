@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "shiratori-starlight",
+  "name": "白鳥的星光票根",
+  "author": "白鳥",
+  "github": "shiratori3",
+  "license": "本套装的气泡、称号和内嵌图形均为本次投稿原创，授权尽欢社区使用、展示并随装扮目录再发布。",
+  "permission": true,
+  "components": {
+    "bubble": { "file": "assets/bubble.css" },
+    "title": { "file": "assets/title.css" }
+  }
+}
