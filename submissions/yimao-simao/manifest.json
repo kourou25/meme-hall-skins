@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "yimao-simao",
+  "name": "一毛四毛",
+  "author": "Earthcat",
+  "github": "EarthRelig",
+  "license": "参考投稿人有权使用的水彩猫素材制作。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    },
+    "frame": {
+      "file": "assets/frame.png"
+    },
+    "badge": {
+      "file": "assets/badge.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    }
+  }
+}
