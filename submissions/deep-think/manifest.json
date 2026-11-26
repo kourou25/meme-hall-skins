@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "deep-think",
+  "name": "深度思考",
+  "author": "DracaeneSunbringer",
+  "github": "DracaeneSunbringer",
+  "license": "原创 DeepSeek「深度思考」主题全套装扮（鲸鱼光环头像框与三段式 CoT 折叠流式气泡，确认拥有完整使用与再发布权限）",
+  "permission": true,
+  "components": {
+    "frame": {
+      "file": "assets/frame.webp",
+      "style": "assets/frame.css"
+    },
+    "bubble": {
+      "file": "assets/bubble.css"
+    },
+    "title": {
+      "file": "assets/title.css"
+    },
+    "badge": {
+      "file": "assets/badge.webp",
+      "style": "assets/badge.css"
+    },
+    "reply": {
+      "file": "assets/reply.css"
+    }
+  }
+}

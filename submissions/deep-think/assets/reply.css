@@ -1,0 +1,42 @@
+@property --ds-ang {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes replyBorderFlow {
+  0% { --ds-ang: 0deg; }
+  100% { --ds-ang: 360deg; }
+}
+
+:scope {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible !important;
+  border-radius: 16px !important;
+  border: 1.6px solid transparent !important;
+  background:
+    radial-gradient(130px 46px at 88% 0%, rgba(57, 100, 254, 0.09), transparent 72%) padding-box,
+    radial-gradient(110px 42px at 10% 100%, rgba(96, 165, 250, 0.08), transparent 72%) padding-box,
+    linear-gradient(135deg, #f7faff 0%, #ffffff 52%, #f1f6ff 100%) padding-box,
+    conic-gradient(from var(--ds-ang), #2563eb 0deg, #3964fe 52deg, #60a5fa 108deg, #dbeafe 140deg, #3964fe 178deg, rgba(57, 100, 254, 0.22) 236deg, rgba(57, 100, 254, 0.18) 312deg, #2563eb 360deg) border-box !important;
+  color: #0f172a !important;
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.08),
+    0 2px 5px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+  animation: replyBorderFlow 4.2s linear infinite !important;
+}
+
+[data-theme="dark"] :scope {
+  background:
+    radial-gradient(130px 46px at 88% 0%, rgba(103, 158, 254, 0.15), transparent 72%) padding-box,
+    radial-gradient(110px 42px at 10% 100%, rgba(59, 130, 246, 0.12), transparent 72%) padding-box,
+    linear-gradient(135deg, #1b2233 0%, #20242e 54%, #181f2f 100%) padding-box,
+    conic-gradient(from var(--ds-ang), #3b82f6 0deg, #679efe 52deg, #93c5fd 108deg, #eff6ff 140deg, #679efe 178deg, rgba(103, 158, 254, 0.26) 236deg, rgba(103, 158, 254, 0.18) 312deg, #3b82f6 360deg) border-box !important;
+  color: #f8fafc !important;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.38),
+    0 0 14px rgba(86, 134, 254, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
