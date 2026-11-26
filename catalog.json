@@ -1,8 +1,65 @@
 {
   "schemaVersion": 1,
-  "revision": 58,
-  "source": "3a36796cfcd79bae284809f06b6f3fbd3ad592b9",
+  "revision": 59,
+  "source": "a3bac7baec2d114ec487c8de31c5584b9caff380",
   "entries": [
+    {
+      "schemaVersion": 1,
+      "id": "deep-think",
+      "name": "深度思考",
+      "author": "DracaeneSunbringer",
+      "github": "dracaenesunbringer",
+      "license": "原创 DeepSeek「深度思考」主题全套装扮（鲸鱼光环头像框与三段式 CoT 折叠流式气泡，确认拥有完整使用与再发布权限）",
+      "permission": true,
+      "components": {
+        "frame": {
+          "file": "assets/frame.webp",
+          "style": {
+            "file": "assets/frame.css",
+            "type": "text/css",
+            "bytes": 12255,
+            "sha256": "44e5916b348d3566ea937b672bf5a5db516fa9e04101e3f0aebe9fc90550c092"
+          },
+          "type": "image/webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 44720,
+          "sha256": "acf0b660b3cba68c0e001a57ed6b45c198d50be301b5bc45df299ff99816dcbd"
+        },
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 32144,
+          "sha256": "47ccfdce9493ac9873f40e78d6b616ceb06be4b657fcf70f35cc3739a0416337"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 1993,
+          "sha256": "4b62760438a6e00407646db5f48291f3638cd1307cc54202a9411b39cb7c6295"
+        },
+        "badge": {
+          "file": "assets/badge.webp",
+          "style": {
+            "file": "assets/badge.css",
+            "type": "text/css",
+            "bytes": 1620,
+            "sha256": "d02192e7da5f956e424f87764ff530523776d47a3a3a3d473a38ca2ab2cc71af"
+          },
+          "type": "image/webp",
+          "width": 128,
+          "height": 128,
+          "bytes": 6018,
+          "sha256": "0750f348587bccedbf81ab60b81b3a1b4611466258e514d87ba5dd1dc2ae6ec5"
+        },
+        "reply": {
+          "file": "assets/reply.css",
+          "type": "text/css",
+          "bytes": 1818,
+          "sha256": "9804f03d40adb32a5d80cc52483a58ca210daba20889e71aefc7fd2d30834fed"
+        }
+      }
+    },
     {
       "schemaVersion": 1,
       "id": "fas-dino-flame",
