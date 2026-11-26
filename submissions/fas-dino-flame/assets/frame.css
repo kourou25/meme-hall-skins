@@ -1,39 +1,14 @@
-/* fas 粉毛恶龙：恐龙连体皮套头像框（紧密贴合包裹 + 适度透气间距 + 像素火星微光） */
-@keyframes dino-sparks-twinkle {
-  0%, 100% {
-    opacity: 0.45;
-    transform: scale(0.96);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.04);
-  }
-}
-
+/* 静态皮套头像框火星，独立于主站用于绘制 frame PNG 的 ::after 图层。 */
 :scope {
-  filter:
-    drop-shadow(0 1px 3px rgba(32, 68, 36, 0.24))
-    drop-shadow(0 0 6px rgba(132, 214, 92, 0.16));
+  filter: drop-shadow(0 1px 3px rgba(32, 68, 36, 0.24)) drop-shadow(0 0 6px rgba(132, 214, 92, 0.16));
 }
-
 [data-theme="dark"] :scope {
-  filter:
-    drop-shadow(0 2px 5px rgba(0, 0, 0, 0.55))
-    drop-shadow(0 0 8px rgba(154, 236, 102, 0.24));
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 8px rgba(154, 236, 102, 0.24));
 }
-
-/* 四角点缀粉金像素火星微闪烁（无任何外部圆形光环） */
-:scope::after {
+:scope::before {
   content: "";
   position: absolute;
   inset: -4%;
   z-index: 2;
-  background: center / contain no-repeat url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20128%20128'><path%20fill='%23ff74aa'%20d='M16%2018l1.8%203.5%203.5%201.8-3.5%201.8-1.8%203.5-1.8-3.5-3.5-1.8%203.5-1.8z'/><path%20fill='%23ffd36b'%20d='M112%2020l1.8%203.5%203.5%201.8-3.5%201.8-1.8%203.5-1.8-3.5-3.5-1.8%203.5-1.8z'/><path%20fill='%23ff8ec0'%20d='M114%2096l1.6%203%203%201.6-3%201.6-1.6%203-1.6-3-3-1.6%203-1.6z'/></svg>");
-  animation: dino-sparks-twinkle 2.2s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :scope::after {
-    animation: none !important;
-  }
+  background: center / contain no-repeat url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><path fill='%23ff74aa' d='M16 18l1.8 3.5 3.5 1.8-3.5 1.8-1.8 3.5-1.8-3.5-3.5-1.8 3.5-1.8zM112 20l1.8 3.5 3.5 1.8-3.5 1.8-1.8 3.5-1.8-3.5-3.5-1.8 3.5-1.8zM114 96l1.6 3 3 1.6-3 1.6-1.6 3-1.6-3-3-1.6 3-1.6z'/><path fill='%23ffd36b' d='M20 80l1.6 3 3 1.6-3 1.6-1.6 3-1.6-3-3-1.6 3-1.6zM105 46l1.6 3 3 1.6-3 1.6-1.6 3-1.6-3-3-1.6 3-1.6z'/></svg>");
 }
