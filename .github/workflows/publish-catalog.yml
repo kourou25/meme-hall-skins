@@ -11,6 +11,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   catalog:
+    # 只在主仓库发布：复刻仓库没有发布凭据，推送 main 时会失败并给复刻的主人发邮件
+    if: github.repository == 'kourou25/meme-hall-skins'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

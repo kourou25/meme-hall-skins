@@ -22,6 +22,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   monitor:
+    # 只在主仓库运行：复刻仓库里定时任务没有权限和数据，每 15 分钟失败一次并给复刻的主人发邮件
+    if: github.repository == 'kourou25/meme-hall-skins'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
