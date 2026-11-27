@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 67,
-  "source": "b43b113494c66cdaad6774a23bea864458e153da",
+  "revision": 68,
+  "source": "ca0570225a3b416d2fb97c39030310ab7409210c",
   "entries": [
     {
       "schemaVersion": 1,
@@ -168,24 +168,10 @@
       "permission": true,
       "components": {
         "bubble": {
-          "file": "assets/bubble.png",
-          "slice": [
-            19,
-            8,
-            15,
-            34
-          ],
-          "style": {
-            "file": "assets/bubble.css",
-            "type": "text/css",
-            "bytes": 31658,
-            "sha256": "2fd070864c1d33eb4f277f28cbb1f3c0d509c14e18e3dfeab9e6c91e6cacf988"
-          },
-          "type": "image/png",
-          "width": 188,
-          "height": 70,
-          "bytes": 9537,
-          "sha256": "8a1ff5f302ee07611db7db508d3eb6b45b85914eed13f6f49b5d28b67aa44b0a"
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 31968,
+          "sha256": "74e7c02118b3f102774774a9352982bb2b07dbd1e137ed9fa891fd348c0b0840"
         }
       }
     },
