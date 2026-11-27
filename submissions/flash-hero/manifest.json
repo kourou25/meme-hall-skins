@@ -8,9 +8,7 @@
   "permission": true,
   "components": {
     "bubble": {
-      "file": "assets/bubble.png",
-      "style": "assets/bubble.css",
-      "slice": [19, 8, 15, 34]
+      "file": "assets/bubble.css"
     }
   }
 }
