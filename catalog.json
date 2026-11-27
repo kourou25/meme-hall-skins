@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 66,
-  "source": "ba0d7554ae222540e728218f4e95e7d0701e7258",
+  "revision": 67,
+  "source": "b43b113494c66cdaad6774a23bea864458e153da",
   "entries": [
     {
       "schemaVersion": 1,
@@ -155,6 +155,37 @@
           "height": 512,
           "bytes": 104080,
           "sha256": "1f06762c8ad8ded4f8bd16a3bebbdf27cbb64271e7d3cbd0ae7e5f5612c551c7"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "flash-hero",
+      "name": "电击小子",
+      "author": "shx126",
+      "github": "shx126",
+      "license": "角色素材为《电击小子》同人重绘，原作角色权利归原权利人。投稿人确认拥有使用及再发布本投稿素材的权限。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.png",
+          "slice": [
+            19,
+            8,
+            15,
+            34
+          ],
+          "style": {
+            "file": "assets/bubble.css",
+            "type": "text/css",
+            "bytes": 31658,
+            "sha256": "2fd070864c1d33eb4f277f28cbb1f3c0d509c14e18e3dfeab9e6c91e6cacf988"
+          },
+          "type": "image/png",
+          "width": 188,
+          "height": 70,
+          "bytes": 9537,
+          "sha256": "8a1ff5f302ee07611db7db508d3eb6b45b85914eed13f6f49b5d28b67aa44b0a"
         }
       }
     },
