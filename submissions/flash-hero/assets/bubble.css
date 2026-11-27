@@ -1,15 +1,24 @@
 :scope {
   position: relative;
   box-sizing: border-box;
-  min-height: 36px;
-  padding-left: 20px;
+  margin-inline-start: 28px;
+  min-width: min(74px,calc(100% - 28px));
+  max-width: min(640px,calc(100% - 28px));
+  padding: 14px 16px 12px 23px;
   color: #6b2414;
   line-height: 1.5;
-  background: none!important;
-  border-radius: 0;
-  border-width: 19px 8px 15px 34px!important;
-  border-image-width: 1!important;
-  border-image-slice: 19 8 15 34 fill!important;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  --bolt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 18'%3E%3Cpath d='M2 2 11 1.5 8 7h6l-9 9.5 2-7H2l2-4Z' fill='%23ffc344' stroke='%239a401d' stroke-width='1' stroke-linejoin='round'/%3E%3Cpath d='m3 3 6-.7L5 8H3l2-4Z' fill='%23fff0a6'/%3E%3C/svg%3E");
+  --tab: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 5'%3E%3Cpath fill='%23aa451b' d='M2 0h16l2 3-2 2H2L0 3Z'/%3E%3Cpath fill='%23ffe289' d='M3 1h14l1 2H2Z'/%3E%3C/svg%3E");
+  background:
+    var(--bolt) left 3px top 1px / 16px 18px no-repeat border-box,
+    var(--bolt) right 3px top 1px / 16px 18px no-repeat border-box,
+    var(--tab) 44% top / 20px 5px no-repeat border-box,
+    var(--tab) 66% bottom / 17px 5px no-repeat border-box,
+    linear-gradient(#fffaf4,#f2e8e2) padding-box,
+    linear-gradient(#ff7762,#d43029 8px,#ce2929 calc(100% - 8px),#991b1b) border-box!important;
+  box-shadow: inset 0 0 0 1px #a63c2a50,0 1px 3px #64241238;
 }
 :scope::before, :scope::after {
   content: "";
@@ -17,7 +26,7 @@
 }
 :scope::before {
   top: 50%;
-  left: -18px;
+  left: -15px;
   z-index: 2;
   height: clamp(60px, calc(100% + 30px), 100px);
   aspect-ratio: 56 / 73;
@@ -41,15 +50,15 @@
   animation: pose 3.6s steps(1,end) infinite,sparks 3.6s steps(1,end) infinite,orbit 3.6s linear infinite;
 }
 :scope::after {
-  inset: -19px -8px -15px -34px;
+  inset: -3px;
   z-index: 1;
-  border: solid transparent;
-  border-width: 19px 8px 15px 34px;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='70' viewBox='0 0 190 70'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='%23ffab44' stroke-width='4.8' opacity='.3' d='M32 35Q32 18 45 15H170Q187 15 187 35T170 57H47Q32 57 32 35Z'/%3E%3Cpath stroke='%23ffd283' stroke-width='2' d='M32 35Q32 18 45 15H170Q187 15 187 35T170 57H47Q32 57 32 35Z'/%3E%3Cpath stroke='%23fff9e1' stroke-width='1.05' d='M33 42Q29 28 37 20l5-1 3-5H91l4 1 8-1H172l5 3 4 1Q188 24 187 36l-1 5 1 3Q183 54 172 57H140l-5-1-4 1H48l-7-3-2-3'/%3E%3Cpath stroke='%23fff4bd' stroke-width='1.3' d='M37 11l5 2 1 5 4 3m126-2 3-5 7-3'/%3E%3C/g%3E%3C/svg%3E") 19 8 15 34 stretch;
-  clip-path: polygon(evenodd,0 0,100% 0,100% 100%,0 100%,0 0,34px 19px,34px calc(100% - 15px),calc(100% - 8px) calc(100% - 15px),calc(100% - 8px) 19px,34px 19px);
-  --rear: calc((100% - 30px)*var(--tail,0));
-  --lead: calc((100% - 30px)*var(--front,0));
-  mask-image: linear-gradient(90deg,transparent calc(30px + var(--rear)),black calc(36px + var(--rear)),black calc(34px + var(--lead)),transparent calc(46px + var(--lead)));
+  border: 2px solid #ffe6a9;
+  border-radius: inherit;
+  box-shadow: inset 0 0 3px #ffab44;
+  clip-path: polygon(evenodd,0 0,100% 0,100% 100%,0 100%,0 0,4px 12px,12px 4px,calc(100% - 12px) 4px,calc(100% - 4px) 12px,calc(100% - 4px) calc(100% - 12px),calc(100% - 12px) calc(100% - 4px),12px calc(100% - 4px),4px calc(100% - 12px),4px 12px);
+  --rear: calc((100% - 14px)*var(--tail,0));
+  --lead: calc((100% - 14px)*var(--front,0));
+  mask-image: linear-gradient(90deg,transparent var(--rear),black calc(5px + var(--rear)),black calc(6px + var(--lead)),transparent calc(16px + var(--lead)));
   opacity: 0;
   animation: rim-light 3.6s linear infinite;
 }
