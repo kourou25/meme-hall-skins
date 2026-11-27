@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "flash-hero",
+  "name": "电击小子",
+  "author": "shx126",
+  "github": "shx126",
+  "license": "角色素材为《电击小子》同人重绘，原作角色权利归原权利人。投稿人确认拥有使用及再发布本投稿素材的权限。",
+  "permission": true,
+  "components": {
+    "bubble": {
+      "file": "assets/bubble.png",
+      "style": "assets/bubble.css",
+      "slice": [19, 8, 15, 34]
+    }
+  }
+}
