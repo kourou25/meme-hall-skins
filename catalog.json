@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 68,
-  "source": "ca0570225a3b416d2fb97c39030310ab7409210c",
+  "revision": 69,
+  "source": "8717313082d5a035ea036c1da6cd38bc44598e80",
   "entries": [
     {
       "schemaVersion": 1,
@@ -1153,6 +1153,35 @@
           "type": "text/css",
           "bytes": 3395,
           "sha256": "9b2e825a3c307dc3eb6e8fa949e8dfa5aa537ef9e67eebb8706339008ce120a7"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "zhenli-letter",
+      "name": "真栗来信",
+      "author": "shx126",
+      "github": "shx126",
+      "license": "人物图以投稿人提供的 B 站 UP 主真栗照片为参考，经 ImageGen 重绘。其余装饰为本投稿原创。投稿人确认拥有使用及再发布权限。",
+      "permission": true,
+      "components": {
+        "bubble": {
+          "file": "assets/bubble.css",
+          "type": "text/css",
+          "bytes": 31798,
+          "sha256": "643395385d54c7ac1bd1c00489705c094f53942876f67ecd731ede03360ecee9"
+        },
+        "badge": {
+          "file": "assets/badge.css",
+          "type": "text/css",
+          "bytes": 1265,
+          "sha256": "7cc4401e2c563cc601ff6400b407a913d6c1ef3b2bcdbd4c975f6016636e1c75"
+        },
+        "title": {
+          "file": "assets/title.css",
+          "type": "text/css",
+          "bytes": 2033,
+          "sha256": "7ed4b86e7d22abeaf469b9f538a79cda61ea5a6bcf6278548cf70a60574f86fa"
         }
       }
     }
