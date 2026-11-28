@@ -1,0 +1,37 @@
+:scope {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 27%, #fff3d8, #edc6a5 70%, #bd7b5e) padding-box,
+    conic-gradient(from 18deg, #fbe2b8, #ad6246 25%, #f3c794 51%, #954d39 75%, #fbe2b8) border-box;
+  box-shadow: 0 1px 5px #7f402e58, inset 0 0 0 1px #fff0d38a;
+  vertical-align: middle;
+}
+
+:scope::before {
+  content: "";
+  position: absolute;
+  inset: 2px 1.5px 2px;
+  clip-path: polygon(53% 3%, 58% 6%, 66% 20%, 79% 29%, 91% 42%, 98% 57%, 98% 70%, 91% 83%, 79% 92%, 63% 96%, 40% 96%, 24% 93%, 10% 84%, 3% 72%, 2% 59%, 8% 44%, 20% 31%, 35% 22%, 45% 11%);
+  background:
+    radial-gradient(ellipse 49% 36% at 32% 38%, #e99868, transparent 98%),
+    radial-gradient(ellipse 86% 69% at 50% 34%, #ab5e3c 12%, #783d2c 56%, #52271e 62%, transparent 64%),
+    linear-gradient(101deg, #ac7048, #f6d2a1 42%, #c89365 84%, #ad7047);
+}
+
+:scope::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  clip-path: polygon(50% 0, 64% 36%, 100% 50%, 64% 64%, 50% 100%, 36% 64%, 0 50%, 36% 36%);
+  background: radial-gradient(circle, #fff8df, #dc9256 76%);
+}

@@ -1,0 +1,75 @@
+@property --sheen {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 13%;
+}
+
+:scope {
+  --glass-top: #fff5e7;
+  --glass-bottom: #f1d3c8;
+  --ink: #572e26;
+  --glow: #a86c5448;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  height: 22px !important;
+  box-sizing: border-box;
+  padding: 0 15px 0 16px !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px 9px 9px 5px !important;
+  background:
+    radial-gradient(ellipse, #fff0daca, transparent 72%) var(--sheen, 13%) -2px / 36px 6px no-repeat border-box,
+    linear-gradient(165deg, var(--glass-top), var(--glass-bottom) 76%, var(--glass-top)) padding-box,
+    linear-gradient(108deg, #a9634d, #e0a98f 23%, #ffebc4 43%, #bb7b66 60%, #f6c5a7 82%, #cf8a74) border-box !important;
+  box-shadow: 0 1px 6px var(--glow), inset 0 0 0 1px #fff3;
+  color: var(--ink) !important;
+  line-height: 1;
+  font-size: 12px !important;
+  font-weight: 650;
+  letter-spacing: .05em;
+  white-space: nowrap;
+  animation: sweep 5.8s ease-in-out infinite alternate;
+}
+
+[data-theme="dark"] :scope {
+  --glass-top: #694239;
+  --glass-bottom: #3b2521;
+  --ink: #fff0dd;
+  --glow: #d3936c68;
+}
+
+:scope::before,
+:scope::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  transform: translateY(-50%);
+}
+
+:scope::before {
+  left: 3px;
+  width: 10px;
+  height: 7px;
+  border-radius: 1px;
+  background:
+    linear-gradient(35deg, transparent 46%, #a25842 50% 59%, transparent 63%) left top / 51% 81% no-repeat,
+    linear-gradient(-35deg, transparent 46%, #a25842 50% 59%, transparent 63%) right top / 51% 81% no-repeat,
+    #edbc97;
+}
+
+:scope::after {
+  right: 3px;
+  clip-path: polygon(50% 22%, 65% 8%, 83% 10%, 94% 25%, 93% 44%, 80% 62%, 50% 90%, 20% 62%, 7% 44%, 6% 25%, 17% 10%, 35% 8%);
+  background: linear-gradient(130deg, #ffe3bc 15%, #db9a83 46%, #a95c54 82%);
+}
+
+@keyframes sweep {
+  to { --sheen: 88%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :scope { animation: none !important; }
+}
