@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "zhenli-letter",
+  "name": "真栗来信",
+  "author": "shx126",
+  "github": "shx126",
+  "license": "人物图以投稿人提供的 B 站 UP 主真栗照片为参考，经 ImageGen 重绘。其余装饰为本投稿原创。投稿人确认拥有使用及再发布权限。",
+  "permission": true,
+  "components": {
+    "bubble": { "file": "assets/bubble.css" },
+    "badge": { "file": "assets/badge.css" },
+    "title": { "file": "assets/title.css" }
+  }
+}
